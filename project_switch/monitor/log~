@@ -1,0 +1,12 @@
+2016-2-10 21:49 <192.168.31.100>[ERROR] : can`t find function IO_rate_1 in lib 'switchlib.cisco_3640' or 'common.py'
+2016-2-10 21:49 <192.168.31.101>[ERROR] : can`t find function IO_rate_1 in lib 'switchlib.cisco_3640' or 'common.py'
+2016-2-10 21:49 [INFO] : poller.py excute complete, use 0.3566172122955322 seconds
+2016-2-10 21:50 <192.168.31.100>[ERROR] : can`t find function IO_rate_1 in lib 'switchlib.cisco_3640' or 'common.py'
+2016-2-10 21:50 <192.168.31.101>[ERROR] : can`t find function IO_rate_1 in lib 'switchlib.cisco_3640' or 'common.py'
+2016-2-10 21:50 [INFO] : poller.py excute complete, use 0.5250186920166016 seconds
+2016-2-10 21:52 <192.168.31.100>[ERROR] : can`t find function IO_rate_1 in lib 'switchlib.cisco_3640' or 'common.py'
+2016-2-10 21:52 <192.168.31.101>[ERROR] : can`t find function IO_rate_1 in lib 'switchlib.cisco_3640' or 'common.py'
+2016-2-10 21:52 [INFO] : poller.py excute complete, use 0.5912976264953613 seconds
+2016-2-10 21:53 <192.168.31.100>[ERROR] : can`t find function IO_rate_1 in lib 'switchlib.cisco_3640' or 'common.py'
+2016-2-10 21:53 <192.168.31.101>[ERROR] : can`t find function IO_rate_1 in lib 'switchlib.cisco_3640' or 'common.py'
+2016-2-10 21:53 [INFO] : poller.py excute complete, use 0.4813668727874756 seconds

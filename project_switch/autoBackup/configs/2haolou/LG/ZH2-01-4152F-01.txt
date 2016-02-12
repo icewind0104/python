@@ -1,0 +1,410 @@
+sh run
+!
+no service password-encryption
+!
+hostname ZH2-01-4152F-01
+vendorlocation chengdu,sichuan province China
+vendorContact 800-886-8668
+!
+enable password 8 1279049ebb2f858567b525b518a4c904
+log trap informational
+!
+username gzw123 password 7 1279049ebb2f858567b525b518a4c904
+!
+!
+!
+telnet-user qware password 7 e869f38902c3ac25e270d4623b9188ee
+telnet-user cqmc password 7 28524bccc815436ae301683f0ab8a500
+telnet-user jswyyd password 7 da3bf908c5f467f75fc31c14d78b2581
+telnet-user wf password 7 5848221f693fbc8131ab8e4bf6debbcc
+!
+snmp-server enable
+snmp-server securityip 10.189.73.242
+snmp-server securityip disable
+snmp-server host 10.189.73.242 v2c cqmc02YYT
+snmp-server community ro Oavpn@123
+snmp-server community ro cqmc02YYT
+snmp-server view cqmcyyt 1.3.6.1. include
+snmp-server enable traps
+rmon enable
+!
+spanning-tree
+!
+!
+sflow agent-address 10.189.72.100
+sflow destination 10.189.73.242 9999
+vlan 1
+!
+vlan 2
+ name management
+!
+vlan 10
+ name zhongduan
+!
+vlan 11
+!
+vlan 12
+!
+vlan 13
+!
+vlan 14
+!
+vlan 17
+!
+vlan 19
+!
+vlan 20
+!
+vlan 21
+!
+vlan 22
+!
+vlan 23
+!
+vlan 24
+!
+vlan 25
+ name JB_BOSSVPN
+!
+vlan 26
+!
+vlan 28
+!
+vlan 29
+ name DS8FVPN
+!
+vlan 30
+ name wuliu-2
+!
+vlan 31
+ name JB_WangGuan
+!
+vlan 32
+!
+vlan 33
+!
+vlan 34
+!
+vlan 35
+!
+vlan 36
+ name LGgongjian3
+!
+vlan 41
+ name WLanManager
+!
+vlan 42
+ name WLan
+!
+vlan 53
+ name LGgongjian
+!
+vlan 54
+ name LGgongjian2
+!
+vlan 61
+ name JTKH_BOSS
+!
+vlan 62
+ name JTXY_BOSS
+!
+vlan 71
+ name wangguan
+!
+vlan 103
+ name JB_OAVPN_1L
+!
+vlan 800
+ name C2_CMNET
+!
+vlan 1000
+ name JBWLB_CMNET
+!
+vlan 1001
+ name JBWLB_BLJ
+!
+vlan 1002
+ name JB_PON_WG
+!
+sntp timezone BeiJing
+ sntp server 10.189.73.242
+!
+firewall enable
+!
+access-list 701 permit host-source-mac 00-23-89-2c-a0-a0
+access-list 701 permit host-source-mac 00-23-89-19-ea-00
+access-list 701 permit host-source-mac 00-23-89-2c-a9-70
+access-list 701 permit host-source-mac 00-23-89-19-f6-b0
+access-list 701 permit host-source-mac 00-1b-77-90-39-a7
+access-list 701 permit host-source-mac 00-1e-4c-67-83-14
+access-list 701 permit host-source-mac 00-19-c6-33-47-18
+access-list 701 permit host-source-mac 00-19-c6-31-e2-4a
+access-list 701 permit host-source-mac 00-23-89-19-e5-b0
+access-list 701 permit host-source-mac 00-23-89-19-ed-40
+access-list 701 permit host-source-mac 00-23-89-19-ed-f0
+access-list 701 permit host-source-mac 00-23-89-19-ef-c0
+access-list 701 permit host-source-mac 00-23-89-19-f3-00
+access-list 701 permit host-source-mac 00-23-89-19-f3-c0
+access-list 701 permit host-source-mac 00-23-89-19-f4-50
+access-list 701 permit host-source-mac 00-23-89-19-f7-20
+access-list 701 permit host-source-mac 00-23-89-19-f8-b0
+access-list 701 permit host-source-mac 00-23-89-2c-a4-90
+access-list 701 permit host-source-mac 00-1b-77-5c-a4-ed
+access-list 701 permit host-source-mac 00-1b-77-6d-c1-99
+access-list 701 permit host-source-mac 00-1b-77-6d-d7-b7
+access-list 701 permit host-source-mac 00-1e-4c-89-0c-a3
+access-list 701 permit host-source-mac c8-f7-33-5c-95-9a
+access-list 701 permit host-source-mac 00-1e-4c-4b-7f-d9
+access-list 701 permit host-source-mac c8-f7-33-3e-7d-d5
+access-list 701 permit host-source-mac c8-f7-33-52-a1-11
+access-list 701 permit host-source-mac 60-36-dd-11-54-9a
+access-list 701 permit host-source-mac 00-1b-77-90-50-45
+access-list 701 permit host-source-mac 60-36-dd-15-de-f2
+access-list 701 permit host-source-mac 60-36-dd-15-d4-84
+access-list 701 permit host-source-mac 60-36-dd-1a-4a-4b
+access-list 701 permit host-source-mac 60-36-dd-12-fd-36
+access-list 701 permit host-source-mac 60-36-dd-13-33-b9
+access-list 701 permit host-source-mac 60-36-dd-13-3f-a8
+access-list 701 permit host-source-mac 60-36-dd-14-eb-37
+access-list 701 permit host-source-mac 9c-4e-36-7e-4e-2c
+access-list 701 permit host-source-mac c8-f7-33-5c-db-13
+access-list 701 permit host-source-mac 60-36-dd-10-85-6f
+access-list 701 permit host-source-mac 60-36-dd-15-4c-5d
+access-list 701 permit host-source-mac 00-13-02-c6-9d-0c
+access-list 701 permit host-source-mac 60-36-dd-14-d6-a6
+access-list 701 permit host-source-mac 60-36-dd-1a-61-57
+access-list 701 permit host-source-mac 60-36-dd-13-ef-d9
+access-list 701 permit host-source-mac 00-22-fa-f0-7b-3e
+access-list 701 permit host-source-mac 60-36-dd-1a-5e-64
+access-list 701 permit host-source-mac 60-36-dd-1a-6c-a1
+access-list 701 permit host-source-mac 00-22-fa-f0-3c-e4
+access-list 701 permit host-source-mac 9c-4e-36-7d-81-24
+access-list 701 permit host-source-mac 60-36-dd-11-53-37
+access-list 701 permit host-source-mac 60-36-dd-19-4c-ef
+access-list 701 permit host-source-mac 60-36-dd-1a-61-7f
+access-list 701 permit host-source-mac 60-36-dd-1a-24-0d
+access-list 701 permit host-source-mac 60-36-dd-13-34-1d
+access-list 701 permit host-source-mac 60-36-dd-13-e0-b1
+access-list 701 permit host-source-mac e0-94-67-08-0a-c6
+access-list 701 permit host-source-mac 60-36-dd-14-f8-43
+access-list 701 permit host-source-mac 9c-4e-36-6c-67-04
+access-list 701 permit host-source-mac a4-17-31-fa-2c-a1
+access-list 701 deny any-source-mac
+!
+Interface Ethernet1/1
+ name To_ZH2-01-4152AE-01
+ switchport mode trunk
+ switchport trunk allowed vlan 2;10-14;17;19-26;28-36;41-42;53-54;61-62;71;103
+ arp-guard ip 10.189.52.190
+ arp-guard ip 10.189.52.189
+ arp-guard ip 10.189.52.188
+ arp-guard ip 10.189.72.195
+ arp-guard ip 10.189.72.194
+ arp-guard ip 10.189.72.193
+ arp-guard ip 10.189.17.62
+ arp-guard ip 10.189.17.61
+ arp-guard ip 10.189.17.60
+ arp-guard ip 10.189.75.126
+ arp-guard ip 10.189.75.124
+ arp-guard ip 10.189.75.125
+ arp-guard ip 10.189.17.129
+ arp-guard ip 10.189.17.130
+ arp-guard ip 10.189.17.131
+!
+Interface Ethernet1/2
+ name DuanKouSunHuai
+!
+Interface Ethernet1/3
+ name DuanKouSunHuai
+!
+Interface Ethernet1/4
+ switchport mode trunk
+ arp-guard ip 10.189.54.60
+ arp-guard ip 10.189.54.61
+ arp-guard ip 10.189.54.62
+!
+Interface Ethernet1/5
+ switchport mode trunk
+ arp-guard ip 10.189.54.60
+ arp-guard ip 10.189.54.61
+ arp-guard ip 10.189.54.62
+!
+Interface Ethernet1/6
+ switchport mode trunk
+ arp-guard ip 10.189.54.60
+ arp-guard ip 10.189.54.61
+ arp-guard ip 10.189.54.62
+!
+Interface Ethernet1/7
+ switchport mode trunk
+ arp-guard ip 10.189.54.61
+ arp-guard ip 10.189.54.60
+ arp-guard ip 10.189.54.62
+!
+Interface Ethernet1/8
+ name DownTo_JBZL_Wlan_SW_2826A_Port24
+ mac access-group 701 in
+ switchport mode trunk
+ arp-guard ip 10.189.76.252
+ arp-guard ip 10.189.76.253
+ arp-guard ip 10.189.76.254
+!
+Interface Ethernet1/9
+ name UP_To_JB_WLB_CMNET_MDU
+ switchport access vlan 1000
+!
+Interface Ethernet1/10
+ switchport mode trunk
+ arp-guard ip 10.189.54.62
+ arp-guard ip 10.189.54.61
+ arp-guard ip 10.189.54.60
+!
+Interface Ethernet1/11
+ name UP_To_JB_WLB_CMNET_MDU_BaoLeiJi
+ switchport access vlan 1001
+!
+Interface Ethernet1/12
+ name UP_To_JB_WLB_CMNET_MDU_JB_PON_WG
+ switchport access vlan 1002
+!
+Interface Ethernet1/13
+ name DownTo_ZH2-02-4152AE-01_JBZL_SW1
+ switchport mode trunk
+ arp-guard ip 10.189.53.30
+ arp-guard ip 10.189.8.1
+ arp-guard ip 10.189.201.252
+ arp-guard ip 10.189.201.253
+ arp-guard ip 10.189.201.254
+ arp-guard ip 10.189.56.124
+ arp-guard ip 10.189.56.125
+ arp-guard ip 10.189.56.126
+!
+Interface Ethernet1/14
+ name DownTo_ZH2-02-4152AE-02_JBZL_SW2
+ switchport mode trunk
+ arp-guard ip 10.189.8.1
+ arp-guard ip 10.189.201.252
+ arp-guard ip 10.189.201.253
+ arp-guard ip 10.189.201.254
+ arp-guard ip 10.189.56.124
+ arp-guard ip 10.189.56.125
+ arp-guard ip 10.189.56.126
+!
+Interface Ethernet1/15
+ name To_ZH2-01-4152AE-01
+ switchport mode trunk
+ switchport trunk allowed vlan 2;10-14;17;19-26;28-36;41-42;53-54;61-62;71;103
+ arp-guard ip 10.189.17.131
+ arp-guard ip 10.189.17.130
+ arp-guard ip 10.189.17.129
+ arp-guard ip 10.189.75.125
+ arp-guard ip 10.189.75.124
+ arp-guard ip 10.189.75.126
+ arp-guard ip 10.189.17.60
+ arp-guard ip 10.189.17.61
+ arp-guard ip 10.189.17.62
+ arp-guard ip 10.189.72.193
+ arp-guard ip 10.189.72.194
+ arp-guard ip 10.189.72.195
+ arp-guard ip 10.189.52.188
+ arp-guard ip 10.189.52.189
+ arp-guard ip 10.189.52.190
+!
+Interface Ethernet1/16
+ switchport mode trunk
+ arp-guard ip 10.189.54.62
+ arp-guard ip 10.189.54.61
+ arp-guard ip 10.189.54.60
+!
+Interface Ethernet1/17
+!
+Interface Ethernet1/18
+!
+Interface Ethernet1/19
+!
+Interface Ethernet1/20
+ switchport access vlan 11
+!
+Interface Ethernet1/21
+!
+Interface Ethernet1/22
+!
+Interface Ethernet1/23
+!
+Interface Ethernet1/24
+ switchport access vlan 19
+!
+Interface Ethernet1/25
+!
+Interface Ethernet1/26
+!
+Interface Ethernet1/27
+!
+Interface Ethernet1/28
+!
+Interface Ethernet1/29
+!
+Interface Ethernet1/30
+!
+Interface Ethernet1/31
+!
+Interface Ethernet1/32
+!
+Interface Ethernet1/33
+!
+Interface Ethernet1/34
+!
+Interface Ethernet1/35
+!
+Interface Ethernet1/36
+!
+Interface Ethernet1/37
+!
+Interface Ethernet1/38
+!
+Interface Ethernet1/39
+!
+Interface Ethernet1/40
+!
+Interface Ethernet1/41
+!
+Interface Ethernet1/42
+!
+Interface Ethernet1/43
+!
+Interface Ethernet1/44
+!
+Interface Ethernet1/45
+!
+Interface Ethernet1/46
+ name UP_To_C2_CMNET_Switch_Port25
+ switchport mode trunk
+ switchport trunk allowed vlan 25;800
+!
+Interface Ethernet1/47
+ name UP_To_1L_8500
+ switchport mode trunk
+ switchport trunk allowed vlan 2;10-14;17;19-26;28-36;41-42;53-54;61-62;71;103
+!
+Interface Ethernet1/48
+ name UP_To_1L_8500
+ switchport mode trunk
+ switchport trunk allowed vlan 2;10-14;17;19-26;28-36;41-42;53-54;61-62;71;103
+!
+Interface Ethernet1/49
+!
+Interface Ethernet1/50
+!
+Interface Ethernet1/51
+!
+Interface Ethernet1/52
+!
+interface Vlan2
+ ip address 10.189.72.101 255.255.255.192
+!
+ip route 0.0.0.0/0 10.189.72.100
+!
+no login
+!
+end
+

@@ -1,0 +1,327 @@
+dis curr
+#
+ sysname CQYD-DCN-9F-S2403H-EI-1
+#
+ super password level 3 cipher $<^;D^CFXR'Q=^Q`MAF4<1!!
+#
+ local-server nas-ip 127.0.0.1 key huawei
+#
+ loopback-detection enable
+#
+ dot1x
+ dot1x authentication-method eap
+#
+ MAC-authentication
+#
+ queue-scheduler wrr 1 2 4 8
+#
+ mirroring-group 1 local
+#
+radius scheme system
+radius scheme numen
+ server-type standard
+ primary authentication 10.189.33.202
+ secondary authentication 10.189.33.203
+ accounting optional
+ user-name-format without-domain
+#
+domain icu
+domain numen
+ scheme radius-scheme numen
+domain system
+ scheme radius-scheme system
+#
+local-user cqyddcn
+ password cipher $<^;D^CFXR'Q=^Q`MAF4<1!!
+ service-type telnet
+ level 1
+local-user huawei
+ password simple huawei
+ service-type telnet
+ level 3
+#
+acl number 3001
+#
+acl number 4001
+#
+vlan 1
+#
+vlan 9 to 10
+#
+vlan 11
+ description XinXiBu
+#
+vlan 20
+#
+vlan 29
+ description 8F-wangguan-lajiduanxin
+#
+vlan 33
+#
+vlan 4092
+#
+vlan 4093
+ description management vlan
+#
+interface Vlan-interface4093
+ ip address 10.189.46.35 255.255.255.192
+#
+interface Aux1/0/0
+#
+interface Ethernet1/0/1
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 10 to 11 29 33 4093
+#
+interface Ethernet1/0/2
+ mac-address max-mac-count 0
+ port access vlan 11
+ loopback-detection enable
+ mac-address static 0000-85d3-1de4 vlan 11
+ mac-address static 001c-234f-1774 vlan 11
+ mac-address static 0022-15fc-c50a vlan 11
+ mac-address static f0de-f1c1-63f6 vlan 11
+ description xxxtb\liusen\09D01
+ line-rate outbound 5120
+#
+interface Ethernet1/0/3
+ duplex full
+ speed 100
+ mac-address max-mac-count 100
+ port access vlan 11
+ loopback-detection enable
+ mac-address static 001d-7280-3f5f vlan 11
+ mac-address static 001b-24d6-1e84 vlan 11
+ mac-address static 00e0-4c98-79aa vlan 11
+ mac-address static 0016-d435-68bd vlan 11
+ mac-address static 901b-0e34-7b53 vlan 11
+ mac-address static 0022-19f9-835f vlan 11
+ mac-address static f8a9-633f-d7bf vlan 11
+ mac-address static 0023-551b-09ca vlan 11
+ mac-address static b888-e3f9-cc89 vlan 11
+ mac-address static 3c97-0e4a-bd97 vlan 11
+ mac-address static 0023-541b-09ca vlan 11
+ description 09D02
+ line-rate outbound 5120
+#
+interface Ethernet1/0/4
+ mac-address max-mac-count 0
+ port access vlan 11
+ loopback-detection enable
+ mac-address static 00e0-4cc4-23f1 vlan 11
+ description xxxtb\jiangshuanglu\09D03
+ line-rate outbound 5120
+#
+interface Ethernet1/0/5
+ mac-address max-mac-count 0
+ port access vlan 11
+ loopback-detection enable
+ mac-address static ecf4-bb7c-47bc vlan 11
+ mac-address static 901b-0e1b-90fe vlan 11
+ mac-address static 00e0-4c98-4352 vlan 11
+ mac-address static 00e0-4c78-3b1d vlan 11
+ mac-address static 0019-99bb-5823 vlan 11
+ mac-address static b888-e3df-2c85 vlan 11
+ mac-address static c80a-a994-540c vlan 11
+ description xxxtb\zhouzhengfei\09D04
+ line-rate outbound 5120
+#
+interface Ethernet1/0/6
+ mac-address max-mac-count 0
+ port access vlan 11
+ loopback-detection enable
+ mac-address static 00e0-4c68-03ad vlan 11
+ description changsong
+ line-rate outbound 5120
+#
+interface Ethernet1/0/7
+ mac-address max-mac-count 0
+ port access vlan 11
+ loopback-detection enable
+ line-rate outbound 5120
+#
+interface Ethernet1/0/8
+ port access vlan 29
+ description 09D08
+ line-rate outbound 5120
+#
+interface Ethernet1/0/9
+ mac-address max-mac-count 1
+ port access vlan 29
+ mac-address static 24be-050f-6996 vlan 29
+ description 09D08
+ line-rate outbound 5120
+#
+interface Ethernet1/0/10
+ mac-address max-mac-count 0
+ port access vlan 29
+ loopback-detection enable
+ mac-address static 6431-5038-6a8f vlan 29
+ description 09D09
+ line-rate outbound 5120
+#
+interface Ethernet1/0/11
+ mac-address max-mac-count 1
+ port access vlan 11
+ loopback-detection enable
+ mac-address static 3c97-0e4d-7a94 vlan 11
+ mac-address static eca8-6b89-0cf2 vlan 11
+ description to8F-D10
+ line-rate outbound 5120
+#
+interface Ethernet1/0/12
+ mac-address max-mac-count 0
+ port access vlan 11
+ loopback-detection enable
+ mac-address static eca8-6b89-6b58 vlan 11
+ line-rate outbound 5120
+#
+interface Ethernet1/0/13
+ mac-address max-mac-count 1
+ port access vlan 11
+ loopback-detection enable
+ mac-address static 00e0-4c98-43d4 vlan 11
+ mac-address static 5c26-0a5f-baab vlan 11
+ line-rate outbound 5120
+#
+interface Ethernet1/0/14
+ mac-address max-mac-count 0
+ port access vlan 11
+ loopback-detection enable
+ mac-address static 00e0-4c78-3aeb vlan 11
+ mac-address static 3c97-0e4d-781a vlan 11
+ mac-address static 901b-0e34-7b63 vlan 11
+ mac-address static 00e0-4c27-3fb5 vlan 11
+ mac-address static 0021-70db-155d vlan 11
+ mac-address static 984b-e191-4aac vlan 11
+ mac-address static 60eb-698c-b3bf vlan 11
+ line-rate inbound 5120
+ line-rate outbound 5120
+#
+interface Ethernet1/0/15
+ mac-address max-mac-count 1
+ port access vlan 11
+ loopback-detection enable
+ mac-address static f076-1c23-f884 vlan 11
+ mac-address static 901b-0e34-7b04 vlan 11
+ mac-address static f076-1c23-f95b vlan 11
+ mac-address static 001f-42c1-8d2d vlan 11
+ mac-address static 901b-0e34-7b80 vlan 11
+ mac-address static f0de-f1b9-894c vlan 11
+ mac-address static 00e0-4ce0-25cf vlan 11
+ line-rate outbound 5120
+#
+interface Ethernet1/0/16
+ mac-address max-mac-count 0
+ port access vlan 11
+ loopback-detection enable
+ mac-address static 54ee-757b-5604 vlan 11
+ mac-address static 0016-d3ba-fa54 vlan 11
+ mac-address static 3c97-0e4d-6f8e vlan 11
+ mac-address static 00e0-4cae-28a0 vlan 11
+ line-rate outbound 5120
+#
+interface Ethernet1/0/17
+ port access vlan 11
+ loopback-detection enable
+ mac-address static 3c97-0e4d-7861 vlan 11
+ description to8f-D16
+ line-rate inbound 5120
+ line-rate outbound 5120
+#
+interface Ethernet1/0/18
+ mac-address max-mac-count 1
+ port access vlan 11
+ loopback-detection enable
+ description to8f-D17
+ line-rate outbound 5120
+#
+interface Ethernet1/0/19
+ mac-address max-mac-count 1
+ port access vlan 29
+ loopback-detection enable
+ mac-address static 00e0-4ce0-2647 vlan 29
+ description to8f-D18
+ line-rate outbound 5120
+#
+interface Ethernet1/0/20
+ port access vlan 11
+ loopback-detection enable
+ mac-address static 001b-2456-4627 vlan 11
+ description to8f-D19
+ line-rate outbound 5120
+#
+interface Ethernet1/0/21
+ mac-address max-mac-count 1
+ port access vlan 11
+ loopback-detection enable
+ description xxxtb\09d21\chenmingyou
+ line-rate outbound 5120
+#
+interface Ethernet1/0/22
+ mac-address max-mac-count 0
+ port access vlan 11
+ loopback-detection enable
+ mac-address static f8a9-644e-1d75 vlan 11
+ mac-address static f8a9-633e-1d75 vlan 11
+ mac-address static f8a9-633e-0d75 vlan 11
+ description xxxtb\09d21\chenmingyou
+ line-rate outbound 5120
+#
+interface Ethernet1/0/23
+ mac-address max-mac-count 0
+ port access vlan 11
+ loopback-detection enable
+ mac-address static 6c0b-8408-c9a0 vlan 11
+ mac-address static 3c97-0e4d-747d vlan 11
+ mac-address static 00e0-4c98-442a vlan 11
+ description xxxtb\09D22\xianpeng
+ line-rate outbound 5120
+#
+interface Ethernet1/0/24
+ mac-address max-mac-count 0
+ port access vlan 11
+ loopback-detection enable
+ mac-address static 6c0b-8408-ccbd vlan 11
+ mac-address static 3c97-0e4d-7070 vlan 11
+ mac-address static 00e0-4c27-4091 vlan 11
+#
+interface GigabitEthernet1/1/1
+#
+interface GigabitEthernet1/1/2
+ shutdown
+#
+interface GigabitEthernet1/2/1
+#
+interface GigabitEthernet1/2/2
+ shutdown
+#
+interface NULL0
+ description xxxtb\09d21\chenmingyou
+#
+ management-vlan 4093
+#
+ undo info-center enable
+#
+ mac-address timer aging 100
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.189.46.1 preference 100
+#
+ snmp-agent
+ snmp-agent local-engineid 800007DB000FE22AC8EA6877
+ snmp-agent community read MSRM
+ snmp-agent community read cqmcnm
+ snmp-agent community read public
+ snmp-agent community read Oavpn@123
+ snmp-agent sys-info contact Huawei 02363632386
+ snmp-agent sys-info location CQYDDCN
+ snmp-agent sys-info version all
+ snmp-agent group v1 cqmcnm
+ snmp-agent group v3 cqmcnm
+#
+user-interface aux 0
+user-interface vty 0 4
+ user privilege level 3
+ set authentication password simple q#FD45dV
+#
+return

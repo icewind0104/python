@@ -1,0 +1,263 @@
+dis curr
+#
+ sysname CQYD-DCN-12F-S2403H-EI-3
+#
+ super password level 3 cipher $<^;D^CFXR(8KB4G4!%(,A!!
+#
+radius scheme system
+ server-type huawei
+ primary authentication 127.0.0.1 1645
+ primary accounting 127.0.0.1 1646
+ user-name-format without-domain
+
+domain system
+ radius-scheme system
+ access-limit disable
+ state active
+ vlan-assignment-mode integer
+ idle-cut disable
+ self-service-url disable
+ messenger time disable
+
+ domain default enable system
+#
+ local-server nas-ip 127.0.0.1 key huawei
+
+local-user cqyddcn
+ password cipher $<^;D^CFXR'Q=^Q`MAF4<1!!
+ service-type telnet level 1
+#
+ queue-scheduler wrr 1 2 4 8
+#
+vlan 1
+#
+vlan 15
+#
+vlan 16
+#
+vlan 4093
+#
+interface Vlan-interface4093
+ ip address 10.189.46.46 255.255.255.192
+#
+interface Aux0/0
+#
+interface Ethernet0/1
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 15 to 16 4093
+#
+interface Ethernet0/2
+ description rlzyb\12D47\liangshuai
+ mac-address max-mac-count 0
+ port access vlan 15
+ line-rate outbound 32
+#
+interface Ethernet0/3
+ description rlzyb\12D48\tianyu
+ mac-address max-mac-count 0
+ port access vlan 15
+ line-rate outbound 32
+#
+interface Ethernet0/4
+ mac-address max-mac-count 0
+ port access vlan 15
+ line-rate outbound 32
+#
+interface Ethernet0/5
+ mac-address max-mac-count 0
+ port access vlan 15
+ line-rate outbound 32
+#
+interface Ethernet0/6
+ description rlzyb\12D51\yezhechuan
+ mac-address max-mac-count 0
+ port access vlan 15
+ line-rate outbound 32
+#
+interface Ethernet0/7
+ description rlzyb\12D52\wangke
+ mac-address max-mac-count 0
+ port access vlan 16
+ line-rate outbound 32
+#
+interface Ethernet0/8
+ description rlzyb\12D53\lengjin
+ mac-address max-mac-count 0
+ port access vlan 16
+ line-rate outbound 32
+#
+interface Ethernet0/9
+ mac-address max-mac-count 0
+ port access vlan 15
+ line-rate outbound 32
+#
+interface Ethernet0/10
+ description rlzyb\12D55\wuxueyan
+ mac-address max-mac-count 0
+ port access vlan 15
+ line-rate outbound 32
+#
+interface Ethernet0/11
+ description rlzyb\12D56\weihua
+ mac-address max-mac-count 0
+ port access vlan 15
+ line-rate outbound 32
+#
+interface Ethernet0/12
+ description rlzyb\12d57\guwen
+ mac-address max-mac-count 0
+ port access vlan 16
+ line-rate outbound 32
+#
+interface Ethernet0/13
+ description rlzyb\12D58\wuxueyan
+ mac-address max-mac-count 0
+ port access vlan 16
+ line-rate outbound 32
+#
+interface Ethernet0/14
+ description 0
+ mac-address max-mac-count 0
+ port access vlan 15
+ line-rate outbound 32
+#
+interface Ethernet0/15
+ description rlzyb\12D60\wanghuiming
+ mac-address max-mac-count 0
+ port access vlan 15
+ line-rate outbound 32
+#
+interface Ethernet0/16
+ mac-address max-mac-count 0
+ port access vlan 15
+ line-rate outbound 32
+#
+interface Ethernet0/17
+ port access vlan 15
+#
+interface Ethernet0/18
+ description fzzyb\12D63\shaojigang
+ port access vlan 15
+#
+interface Ethernet0/19
+ description rlzyb\12D64\wangyong
+ mac-address max-mac-count 5
+ port access vlan 15
+#
+interface Ethernet0/20
+ description 12D65
+ port access vlan 15
+#
+interface Ethernet0/21
+ port access vlan 15
+ line-rate outbound 32
+#
+interface Ethernet0/22
+ mac-address max-mac-count 0
+ port access vlan 15
+ line-rate outbound 32
+#
+interface Ethernet0/23
+ mac-address max-mac-count 0
+ port access vlan 15
+ line-rate outbound 32
+#
+interface Ethernet0/24
+ mac-address max-mac-count 0
+ port access vlan 15
+ line-rate outbound 32
+#
+interface Ethernet0/25
+#
+interface NULL0
+#
+ mac-address static 54ee-757d-21d2 interface Ethernet0/2 vlan 15
+ mac-address static f8a9-633f-d7bf interface Ethernet0/2 vlan 15
+ mac-address static ecf4-bb4a-ce14 interface Ethernet0/4 vlan 15
+ mac-address static 3c97-0e4d-7176 interface Ethernet0/4 vlan 15
+ mac-address static 3c97-0e4d-7376 interface Ethernet0/5 vlan 15
+ mac-address static 0026-181c-e807 interface Ethernet0/5 vlan 15
+ mac-address static 0000-85d3-1b9e interface Ethernet0/5 vlan 15
+ mac-address static 54ee-757d-1daf interface Ethernet0/6 vlan 15
+ mac-address static 3c97-0e4d-7733 interface Ethernet0/6 vlan 15
+ mac-address static 001b-2456-462f interface Ethernet0/6 vlan 15
+ mac-address static 001f-1609-5823 interface Ethernet0/6 vlan 15
+ mac-address static 3c97-0e89-79ad interface Ethernet0/9 vlan 15
+ mac-address static 3c97-0e12-e5ab interface Ethernet0/9 vlan 15
+ mac-address static 3c97-0e4d-7b2e interface Ethernet0/11 vlan 15
+ mac-address static 001f-1627-4b11 interface Ethernet0/11 vlan 15
+ mac-address static 507b-9d61-dcd3 interface Ethernet0/14 vlan 15
+ mac-address static 3c97-0e4c-8f13 interface Ethernet0/14 vlan 15
+ mac-address static 54ee-757d-1ae4 interface Ethernet0/15 vlan 15
+ mac-address static 901b-0e35-f541 interface Ethernet0/17 vlan 15
+ mac-address static 901b-0e34-7b6a interface Ethernet0/19 vlan 15
+ mac-address static 901b-0e35-f533 interface Ethernet0/20 vlan 15
+ mac-address static 3c97-0e55-aeb5 interface Ethernet0/20 vlan 15
+ mac-address static 90b1-1c11-1b5d interface Ethernet0/21 vlan 15
+ mac-address static 90b1-1c11-1b5c interface Ethernet0/21 vlan 15
+ mac-address static 3c97-0e4d-77a6 interface Ethernet0/2 vlan 15
+ mac-address static 00e0-4ce0-2619 interface Ethernet0/2 vlan 15
+ mac-address static 0002-3f1a-f680 interface Ethernet0/2 vlan 15
+ mac-address static 0016-d3ba-f997 interface Ethernet0/2 vlan 15
+ mac-address static 3c97-0e55-aeb4 interface Ethernet0/3 vlan 15
+ mac-address static 00e0-4c46-8707 interface Ethernet0/3 vlan 15
+ mac-address static 0016-d3ba-f6eb interface Ethernet0/3 vlan 15
+ mac-address static 001e-ecaf-ea66 interface Ethernet0/4 vlan 15
+ mac-address static 3c97-0e4d-6f37 interface Ethernet0/6 vlan 15
+ mac-address static 00e0-4c46-8666 interface Ethernet0/6 vlan 15
+ mac-address static 0016-41aa-3863 interface Ethernet0/6 vlan 15
+ mac-address static 0025-b35a-787b interface Ethernet0/9 vlan 15
+ mac-address static 0010-dccd-b93b interface Ethernet0/9 vlan 15
+ mac-address static 3c97-0e4d-7403 interface Ethernet0/10 vlan 15
+ mac-address static 00e0-4c2c-4685 interface Ethernet0/10 vlan 15
+ mac-address static 3c97-0e4d-73fc interface Ethernet0/11 vlan 15
+ mac-address static 00e0-4c78-3a15 interface Ethernet0/14 vlan 15
+ mac-address static 001b-2417-d075 interface Ethernet0/14 vlan 15
+ mac-address static 00e0-4c46-8759 interface Ethernet0/15 vlan 15
+ mac-address static 0016-d3ba-f4d0 interface Ethernet0/15 vlan 15
+ mac-address static 3c07-5465-2d5f interface Ethernet0/15 vlan 15
+ mac-address static 001b-2456-455f interface Ethernet0/15 vlan 15
+ mac-address static 00e0-4c46-86bc interface Ethernet0/16 vlan 15
+ mac-address static 0016-d3ba-f4b4 interface Ethernet0/17 vlan 15
+ mac-address static 001d-60b3-7aa2 interface Ethernet0/18 vlan 15
+ mac-address static 000a-e4cc-6b9f interface Ethernet0/19 vlan 15
+ mac-address static 0016-d3ba-f5f2 interface Ethernet0/19 vlan 15
+ mac-address static 0021-70a4-bf05 interface Ethernet0/7 vlan 16
+ mac-address static 3c97-0e52-205d interface Ethernet0/7 vlan 16
+ mac-address static 0021-9bf7-7a17 interface Ethernet0/8 vlan 16
+ mac-address static f0de-f11f-33fc interface Ethernet0/8 vlan 16
+ mac-address static 60eb-6925-a8c3 interface Ethernet0/8 vlan 16
+ mac-address static 5cac-4ca5-a6be interface Ethernet0/8 vlan 16
+ mac-address static 60eb-695e-2735 interface Ethernet0/8 vlan 16
+ mac-address static 001d-7288-d54d interface Ethernet0/8 vlan 16
+ mac-address static 001c-230f-2549 interface Ethernet0/8 vlan 16
+ mac-address static 001b-2456-4560 interface Ethernet0/8 vlan 16
+ mac-address static 00e0-4c00-010a interface Ethernet0/8 vlan 16
+ mac-address static 3c97-0e4d-78c8 interface Ethernet0/12 vlan 16
+ mac-address static 00e0-4ce0-263d interface Ethernet0/12 vlan 16
+ mac-address static 984b-e191-4671 interface Ethernet0/12 vlan 16
+ mac-address static 0006-1bc0-425f interface Ethernet0/12 vlan 16
+ mac-address static 001c-230f-18ae interface Ethernet0/12 vlan 16
+ mac-address static 18a9-05e5-0177 interface Ethernet0/13 vlan 16
+ mac-address static 3c97-0e4d-790f interface Ethernet0/13 vlan 16
+ mac-address static 00e0-4c27-3811 interface Ethernet0/13 vlan 16
+ mac-address static 0025-b35a-787b interface Ethernet0/13 vlan 16
+ mac-address static 001b-2456-42b9 interface Ethernet0/13 vlan 16
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.189.46.1 preference 100
+#
+ snmp-agent
+ snmp-agent local-engineid 800007DB000FE22AC9756877
+ snmp-agent community read  MSRM
+ snmp-agent community read  Oavpn@123
+ snmp-agent sys-info contact Huawei 02363632386
+ snmp-agent sys-info location CQYDDCN
+ snmp-agent sys-info version v2c v3
+#
+user-interface aux 0
+user-interface vty 0 4
+ user privilege level 3
+ set authentication password simple q#FD45dV
+#
+return

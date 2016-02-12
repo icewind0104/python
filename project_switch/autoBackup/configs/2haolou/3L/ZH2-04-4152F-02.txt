@@ -1,0 +1,317 @@
+sh run
+!
+no service password-encryption
+!
+hostname ZH2-04-4152F-02
+vendorlocation chengdu,sichuan province China
+vendorContact 800-886-8668
+!
+enable password 8 1279049ebb2f858567b525b518a4c904
+log trap informational
+!
+!
+!
+telnet-user qware password 7 da3bf908c5f467f75fc31c14d78b2581
+telnet-user jswyyd password 7 da3bf908c5f467f75fc31c14d78b2581
+!
+snmp-server enable
+snmp-server securityip 10.189.74.148
+snmp-server securityip 10.189.20.170
+snmp-server securityip 10.189.68.29
+snmp-server securityip 10.189.20.136
+snmp-server securityip 10.189.68.10
+snmp-server securityip disable
+snmp-server community ro Oavpn@123
+snmp-server community ro MSRM
+snmp-server community ro public
+rmon enable
+!
+spanning-tree
+!
+!
+vlan 1
+!
+vlan 2
+!
+vlan 10
+!
+vlan 11
+!
+vlan 12
+!
+vlan 13
+!
+vlan 14
+!
+vlan 15
+!
+vlan 17
+!
+vlan 20
+ name gongjian
+!
+vlan 21
+!
+vlan 22
+!
+vlan 23
+!
+vlan 24
+!
+vlan 25
+!
+vlan 26
+!
+vlan 27
+ name C4-BOSSVPN
+!
+vlan 28
+!
+vlan 29
+ name 5F-505
+!
+vlan 30
+ name caigou
+!
+vlan 31
+!
+vlan 34
+!
+vlan 35
+!
+vlan 41
+!
+vlan 42
+!
+vlan 53
+ name LGgongjian
+!
+vlan 61
+ name JTKH_BOSS
+!
+vlan 62
+ name JTXY_BOSS
+!
+vlan 71
+ name wangguan
+!
+vlan 80
+ name WLWZX-OA
+!
+vlan 101
+ name C4-OAVPN
+!
+vlan 103
+ name chen-2-temp
+!
+vlan 111
+ name 505
+!
+vlan 112
+ name 3Fxin
+!
+vlan 113
+ name 5F504
+!
+vlan 115
+ name 5F505
+!
+firewall enable
+!
+access-list 701 deny host-source-mac 40-16-9f-db-8a-c7
+access-list 701 deny host-source-mac c8-3a-35-0a-72-f8
+access-list 701 deny host-source-mac 00-16-d3-ba-fa-77
+!
+Interface Ethernet1/1
+ switchport mode trunk
+ arp-guard ip 10.189.223.83
+ arp-guard ip 10.189.223.82
+ arp-guard ip 10.189.223.81
+ arp-guard ip 10.190.150.210
+ arp-guard ip 10.190.150.209
+ arp-guard ip 10.190.150.211
+ arp-guard ip 10.189.94.254
+ arp-guard ip 10.189.94.253
+ arp-guard ip 10.189.94.252
+ arp-guard ip 10.189.83.129
+ arp-guard ip 10.189.83.130
+ arp-guard ip 10.189.83.131
+!
+Interface Ethernet1/2
+ mac access-group 701 in
+ switchport mode trunk
+ arp-guard ip 10.189.94.252
+ arp-guard ip 10.189.94.253
+ arp-guard ip 10.189.94.254
+ arp-guard ip 10.189.83.129
+ arp-guard ip 10.189.83.130
+ arp-guard ip 10.189.83.131
+ arp-guard ip 10.189.83.193
+ arp-guard ip 10.189.83.194
+ arp-guard ip 10.189.83.195
+!
+Interface Ethernet1/3
+ switchport mode trunk
+!
+Interface Ethernet1/4
+ switchport mode trunk
+ arp-guard ip 10.189.82.62
+ arp-guard ip 10.189.82.61
+ arp-guard ip 10.189.82.60
+ arp-guard ip 10.189.220.254
+ arp-guard ip 10.189.220.253
+ arp-guard ip 10.189.220.252
+ arp-guard ip 10.189.75.126
+ arp-guard ip 10.189.75.125
+ arp-guard ip 10.189.75.124
+!
+Interface Ethernet1/5
+ switchport mode trunk
+ arp-guard ip 10.189.94.254
+ arp-guard ip 10.189.94.253
+ arp-guard ip 10.189.94.252
+!
+Interface Ethernet1/6
+ switchport mode trunk
+!
+Interface Ethernet1/7
+ switchport access vlan 20
+!
+Interface Ethernet1/8
+ switchport access vlan 20
+!
+Interface Ethernet1/9
+ switchport access vlan 20
+!
+Interface Ethernet1/10
+ switchport access vlan 20
+!
+Interface Ethernet1/11
+ switchport access vlan 20
+!
+Interface Ethernet1/12
+ switchport access vlan 20
+!
+Interface Ethernet1/13
+ switchport access vlan 20
+!
+Interface Ethernet1/14
+ switchport access vlan 20
+!
+Interface Ethernet1/15
+ switchport access vlan 20
+!
+Interface Ethernet1/16
+ switchport access vlan 20
+!
+Interface Ethernet1/17
+ switchport access vlan 20
+!
+Interface Ethernet1/18
+ switchport access vlan 20
+!
+Interface Ethernet1/19
+ switchport access vlan 20
+!
+Interface Ethernet1/20
+ switchport access vlan 20
+!
+Interface Ethernet1/21
+ switchport access vlan 20
+!
+Interface Ethernet1/22
+ switchport access vlan 20
+!
+Interface Ethernet1/23
+ switchport access vlan 20
+!
+Interface Ethernet1/24
+ switchport access vlan 20
+!
+Interface Ethernet1/25
+ switchport access vlan 20
+!
+Interface Ethernet1/26
+ switchport access vlan 20
+!
+Interface Ethernet1/27
+ switchport access vlan 20
+!
+Interface Ethernet1/28
+ switchport access vlan 20
+!
+Interface Ethernet1/29
+ switchport access vlan 20
+!
+Interface Ethernet1/30
+ switchport access vlan 20
+!
+Interface Ethernet1/31
+ switchport access vlan 20
+!
+Interface Ethernet1/32
+ switchport access vlan 20
+!
+Interface Ethernet1/33
+ switchport access vlan 20
+!
+Interface Ethernet1/34
+ switchport access vlan 20
+!
+Interface Ethernet1/35
+ switchport access vlan 20
+!
+Interface Ethernet1/36
+ switchport access vlan 20
+!
+Interface Ethernet1/37
+ switchport access vlan 20
+!
+Interface Ethernet1/38
+ switchport access vlan 20
+!
+Interface Ethernet1/39
+ switchport access vlan 20
+!
+Interface Ethernet1/40
+ switchport access vlan 20
+!
+Interface Ethernet1/41
+ switchport access vlan 20
+!
+Interface Ethernet1/42
+ switchport access vlan 20
+!
+Interface Ethernet1/43
+ switchport access vlan 20
+!
+Interface Ethernet1/44
+ switchport access vlan 20
+!
+Interface Ethernet1/45
+!
+Interface Ethernet1/46
+!
+Interface Ethernet1/47
+ switchport mode trunk
+!
+Interface Ethernet1/48
+ switchport mode trunk
+!
+Interface Ethernet1/49
+!
+Interface Ethernet1/50
+!
+Interface Ethernet1/51
+!
+Interface Ethernet1/52
+!
+interface Vlan2
+ ip address 10.189.72.102 255.255.255.192
+!
+ip route 0.0.0.0/0 10.189.72.100
+!
+no login
+!
+end
+

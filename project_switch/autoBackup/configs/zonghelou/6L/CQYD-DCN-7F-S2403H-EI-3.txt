@@ -1,0 +1,218 @@
+dis curr
+#
+ sysname CQYD-DCN-7F-S2403H-EI-3
+#
+ super password level 3 cipher $<^;D^CFXR(8KB4G4!%(,A!!
+#
+radius scheme system
+ server-type huawei
+ primary authentication 127.0.0.1 1645
+ primary accounting 127.0.0.1 1646
+ user-name-format without-domain
+
+domain icu
+ radius-scheme system
+ access-limit disable
+ state active
+ vlan-assignment-mode integer
+ idle-cut disable
+ self-service-url disable
+ messenger time disable
+
+domain system
+ radius-scheme system
+ access-limit disable
+ state active
+ vlan-assignment-mode integer
+ idle-cut disable
+ self-service-url disable
+ messenger time disable
+
+ domain default enable system
+#
+ local-server nas-ip 127.0.0.1 key huawei
+
+local-user cqyddcn
+ password cipher $<^;D^CFXR'Q=^Q`MAF4<1!!
+ service-type telnet level 1
+#
+ queue-scheduler wrr 1 2 4 8
+#
+vlan 1
+#
+vlan 7
+#
+vlan 4093
+#
+interface Vlan-interface4093
+ ip address 10.189.46.26 255.255.255.192
+#
+interface Aux0/0
+#
+interface Ethernet0/1
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 7 4093
+ line-rate outbound 32
+#
+interface Ethernet0/2
+ description gcjsb\07D47\wangyiyu
+ mac-address max-mac-count 0
+ port access vlan 7
+ line-rate outbound 32
+#
+interface Ethernet0/3
+ description gcjsb\0748\zhangchangdong
+ mac-address max-mac-count 0
+ port access vlan 7
+ line-rate outbound 32
+#
+interface Ethernet0/4
+ description 07D49\JTKHB_dayinji
+ mac-address max-mac-count 0
+ port access vlan 7
+ line-rate outbound 32
+#
+interface Ethernet0/5
+ description gcjsb\07D50\fupeijun
+ mac-address max-mac-count 0
+ port access vlan 7
+ line-rate outbound 32
+#
+interface Ethernet0/6
+ description gcjsb\07D51\wangyujia
+ mac-address max-mac-count 0
+ port access vlan 7
+ line-rate outbound 32
+#
+interface Ethernet0/7
+ description gcjsb\07D55\zhangjing
+ mac-address max-mac-count 0
+ port access vlan 7
+ line-rate outbound 32
+#
+interface Ethernet0/8
+ description 0
+ mac-address max-mac-count 0
+ port access vlan 7
+ line-rate outbound 32
+#
+interface Ethernet0/9
+ description gcjsb\07D54\yangzhaohui
+ mac-address max-mac-count 0
+ port access vlan 7
+ line-rate outbound 32
+#
+interface Ethernet0/10
+ mac-address max-mac-count 0
+ port access vlan 7
+ line-rate outbound 32
+#
+interface Ethernet0/11
+ description gcjsb\07D56\xulian
+ mac-address max-mac-count 0
+ port access vlan 7
+ line-rate outbound 32
+#
+interface Ethernet0/12
+ description gcjsb\07D57\caizhengyun
+ mac-address max-mac-count 0
+ port access vlan 7
+ line-rate outbound 32
+#
+interface Ethernet0/13
+ description gcjsb\07D58\wangyouyi
+ mac-address max-mac-count 0
+ port access vlan 7
+ line-rate outbound 32
+#
+interface Ethernet0/14
+ description gcjsb\07D59\ganzhipeng
+ mac-address max-mac-count 0
+ port access vlan 7
+ line-rate outbound 32
+#
+interface Ethernet0/15
+ description gcjsb\07D60\yuliang
+ mac-address max-mac-count 0
+ port access vlan 7
+ line-rate outbound 32
+#
+interface Ethernet0/16
+ mac-address max-mac-count 0
+ port access vlan 7
+ line-rate outbound 32
+#
+interface Ethernet0/17
+ shutdown
+ mac-address max-mac-count 0
+ port access vlan 7
+ line-rate outbound 32
+#
+interface Ethernet0/18
+ mac-address max-mac-count 0
+ port access vlan 7
+ line-rate outbound 32
+#
+interface Ethernet0/19
+ mac-address max-mac-count 0
+ port access vlan 7
+ line-rate outbound 32
+#
+interface Ethernet0/20
+ mac-address max-mac-count 0
+ port access vlan 7
+ line-rate outbound 32
+#
+interface Ethernet0/21
+ mac-address max-mac-count 0
+ port access vlan 7
+ line-rate outbound 32
+#
+interface Ethernet0/22
+ description 07D59\JTKHB_dayinji
+ mac-address max-mac-count 0
+ port access vlan 7
+ line-rate outbound 32
+#
+interface Ethernet0/23
+ mac-address max-mac-count 0
+ port access vlan 7
+ line-rate outbound 32
+#
+interface Ethernet0/24
+ mac-address max-mac-count 0
+ port access vlan 7
+ line-rate outbound 32
+#
+interface Ethernet0/25
+ shutdown
+#
+interface NULL0
+#
+interface LoopBack0
+#
+ mac-address static 3c97-0edf-96e0 interface Ethernet0/5 vlan 7
+ mac-address static 00e0-4ce0-1bfc interface Ethernet0/6 vlan 7
+ mac-address static 3c97-0e4d-6fa0 interface Ethernet0/8 vlan 7
+ mac-address static 3c97-0e51-8af8 interface Ethernet0/14 vlan 7
+ mac-address static 00e0-4c46-872b interface Ethernet0/19 vlan 7
+ mac-address static 00e0-4c36-b7e4 interface Ethernet0/20 vlan 7
+ mac-address static 30cd-a75f-1b4c interface Ethernet0/22 vlan 7
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.189.46.1 preference 100
+#
+ snmp-agent
+ snmp-agent local-engineid 800007DB000FE22AC9396877
+ snmp-agent community read  MSRM
+ snmp-agent community read  Oavpn@123
+ snmp-agent sys-info contact Huawei 02363632386
+ snmp-agent sys-info location CQYDDCN
+ snmp-agent sys-info version v2c v3
+#
+user-interface aux 0
+user-interface vty 0 4
+ user privilege level 3
+ set authentication password simple q#FD45dV
+#
+return

@@ -1,0 +1,198 @@
+dis curr
+#
+ sysname 10F-S2300-01
+#
+ vlan batch 1 to 2 16 18 28 65
+#
+interface Vlanif2
+ ip address 10.189.72.75 255.255.255.192
+#
+interface Ethernet0/0/1
+ port default vlan 18
+#
+interface Ethernet0/0/2
+ port default vlan 18
+#
+interface Ethernet0/0/3
+ port default vlan 18
+#
+interface Ethernet0/0/4
+ port default vlan 18
+#
+interface Ethernet0/0/5
+ port default vlan 18
+#
+interface Ethernet0/0/6
+ port default vlan 18
+#
+interface Ethernet0/0/7
+ port default vlan 18
+#
+interface Ethernet0/0/8
+ port default vlan 18
+#
+interface Ethernet0/0/9
+ port default vlan 18
+#
+interface Ethernet0/0/10
+ port default vlan 18
+#
+interface Ethernet0/0/11
+ port default vlan 16
+#
+interface Ethernet0/0/12
+ port default vlan 18
+#
+interface Ethernet0/0/13
+ port default vlan 18
+#
+interface Ethernet0/0/14
+ description vlan 28
+ port default vlan 28
+#
+interface Ethernet0/0/15
+ port default vlan 18
+#
+interface Ethernet0/0/16
+ port default vlan 18
+#
+interface Ethernet0/0/17
+ port default vlan 18
+#
+interface Ethernet0/0/18
+ port default vlan 18
+#
+interface Ethernet0/0/19
+ port default vlan 18
+#
+interface Ethernet0/0/20
+ port default vlan 18
+#
+interface Ethernet0/0/21
+ port default vlan 18
+#
+interface Ethernet0/0/22
+ port default vlan 18
+#
+interface Ethernet0/0/23
+ port default vlan 18
+#
+interface Ethernet0/0/24
+ port default vlan 18
+#
+interface Ethernet0/0/25
+ port default vlan 28
+#
+interface Ethernet0/0/26
+ port default vlan 18
+#
+interface Ethernet0/0/27
+ port default vlan 28
+#
+interface Ethernet0/0/28
+ port default vlan 18
+#
+interface Ethernet0/0/29
+ port default vlan 18
+#
+interface Ethernet0/0/30
+ port default vlan 18
+#
+interface Ethernet0/0/31
+ port default vlan 18
+#
+interface Ethernet0/0/32
+ port default vlan 28
+#
+interface Ethernet0/0/33
+ port default vlan 18
+#
+interface Ethernet0/0/34
+ port default vlan 18
+#
+interface Ethernet0/0/35
+ port default vlan 28
+#
+interface Ethernet0/0/36
+ port default vlan 18
+#
+interface Ethernet0/0/37
+ port default vlan 18
+#
+interface Ethernet0/0/38
+ port default vlan 18
+#
+interface Ethernet0/0/39
+ port default vlan 18
+#
+interface Ethernet0/0/40
+ port default vlan 18
+#
+interface Ethernet0/0/41
+ port default vlan 18
+#
+interface Ethernet0/0/42
+ port default vlan 18
+#
+interface Ethernet0/0/43
+ port default vlan 28
+#
+interface Ethernet0/0/44
+ port default vlan 28
+#
+interface Ethernet0/0/45
+ port default vlan 18
+#
+interface Ethernet0/0/46
+ port default vlan 18
+#
+interface Ethernet0/0/47
+ port link-type trunk
+ port trunk allow-pass vlan 1 to 4094
+#
+interface Ethernet0/0/48
+ port link-type trunk
+ port trunk allow-pass vlan 1 to 4094
+#
+interface GigabitEthernet0/0/1
+#
+interface GigabitEthernet0/0/2
+#
+interface GigabitEthernet0/0/3
+#
+interface GigabitEthernet0/0/4
+#
+interface NULL0
+#
+aaa
+ local-user qware password simple jswy123
+ local-user qware service-type telnet
+ local-user qware level 3
+ local-user qware ftp-directory flash:
+ authentication-scheme default
+ #
+ authorization-scheme default
+ #
+ accounting-scheme default
+ #
+ domain default
+ #
+#
+qos map-table dscp-dscp
+#
+qos map-table dscp-dot1p
+#
+qos map-table dscp-dp
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.189.72.100
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100007A1C
+ snmp-agent community read  Oavpn@123
+ snmp-agent sys-info version v2c v3
+#
+user-interface con 0
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return

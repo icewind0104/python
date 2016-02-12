@@ -1,0 +1,106 @@
+*** Non changed list ***
+[CQYD-DCN-1F-S2403H] 10.189.46.18
+[CQYD-DCN-1F-S3026C] 10.189.46.17
+[zonghelou_4F_huiju_S9303] 10.189.46.66
+[CQYD-DCN-6F-S2403H-EI-1] 10.189.46.19
+[CQYD-DCN-6F-S2403H-EI-2] 10.189.58.139
+[CQYD-DCN-6F-S2403H-EI-3] 10.189.46.21
+[CQYD-DCN-6F-S2403H-EI-4] 10.189.46.22
+[CQYD-DCN-6F-S2403H-EI-5] 10.189.46.23
+[CQYD-DCN-6F-S6502] 10.189.46.7
+[CQYD-DCN-7F-S2403H-EI-1] 10.189.46.24
+[CQYD-DCN-7F-S2403H-EI-2] 10.189.46.25
+[CQYD-DCN-7F-S2403H-EI-4] 10.189.46.27
+[CQYD-DCN-7F-S2403H-EI-5] 10.189.46.28
+[CQYD-DCN-7F-S2403H-EI-6] 10.189.46.29
+[CQYD-DCN-7F-S2403H-EI-7] 10.189.46.30
+[CQYD-DCN-8F-S2403H-EI-1] 10.189.46.31
+[CQYD-DCN-8F-S2403H-EI-3] 10.189.46.33
+[CQYD-DCN-8F-S2403H-EI-4] 10.189.46.34
+[CQYD-DCN-9F-S2403H-EI-1] 10.189.46.35
+[CQYD-DCN-9F-S2403H-EI-2] 10.189.46.36
+[CQYD-DCN-9F-S2403H-EI-3] 10.189.46.37
+[CQYD-DCN-10F-S6502] 10.189.46.8
+[CQYD-DCN-10F-S2403H-EI-1] 10.189.46.38
+[CQYD-DCN-10F-S2403H-EI-2] 10.189.46.39
+[CQYD-DCN-10F-S2403H-EI-3] 10.189.46.40
+[CQYD-DCN-11F-S2403H-EI-1] 10.189.46.41
+[CQYD-DCN-11F-S2403H-EI-2] 10.189.46.42
+[CQYD-DCN-11F-S2403H-EI-3] 10.189.46.43
+[CQYD-DCN-12F-S2403H-EI-1] 10.189.46.44
+[CQYD-DCN-12F-S2403H-EI-2] 10.189.46.45
+[CQYD-DCN-12F-S2403H-EI-3] 10.189.46.46
+[CQYD-DCN-13F-S2403H-EI-4] 10.189.46.47
+[CQYD-DCN-13F-S2403H-EI-1] 10.189.46.48
+[CQYD-DCN-13F-S2403H-EI-2] 10.189.46.49
+[CQYD-DCN-13F-S2403H-EI-3] 10.189.46.50
+[CQYD-DCN-13F-S2403H-EI-4] 10.189.46.51
+[CQYD-DCN-14F-S2403H-EI-1] 10.189.46.52
+[CQYD-DCN-14F-S2403H-EI-2] 10.189.46.53
+[CQYD-DCN-14F-S2403H-EI-3] 10.189.46.54
+[CQYD-DCN-15F-S2403H-EI-1] 10.189.46.55
+[CQYD-DCN-15F-S2403H-EI-2] 10.189.46.56
+[CQYD-DCN-15F-S2403H-EI-3] 10.189.46.57
+[CQYD-DCN-16F-S6502] 10.189.46.10
+[CQYD-DCN-15F-S3328TP-EI-1] 10.189.46.58
+[CQYD-DCN-16F-S3328TP-EI-1] 10.189.46.59
+[ZH2-LG-01-S4152AE-01] 10.189.72.67
+[ZH2-01-4152F-01] 10.189.72.101
+[ZH2-03-4152AE-01] 10.189.72.70
+[ZH2-03-4152AE-02] 10.189.72.71
+[ZH2-03-4152AE-03] 10.189.72.72
+[ZH2-03-4152AE-04] 10.189.72.73
+[ZH2-04-4152F-02] 10.189.72.102
+[ZH2-04-4152AE-01] 10.189.72.74
+[ZH2-08-4152AE-02] 10.189.72.81
+[ZH2-06-4152AE-01] 10.189.72.77
+[ZH2-07-4152AE-01] 10.189.72.78
+[ZH2-07-4152AE-02] 10.189.72.79
+[ZH2-08-4152F-03] 10.189.72.65
+[ZH2-08-4152AE-01] 10.189.72.80
+[ZH2-09-4152AE-01] 10.189.72.82
+[ZH2-09-4152AE-03] 10.189.72.84
+[10F-S2300-01] 10.189.72.75
+[10F-S2300-02] 10.189.72.76
+*** Changed list ***
+[CQYD-DCN-7F-S2403H-EI-3] 10.189.46.26
+    [add] :  mac-address max-mac-count 0
+    [add] :  mac-address max-mac-count 0
+    [add] :  mac-address max-mac-count 0
+    [add] :  mac-address max-mac-count 0
+    [add] :  mac-address max-mac-count 0
+    [add] :  mac-address max-mac-count 0
+    [add] :  mac-address max-mac-count 0
+    [add] :  mac-address max-mac-count 0
+    [add] :  mac-address max-mac-count 0
+    [add] :  mac-address max-mac-count 0
+    [add] :  mac-address max-mac-count 0
+    [add] :  mac-address max-mac-count 0
+    [add] :  mac-address max-mac-count 0
+    [add] :  mac-address max-mac-count 0
+    [add] :  mac-address max-mac-count 0
+    [add] :  mac-address max-mac-count 0
+    [delete] :  mac-address max-mac-count 2
+    [delete] :  mac-address max-mac-count 2
+    [delete] :  mac-address max-mac-count 2
+    [delete] :  mac-address max-mac-count 2
+    [delete] :  mac-address max-mac-count 2
+    [delete] :  mac-address max-mac-count 2
+    [delete] :  mac-address max-mac-count 2
+    [delete] :  mac-address max-mac-count 2
+    [delete] :  mac-address max-mac-count 2
+    [delete] :  mac-address max-mac-count 2
+    [delete] :  mac-address max-mac-count 2
+    [delete] :  mac-address max-mac-count 2
+    [delete] :  mac-address max-mac-count 2
+    [delete] :  mac-address max-mac-count 2
+    [delete] :  mac-address max-mac-count 2
+    [delete] :  mac-address max-mac-count 2
+[CQYD-DCN-8F-S2403H-EI-2] 10.189.46.32
+    [add] :  mac-address static 28d2-441f-01c5 interface Ethernet0/6 vlan 9
+[CQYD-DCN-12F-S6502] 10.189.46.9
+    [add] :  mac-address static bc85-5660-aba1 interface GigabitEthernet0/0/15 vlan 8
+[ZH2-09-4152AE-02] 10.189.72.83
+    [delete] :    
+    [delete] : !
+

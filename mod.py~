@@ -1,0 +1,2 @@
+mod = __import__('aiomysql',globals() , locals(), [])
+

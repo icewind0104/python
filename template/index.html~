@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}SWITCHES INDICATOR{% endblock %}
+
+{% block content %}
+    <h2>SWITCHES INDICATOR</h2>
+    <a href="/zb.xlsx">下载性能指标</a>
+    {% for each in switches %}
+    <li fontsize=11>name:{{ each['name'] }} host:{{ each['host'] }} cpu:{{ each['cpu'] }} memory:{{ each['memory'] }} <a href='/detail?swid={{ each['id'] }}'>detail...</a></li>
+    {% endfor %}
+{% endblock %}

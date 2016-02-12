@@ -1,0 +1,215 @@
+dis curr
+#
+ sysname CQYD-DCN-1F-S3026C
+#
+ super password level 3 cipher $<^;D^CFXR&G5/'D$FUW>1!!
+#
+radius scheme system
+ server-type huawei
+ primary authentication 127.0.0.1 1645
+ primary accounting 127.0.0.1 1646
+ user-name-format without-domain
+
+domain system
+ radius-scheme system
+ access-limit disable
+ state active
+ vlan-assignment-mode integer
+ idle-cut disable
+ self-service-url disable
+ messenger time disable
+
+ domain default enable system
+#
+ local-server nas-ip 127.0.0.1 key huawei
+
+local-user cqyddcn
+ password cipher $<^;D^CFXR(7E!#/.$JY[Q!!
+ service-type telnet level 3
+
+local-user wf
+ password cipher _CR0@.$VO#CS+TV*!W-_6Q!!
+ service-type telnet level 3
+#
+ temperature-limit 0 42 65
+#
+vlan 1
+#
+vlan 2
+#
+vlan 30
+#
+vlan 33
+ description XinXiBu-Server
+#
+vlan 4093
+#
+interface Vlan-interface4093
+ ip address 10.189.46.17 255.255.255.192
+#
+interface Aux0/0
+#
+interface Ethernet0/1
+ shutdown
+#
+interface Ethernet0/2
+ mac-address max-mac-count 0
+#
+interface Ethernet0/3
+ description TO CISCO2900
+ port link-type trunk
+ port trunk permit vlan 1 33
+#
+interface Ethernet0/4
+ mac-address max-mac-count 0
+#
+interface Ethernet0/5
+ description hqfwzx\01D05\liuke
+ mac-address max-mac-count 0
+ port access vlan 2
+ line-rate 2
+#
+interface Ethernet0/6
+ mac-address max-mac-count 0
+ port access vlan 2
+ line-rate 5
+#
+interface Ethernet0/7
+ mac-address max-mac-count 0
+ port access vlan 2
+#
+interface Ethernet0/8
+ duplex full
+ speed 100
+ mac-address max-mac-count 0
+ port access vlan 2
+#
+interface Ethernet0/9
+ mac-address max-mac-count 0
+ port access vlan 2
+#
+interface Ethernet0/10
+ mac-address max-mac-count 0
+ port access vlan 2
+#
+interface Ethernet0/11
+ port access vlan 33
+#
+interface Ethernet0/12
+ mac-address max-mac-count 0
+ port access vlan 2
+#
+interface Ethernet0/13
+ port access vlan 2
+#
+interface Ethernet0/14
+ mac-address max-mac-count 0
+ port access vlan 2
+#
+interface Ethernet0/15
+ mac-address max-mac-count 0
+ port access vlan 2
+#
+interface Ethernet0/16
+ mac-address max-mac-count 0
+ port access vlan 2
+#
+interface Ethernet0/17
+ port access vlan 30
+#
+interface Ethernet0/18
+ description TO CQYD-DCN-1F-S2403H-E0/25
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 2 4093
+ line-rate 10
+#
+interface Ethernet0/19
+ mac-address max-mac-count 0
+ port access vlan 2
+#
+interface Ethernet0/20
+ mac-address max-mac-count 0
+ port access vlan 2
+ line-rate 5
+#
+interface Ethernet0/21
+ mac-address max-mac-count 0
+ port access vlan 2
+ line-rate 5
+#
+interface Ethernet0/22
+ mac-address max-mac-count 0
+ port access vlan 2
+ line-rate 5
+#
+interface Ethernet0/23
+ mac-address max-mac-count 0
+ port access vlan 2
+ line-rate 5
+#
+interface Ethernet0/24
+ duplex full
+ mac-address max-mac-count 9
+ port access vlan 2
+ line-rate 5
+#
+interface GigabitEthernet1/1
+ description TO CQYD-DCN-S8505-1-GE2/3/2
+ duplex full
+ speed 1000
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 2 30 33 4093
+#
+interface NULL0
+#
+ mac-address static 0016-ecdf-2df8 interface Ethernet0/5 vlan 2
+ mac-address static 6c62-6d73-808e interface Ethernet0/5 vlan 2
+ mac-address static 0019-e003-1daf interface Ethernet0/6 vlan 2
+ mac-address static 0014-2a22-033f interface Ethernet0/7 vlan 2
+ mac-address static 00e0-4c00-31f9 interface Ethernet0/7 vlan 2
+ mac-address static c89c-dcbc-41ee interface Ethernet0/9 vlan 2
+ mac-address static 0010-5cd9-7ab4 interface Ethernet0/10 vlan 2
+ mac-address static d8cb-8a27-6a8d interface Ethernet0/13 vlan 2
+ mac-address static b8cb-8a27-6a8d interface Ethernet0/13 vlan 2
+ mac-address static 6c62-6da9-f301 interface Ethernet0/13 vlan 2
+ mac-address static 001a-9253-b647 interface Ethernet0/13 vlan 2
+ mac-address static bc5f-f4cf-713d interface Ethernet0/13 vlan 2
+ mac-address static 0019-2128-b78d interface Ethernet0/13 vlan 2
+ mac-address static 000a-e4fd-5d74 interface Ethernet0/13 vlan 2
+ mac-address static 282c-b251-0e99 interface Ethernet0/13 vlan 2
+ mac-address static 0022-15d1-871e interface Ethernet0/13 vlan 2
+ mac-address static 3c97-0eb8-e8b1 interface Ethernet0/13 vlan 2
+ mac-address static bc5f-f4c7-4caf interface Ethernet0/13 vlan 2
+ mac-address static b888-e3f9-cc89 interface Ethernet0/13 vlan 2
+ mac-address static 0023-54d5-b2fb interface Ethernet0/14 vlan 2
+ mac-address static 047d-7bdf-f00b interface Ethernet0/14 vlan 2
+ mac-address static 001d-ba06-4068 interface Ethernet0/14 vlan 2
+ mac-address static dc0e-a1d9-2f47 interface Ethernet0/14 vlan 2
+ mac-address static 20cf-30be-ece7 interface Ethernet0/14 vlan 2
+ mac-address static d43d-7edc-9c8e interface Ethernet0/14 vlan 2
+ mac-address static 0026-220b-b2d1 interface Ethernet0/14 vlan 2
+ mac-address static 0019-2157-4886 interface Ethernet0/20 vlan 2
+ mac-address static 0023-cd18-7b88 interface Ethernet0/20 vlan 2
+ mac-address static 0010-5cd9-8af1 interface Ethernet0/21 vlan 2
+ mac-address static 0010-5cb9-8af1 interface Ethernet0/21 vlan 2
+ mac-address static 0019-2153-0c5e interface Ethernet0/22 vlan 2
+ mac-address static 0007-e971-6ea2 interface Ethernet0/23 vlan 2
+ mac-address static 0023-cd7f-4eb3 interface Ethernet0/24 vlan 2
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.189.46.1 preference 100
+#
+ snmp-agent
+ snmp-agent local-engineid 800007DB000FE2297A596877
+ snmp-agent community read  Oavpn@123
+ snmp-agent sys-info contact Huawei 02363632386
+ snmp-agent sys-info location CQYDDCN
+ snmp-agent sys-info version v2c v3
+#
+user-interface aux 0
+user-interface vty 0 4
+ authentication-mode scheme
+ user privilege level 3
+#
+return

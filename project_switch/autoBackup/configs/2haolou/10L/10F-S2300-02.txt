@@ -1,0 +1,391 @@
+dis curr
+#
+ sysname 10F-S2300-02
+#
+ vlan batch 1 to 2 16 18 28 65
+#
+ cluster enable
+ ntdp enable
+ ntdp hop 16
+ ndp enable
+#
+ voice-vlan mac-address 0001-e300-0000 mask ffff-ff00-0000 description Simens phone
+ voice-vlan mac-address 0003-6b00-0000 mask ffff-ff00-0000 description Cisco phone
+ voice-vlan mac-address 0004-0d00-0000 mask ffff-ff00-0000 description Avaya phone
+ voice-vlan mac-address 0060-b900-0000 mask ffff-ff00-0000 description Philips/NEC phone
+ voice-vlan mac-address 00d0-1e00-0000 mask ffff-ff00-0000 description Pingtel phone
+ voice-vlan mac-address 00e0-7500-0000 mask ffff-ff00-0000 description Polycom phone
+ voice-vlan mac-address 00e0-bb00-0000 mask ffff-ff00-0000 description 3com phone
+#
+acl number 3001
+ rule 5 permit ip source 10.189.198.144 0
+ rule 10 permit ip source 10.189.198.145 0
+ rule 15 permit ip source 10.189.198.146 0
+ rule 20 permit ip source 10.189.198.147 0
+ rule 25 permit ip source 10.189.198.148 0
+ rule 30 deny ip
+#
+traffic classifier a100
+ if-match acl 3001
+#
+traffic behavior b100
+ permit
+#
+traffic policy c100
+ classifier a100 behavior b100
+#
+interface Vlanif2
+ ip address 10.189.72.76 255.255.255.192
+#
+interface Ethernet0/0/1
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/2
+ port default vlan 28
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/3
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/4
+ port default vlan 28
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/5
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/6
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/7
+ port default vlan 28
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/8
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/9
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/10
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/11
+ port default vlan 28
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/12
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/13
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/14
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/15
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/16
+ description vlan 18
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/17
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/18
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/19
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/20
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/21
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/22
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/23
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/24
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/25
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/26
+ port default vlan 28
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/27
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/28
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/29
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/30
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/31
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/32
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/33
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/34
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/35
+ port default vlan 65
+ traffic-policy c100 inbound
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/36
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/37
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/38
+ port default vlan 28
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/39
+ port default vlan 65
+ traffic-policy c100 inbound
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/40
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/41
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/42
+ port default vlan 65
+ traffic-policy c100 inbound
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/43
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/44
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/45
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/46
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/47
+ port default vlan 18
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface Ethernet0/0/48
+ port link-type trunk
+ port trunk allow-pass vlan 2 to 4094
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface GigabitEthernet0/0/1
+ port default vlan 1
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface GigabitEthernet0/0/2
+ port default vlan 1
+ port trunk allow-pass vlan 40 1011
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface GigabitEthernet0/0/3
+ port default vlan 1
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface GigabitEthernet0/0/4
+ port default vlan 1
+ bpdu enable
+ ntdp enable
+ ndp enable
+#
+interface NULL0
+#
+aaa
+ local-user qware password simple jswy123
+ local-user qware service-type telnet
+ local-user qware level 3
+ local-user qware ftp-directory flash:
+ authentication-scheme default
+ #
+ authorization-scheme default
+ #
+ accounting-scheme default
+ #
+ domain default
+ #
+#
+qos map-table dscp-dscp
+#
+qos map-table dscp-dot1p
+#
+qos map-table dscp-dp
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.189.72.100
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F00000100005338
+ snmp-agent community read  Oavpn@123
+ snmp-agent sys-info version v2c v3
+#
+user-interface con 0
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return

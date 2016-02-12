@@ -1,0 +1,111 @@
+#!/bin/usr/env python3
+# -*- coding: utf-8 -*-
+
+import config
+import switch_tools
+from mutiThread_runner import mutiThread
+import db
+import loggings
+import time
+logging = loggings.loggings(config.configs.log['path'])
+import json
+
+def get_value(switch, args):
+    '''
+    mutiThread 的func参数，用来获取交换机指标
+    '''
+    value = {}
+    for name, arg in args:
+        Arg = json.loads(arg) if not arg is None else {}    # 将数据库里取出的序列化参数转化为python支持的格式
+        Name = name+'-'+str(Arg) if not arg is None else name    # 如果监控项目需要传入值，则值将成为监控项目名称的一部分，方便区别名字相同的监控项目
+        value[Name] = switch.get_indicator_value(Name, Arg)
+    return {'switch':switch, 'indicator':value}
+
+def collecting(Tasks):
+    '''
+    采集TASKS任务组的所有采集项目
+    返回结果形如：
+    [{'switch':object(switch), 'indicator':{'cpu':10, 'memory':20}}, ...]
+    '''
+    # 转换为task_pool
+    task_pool = []
+    for task in Tasks:
+        # 产生mutiThread所需的args, 形如{'switch':switch 'args':[('name', args), ('name2', args2)]}
+        args = {}
+        args['args'] = task.pop('indicator')
+        args['switch'] = switch_tools.device(**task)
+
+        task_pool.append({'func':get_value, 'args':args})
+
+    r = mutiThread(task_pool, threads=10).run()
+
+    return r
+
+def saving(data):
+    for each in data:
+        for key, value in each['indicator'].items():
+            if not value is None:
+                each['switch'].update_rrd(key, value) 
+
+def task(switches, common_indicator):
+    '''
+    产生用于进行指标抓取的参数集合
+    返回结果形如：
+    [
+        {'id':1, 'host':'1.1.1.1', 'snmp_version':'2c' ... 'indicator':[
+                                                                           ('cpu',None),
+                                                                           ('memory',None)
+                                                                       ]
+        }
+        ....
+    ]
+    '''
+    Tasks = []
+    prev_switch = {}
+    for each in switches:
+        curr_switch = each.copy()
+        name = curr_switch.pop('name')
+        argument = curr_switch.pop('argument')
+        if curr_switch['id'] != prev_switch.get('id', None):
+            if name != None:
+                curr_switch['indicator'] = [(name, argument)]
+            else:
+                curr_switch['indicator'] = []
+            Tasks.append(curr_switch)
+        else:
+            prev_switch[indicator].append((name, argument)) 
+        prev_swtich = curr_switch
+    for each in Tasks:
+        for name, value in common_indicator.items():
+            each['indicator'].append((name, value))
+    return Tasks
+
+def update_quick_indicators(collections):
+    for each in collections:
+        switch_id	= each['switch']._id
+        name		= 'null'
+        host		= each['switch']._host
+        cpu		= ' '.join([str(x) for x in each['indicator']['cpu']]) if each['indicator']['cpu'] else 'unknown'
+        memory		= ' '.join([str(x) for x in each['indicator']['memory']]) if each['indicator']['memory'] else 'unknown'
+        # 插入或更新采集到的数据
+        if db.exists(table='quick_indicator', where='switch_id='+str(switch_id)):
+            sql = "update quick_indicator set `cpu`='%s',`memory`='%s' where `switch_id`='%s'" % (cpu, memory, switch_id)
+            db.update(sql)
+        else:
+            sql = "insert into quick_indicator (`switch_id`,`host`,`name`,`cpu`,`memory`) value (%s,'%s','%s','%s','%s')" % (switch_id, host, name, cpu, memory)
+            db.insert(sql)
+
+def main():
+    start_time = float(time.time())
+    switches			= db.select('select `switches`.`id`,`host`,`vendor`,`model`,`snmp_version`,`snmp_community`,`name`,`argument` from switches left join indicator on `switches`.`id` = `switch_id`')
+    common_indicator		= config.configs.common_indicator
+    additional_indicator	= db.select('select * from indicator')
+
+    Tasks = task(switches, common_indicator)
+    collections = collecting(Tasks)
+    saving(collections)
+    update_quick_indicators(collections)
+    end_time = float(time.time())
+    logging.information('poller.py excute complete, use %s seconds' % str(end_time-start_time))
+main()
+

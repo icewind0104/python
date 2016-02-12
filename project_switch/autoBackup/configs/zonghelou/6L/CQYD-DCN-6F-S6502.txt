@@ -1,0 +1,1703 @@
+dis curr
+#
+ sysname CQYD-DCN-6F-S6502
+#
+ super password level 3 cipher $<^;D^CFXR'Q=^Q`MAF4<1!!
+#
+ local-server nas-ip 127.0.0.1 key huawei
+#
+ domain default enable system
+#
+ temperature-limit 0 10 70
+ temperature-limit 1 10 70
+#
+ poe power max-value 2400
+#
+ acl mode link-based
+#
+radius scheme system
+ primary authentication 127.0.0.1 1645
+ primary accounting 127.0.0.1 1646
+ user-name-format without-domain
+#
+isis cu
+#
+domain 8icn
+ vlan-assignment-mode integer
+ access-limit disable
+ state active
+ idle-cut disable
+ self-service-url disable
+ messenger time disable
+domain system
+ vlan-assignment-mode integer
+ access-limit disable
+ state active
+ idle-cut disable
+ self-service-url disable
+ messenger time disable
+#
+local-user cqyddcn
+ password cipher $<^;D^CFXR'Q=^Q`MAF4<1!!
+ service-type telnet
+ level 1
+local-user huawei
+ password cipher ;'*;"45Y1_M%`DJL.:OE)Q!!
+ service-type telnet
+ level 1
+local-user wf
+ password cipher _CR0@.$VO#B/3:L02.;;!Q!!
+ service-type telnet
+ level 3
+#
+ stp TC-protection enable
+#
+vlan 1
+#
+vlan 5
+#
+vlan 6
+#
+vlan 7
+#
+vlan 8
+ description to_LGF-13F_Wlan_10.189.20.2/23
+#
+vlan 9
+#
+vlan 15
+#
+vlan 21
+ description to_12F-17F_Wlan
+#
+vlan 4093
+ description to_guanli_ip
+#
+interface Vlan-interface8
+ description to_LGF-13F_Wlan_10.189.20.2/23
+ ip address 10.189.20.4 255.255.254.0
+#
+interface Vlan-interface4093
+ ip address 10.189.46.7 255.255.255.192
+#
+interface Aux0/0/0
+#
+interface M-Ethernet0/0/0
+#
+interface Ethernet1/0/1
+ description TO CQYD-DCN-7F-S2403H-EI-1
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 7 4093
+#
+interface Ethernet1/0/2
+ description TO CQYD-DCN-7F-S2403H-EI-2
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 7 4093
+#
+interface Ethernet1/0/3
+ description TO CQYD-DCN-7F-S2403H-EI-3
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 7 4093
+#
+interface Ethernet1/0/4
+ description TO CQYD-DCN-7F-S2403H-EI-4
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 7 4093
+#
+interface Ethernet1/0/5
+ description TO CQYD-DCN-7F-S2403H-EI-5
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 7 4093
+#
+interface Ethernet1/0/6
+ description TO CQYD-DCN-7F-S2403H-EI-6
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 7 4093
+#
+interface Ethernet1/0/7
+ description to_Wlan_CQYD-DCN-7F-S2403
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 8 4093
+ mac-address max-mac-count 0
+#
+interface Ethernet1/0/8
+ description TO CQYD-DCN-6F-S2403H-EI-1
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 5 to 6 4093
+#
+interface Ethernet1/0/9
+ description TO CQYD-DCN-6F-S2403H-EI-2
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 5 to 6 4093
+#
+interface Ethernet1/0/10
+ description TO CQYD-DCN-6F-S2403H-EI-3
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 5 to 6 4093
+#
+interface Ethernet1/0/11
+ description TO CQYD-DCN-6F-S2403H-EI-4
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 5 to 6 4093
+#
+interface Ethernet1/0/12
+ description TO CQYD-DCN-8F-S2403H-EI-1
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 8 to 9 4093
+#
+interface Ethernet1/0/13
+ description TO CQYD-DCN-6F-S2403H-EI-5
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 5 to 6 4093
+#
+interface Ethernet1/0/14
+ description TO CQYD-DCN-8F-S2403H-EI-3
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 9 4093
+#
+interface Ethernet1/0/15
+ description TO CQYD-DCN-8F-S2403H-EI-2
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 9 4093
+#
+interface Ethernet1/0/16
+ description TO CQYD-DCN-8F-S2403H-EI-4
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 9 4093
+#
+interface Ethernet1/0/17
+ shutdown
+#
+interface Ethernet1/0/18
+ shutdown
+#
+interface Ethernet1/0/19
+ shutdown
+#
+interface Ethernet1/0/20
+ shutdown
+#
+interface Ethernet1/0/21
+ shutdown
+#
+interface Ethernet1/0/22
+ shutdown
+#
+interface Ethernet1/0/23
+ shutdown
+#
+interface Ethernet1/0/24
+ shutdown
+#
+interface Ethernet1/0/25
+ shutdown
+#
+interface Ethernet1/0/26
+ shutdown
+#
+interface Ethernet1/0/27
+ shutdown
+#
+interface Ethernet1/0/28
+ shutdown
+#
+interface Ethernet1/0/29
+ shutdown
+#
+interface Ethernet1/0/30
+ shutdown
+#
+interface Ethernet1/0/31
+ shutdown
+#
+interface Ethernet1/0/32
+ shutdown
+#
+interface Ethernet1/0/33
+ shutdown
+#
+interface Ethernet1/0/34
+ shutdown
+#
+interface Ethernet1/0/35
+ shutdown
+#
+interface Ethernet1/0/36
+ shutdown
+#
+interface Ethernet1/0/37
+ shutdown
+#
+interface Ethernet1/0/38
+ shutdown
+#
+interface Ethernet1/0/39
+ shutdown
+#
+interface Ethernet1/0/40
+ shutdown
+#
+interface Ethernet1/0/41
+ shutdown
+#
+interface Ethernet1/0/42
+ shutdown
+#
+interface Ethernet1/0/43
+ shutdown
+#
+interface Ethernet1/0/44
+ shutdown
+#
+interface Ethernet1/0/45
+ shutdown
+#
+interface Ethernet1/0/46
+ shutdown
+#
+interface Ethernet1/0/47
+ shutdown
+#
+interface Ethernet1/0/48
+ description to_LG-13F_WLAN_ceshi
+ port access vlan 8
+#
+interface GigabitEthernet0/0/1
+ shutdown
+#
+interface GigabitEthernet0/0/2
+ shutdown
+#
+interface GigabitEthernet0/0/3
+ shutdown
+#
+interface GigabitEthernet0/0/4
+ shutdown
+#
+interface GigabitEthernet0/0/5
+ shutdown
+#
+interface GigabitEthernet0/0/6
+ shutdown
+#
+interface GigabitEthernet0/0/7
+ shutdown
+#
+interface GigabitEthernet0/0/8
+ shutdown
+#
+interface GigabitEthernet0/0/9
+ shutdown
+#
+interface GigabitEthernet0/0/10
+ shutdown
+#
+interface GigabitEthernet0/0/11
+ shutdown
+#
+interface GigabitEthernet0/0/12
+ shutdown
+#
+interface GigabitEthernet0/0/13
+ description CQYD-DCN-S8505-1-GE2/2/1
+ duplex full
+ speed 1000
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 5 to 9 21 4055 4093
+#
+interface GigabitEthernet0/0/14
+ description CQYD-DCN-S8505-2-GE2/2/1
+ duplex full
+ speed 1000
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 5 to 9 21 4055 4093
+#
+interface GigabitEthernet0/0/15
+ description to_Wlan_RH18_OLT_MA5680T_g0/20/1-10.189.20.10-80fb-0635-0e7c
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 8 4093
+ mac-address max-mac-count 0
+#
+interface GigabitEthernet0/0/16
+ shutdown
+#
+interface NULL0
+#
+msdp
+#
+ arp timer aging 2
+ arp static 10.189.21.152 aaaa-aaaa-aaaa
+#
+ mac-address static 6036-dd1a-66a7 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8ff-2850-3e01 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8ff-2850-42ed interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 185e-0f17-cb27 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8ff-2850-6861 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-46be interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8ff-2850-6231 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3052-cb7d-3817 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 185e-0f18-1ce4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 185e-0fb9-3c55 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8ff-2850-430b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8ff-2850-82f5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8ff-2850-8071 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8ff-2850-61bf interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8ff-2850-8007 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8ff-2850-623d interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3052-cb7f-8273 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8ff-2850-41f7 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8ff-2850-68bb interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 240a-642e-fe55 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8ff-2850-432f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8ff-2850-801b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 185e-0fbf-1657 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3052-cb7f-83a7 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8ff-2850-67eb interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 185e-0fbf-448d interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 185e-0f18-1f4b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 54ee-757d-2018 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8ff-2850-4321 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd6d-ff83 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 185e-0fbf-4393 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 185e-0f18-093e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 185e-0fbf-44a6 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3052-cb7f-8391 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8ff-2850-60b5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8ff-2850-837f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3052-cb7f-82c9 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8ff-2850-8079 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8ff-2850-8181 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8ff-2850-8163 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8ff-2850-431f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8ff-2850-8237 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static a4d1-8ccd-ea48 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8ff-2850-81f5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8ff-2850-4277 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8ff-2850-60d7 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9c4e-367e-213c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 185e-0f18-2da1 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 80e6-5018-2f3a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8ff-2850-6aa7 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 185e-0f18-1b9f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8ff-2850-61f7 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 185e-0f8a-a94e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8ff-2850-846d interface GigabitEthernet0/0/15 vlan 8
+ mac-address static caff-2850-3e13 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8ff-2850-8075 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 74e5-0b69-294a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8ff-2850-8551 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 7ae9-d3f5-58b7 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 7ee9-d3f5-58b7 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3052-cb7f-7d29 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 185e-0f18-01c3 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8ff-2850-801f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 780c-b89d-079c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 60d8-1927-bbce interface GigabitEthernet0/0/15 vlan 8
+ mac-address static ec55-f965-d3ff interface GigabitEthernet0/0/15 vlan 8
+ mac-address static f816-54da-c154 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9c4e-36b0-03bc interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9c4e-36a6-538c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6817-291f-7593 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 507a-5566-f10a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-8083 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8f7-3352-8578 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6236-dd15-df1a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 5cc5-d432-b996 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static a0a8-cdbb-66c9 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0022-fa3c-d38c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e0b9-a51f-344a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd13-3f94 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6236-dd10-0e3b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 184f-32b3-76c7 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 28e3-4732-75f9 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6c88-1472-0b88 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0857-00a0-bf54 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e4f8-9c80-e3b4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static d07e-3536-bf28 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 083e-8ea7-da45 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c48e-8f8f-de4f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 5cac-4c98-c827 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c0f8-da50-7b9a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static b8e8-563e-ff96 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static acb5-7dc4-5695 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 2c81-58e6-fc93 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6c71-d9d6-bd95 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0025-d33d-edd1 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 4ceb-4256-3394 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 889f-fa34-a3c4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static f4b7-e26b-3bec interface GigabitEthernet0/0/15 vlan 8
+ mac-address static d07e-3536-b728 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 2cf0-ee1d-c4b0 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static b40b-440c-abd5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001e-654a-3b56 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6067-204f-149a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6c88-1434-4a58 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e094-6705-d27c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 8ca9-8238-3a1a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 8ca9-8242-8fca interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e82a-ea19-7ad5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 74de-2b68-73ff interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6c88-1471-9910 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static a44e-311c-2694 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 28b2-bd3c-d7d7 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 4c34-8805-b2dd interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 5ce0-c57f-09ea interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e4f8-9c59-c14e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c869-cd96-5396 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-bdff interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd61-d221 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-c764-b3f4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-669e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 40b8-9a85-090b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd6d-895e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-28a9 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 844b-f50a-87aa interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-09c9 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3c46-d865-60fc interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 1e85-defd-1527 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 24fd-5244-8c8d interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 5ce0-c589-7a9c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 5ce0-c57e-f955 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static a417-31f7-0d2e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 5ce0-c571-1cfe interface GigabitEthernet0/0/15 vlan 8
+ mac-address static d440-f06c-dd9c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 68a3-c40e-719a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 68f7-28c3-b016 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 68f7-28c3-a73e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3c97-0e82-357f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 68f7-28d6-8d82 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 00ff-853d-f820 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static ccfe-3c09-d1db interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3402-866e-b3d8 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 5ce0-c5a7-04cc interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6817-291b-d2b7 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 7077-8196-bccd interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 4c34-883f-3db5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static d85d-e264-89ff interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 28e3-475e-9cf6 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static b870-2a76-00d4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 60d8-1983-6d48 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6427-370d-6106 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3402-863b-c2ed interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 5ce0-c554-86d4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 484d-609d-03e5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 7451-bac3-c45b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 5ce0-c551-3434 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static ace0-1026-d503 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 14cf-92b1-9ba4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 645a-04c3-2aa4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 98e0-d984-f58f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9c4e-36b6-0750 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-185f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static acb5-7de3-b523 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9c4e-3679-e36c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-6161 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 74e5-0bc3-6d42 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 8c70-5a7f-bde9 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6c71-d978-0e41 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e006-e6bb-8889 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 74d0-2be3-c429 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 2cf0-ee05-2258 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9cf3-87d8-8a20 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e4d5-3da9-8ddc interface GigabitEthernet0/0/15 vlan 8
+ mac-address static d0df-9a95-023f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static dc85-defd-1527 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c48e-8f74-cc1f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static f4b7-e218-d4a5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 18cf-5e50-fd85 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8f7-335d-2154 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static ace0-1026-d659 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 742f-684a-743a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 207c-8f6b-f49b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001e-644f-072a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 74d0-2b73-3614 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static ace0-1026-d595 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0015-afb1-9a20 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 74de-2b0d-3f98 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 1ee0-1028-d855 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e82a-ea3a-9c60 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 1ee0-101b-6805 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static acd1-b8ea-2e91 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6c71-d934-1e79 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 74e5-0bb5-2649 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001f-e214-6dd8 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static d85d-e21f-dd01 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 2cf0-ee28-e96a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static acd1-b8f4-f62b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0016-eaef-6c56 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c033-5e17-a30b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 2c33-7a2a-b92f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0022-faca-1fc0 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6cfa-a73b-13e6 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 7ce9-d3f6-eab4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static a088-b4e4-bbcc interface GigabitEthernet0/0/15 vlan 8
+ mac-address static d07e-35e9-91c5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8f7-3352-8569 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static ace0-100f-ba0b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 28b2-bd3a-ffd4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static a088-b4e5-05f0 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 28b2-bd3c-4ff6 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6c88-1470-d6f0 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 5894-6b65-b938 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static acb0-100f-ba0b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 48d7-05d3-438b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static d053-4914-f94a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0025-d3bb-86da interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-c73d-90d4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9cb7-0d1f-7396 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e0b9-a563-42f9 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001e-65e0-c5b4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9c4e-367e-1134 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776d-b17f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 645a-042a-41c6 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd10-0dfb interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-308e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0022-5f01-ada4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3c97-0e4d-776e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static ace0-1026-d64b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 1c65-9d18-63a5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static ace0-1026-d63f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 28b2-bd3c-dffc interface GigabitEthernet0/0/15 vlan 8
+ mac-address static a44e-311a-4da8 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static a44e-311b-58f8 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 28b2-bd3a-addb interface GigabitEthernet0/0/15 vlan 8
+ mac-address static ae4e-311b-58f8 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 28d2-44c8-19dd interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd62-43d2 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 5427-1e6a-48f9 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 60d8-19c6-7709 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 8438-38be-35b0 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd13-e098 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 1008-b149-e3d3 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-dd40 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static cc78-5f10-7cab interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-308f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static d46e-5cab-f1c2 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 98e0-d98b-cc91 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 28e3-4755-b3a9 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static a088-b489-a914 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 485a-b6c1-a94f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-38ee interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e006-e6c9-17fa interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-5e42-b9c0 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 8056-f2e9-3f57 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static ec55-f9a1-0742 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 446d-577c-4ec9 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3010-b393-93ef interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 5c93-a2fd-50f2 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 18dc-56cc-1604 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 38b1-db7f-befd interface GigabitEthernet0/0/15 vlan 8
+ mac-address static acb5-7d73-0361 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e006-e6c7-aa36 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 5891-cf3b-d30b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 74de-2b8d-bada interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 502e-5c31-27c7 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0c84-dcb4-f959 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 7475-4806-9370 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 68a3-c4ca-32b3 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 5891-cf3b-d30a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-0082 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 183d-a2a6-0cd0 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9048-9aa5-6103 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-4a4b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 8ca9-8210-a5e6 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static acb5-7d73-04f3 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd13-00ba interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-dd4e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1e-0ff5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static ac81-1216-6c89 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-8278-9185 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 1008-b11a-9319 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 18cf-5e4f-6ec9 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 5c93-a2e6-d5cb interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 48d7-05d8-2417 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 1c65-9d68-0bbc interface GigabitEthernet0/0/15 vlan 8
+ mac-address static d053-490a-d8db interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6817-291f-74bc interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6cfa-a71f-7eed interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 60f8-1dba-041e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0071-cc9a-b015 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-c763-1298 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static acb5-7d72-f133 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 10ae-60ba-fa05 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9c4e-367d-9d38 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9439-e5ea-ae3d interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-2480-529d interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd13-00a6 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001a-738e-9643 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-f857 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3ca9-f493-8c84 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 4851-b775-ac74 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 40f0-2f1a-84ae interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 5063-13c3-50a9 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6817-291f-766a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd10-0e1e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static d0df-9a72-abfd interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 1c4b-d68c-8e72 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e0b9-a522-2f61 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static a44e-3118-2c28 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 2cd0-5ae7-edf7 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static a417-31fa-0119 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 14cf-9213-73d4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd61-d7f8 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8f7-335c-a19d interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 1c65-9d9f-8179 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-d6d3 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e82a-ea73-a744 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static a44e-3118-2c44 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static a44e-3118-30ac interface GigabitEthernet0/0/15 vlan 8
+ mac-address static a088-b475-7dcc interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0205-857f-eb80 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 8c70-5af5-85a8 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 1c78-3901-d1e5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 50b7-c3f8-f63b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static ac7b-a155-6f13 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 60d8-19c1-fc7d interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-0be9 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 1c65-9dbc-05e0 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 7ce9-d3ee-cb31 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0627-37b2-27fe interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 60d8-1920-82eb interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 18cf-5e9b-9b91 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e82a-ea73-c747 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-0bea interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-50c7 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 28e3-4755-b6f7 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 48d2-24f8-b100 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 80e6-5012-dbc0 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-c7d3 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 5cf9-389c-c44e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 1c4b-d6ce-35e3 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9cd2-1e91-d633 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 207c-8f11-9f9d interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 18cf-5e56-b621 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 1a4b-d6d0-b0f8 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 701a-043d-ff7c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3859-f9e8-e452 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 78e4-00e7-d557 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3c97-0e8b-7794 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 74e6-e21d-3066 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9cd2-1e88-d02a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0022-5fb1-778c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static bcec-2303-31f2 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static acb5-7d73-0393 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 12b9-a522-2f61 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd61-96ee interface GigabitEthernet0/0/15 vlan 8
+ mac-address static acb5-7d72-2ec1 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 4cbb-5834-c8ec interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 083e-8e0b-204b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6817-297a-d082 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 18cf-5e52-c389 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd61-e040 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-796c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 74e5-4317-504b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 1008-b11a-9bbd interface GigabitEthernet0/0/15 vlan 8
+ mac-address static acb5-7d72-f05f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd10-107b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 5426-96d2-d97f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static acb5-7d73-04c5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 1c78-3901-cc8f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 889f-fafb-7366 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 90a4-deef-b77c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static acb5-7d72-2f39 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static a0a8-cd97-3592 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-b3b5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 2cf0-ee28-8b3e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e803-9ac9-099f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 18cf-5e9b-8f9f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static b8ee-655c-5ed9 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 1c3e-84ec-fa3f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-3457 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 7ce9-d3f8-349c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 60d8-19d0-8b17 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 08ed-b9fd-d97b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd61-ba84 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-c736-1928 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-3458 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-dd63 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static f07b-cb74-1fee interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001e-656e-22a2 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-38e9 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0021-00d5-f270 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-826a-42ec interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 7ce9-d3f6-92c5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 60d8-19cb-4250 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0810-786c-d174 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0022-faf0-393e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static fcf8-ae5c-4635 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd10-0e32 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-2d4f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static f025-b71d-ebb6 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 7c6d-62e0-f0f5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd62-02f5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6026-dd19-03ca interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0013-0228-9fa4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3883-450a-af5a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static d0df-9a3a-672f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e006-e6cc-6ddf interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 28e3-4760-0829 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0024-d7a4-9da8 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6c88-14e6-7000 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static a44e-31c0-da14 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static d0df-9a4e-3ba4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 24fd-5244-8beb interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 742f-6848-d854 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 8863-dfa2-cc53 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 2cf0-ee12-f970 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 2cf0-ee11-7c16 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-7953 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e006-e63c-879d interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 18cf-5e52-e023 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 485d-6078-44c6 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd61-6ec1 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 889f-fa33-a569 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static b8ee-652a-5753 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 8056-f2d8-21d7 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9c4e-36bf-a654 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 5c51-4f15-679c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 18cf-5e9c-6f95 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static d0df-9a39-f6b7 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 08ed-b9c9-f60f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 142d-2788-2c45 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 34e2-fd31-4e6b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 786c-1c3b-26b0 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-c7b6-120e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-801b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 18cf-5e54-1973 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 18cf-5e9e-eae1 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 18cf-5e9e-e9b9 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 2acf-5e9e-e9b9 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6894-237a-62ae interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 18cf-5e9e-ea93 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 18cf-5e9b-ee3f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 18cf-5e9b-9ab9 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-9433 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 50b3-c3fe-5675 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-77aa-80e2 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6817-291f-7624 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-1c34 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6817-291b-d47e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-2576 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-c8c2 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static a4db-309f-07f9 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd12-fd45 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-c644-a0c2 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 8ca9-82a6-fc02 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0022-faef-60c8 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd6d-6ab4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 18cf-5e9c-6feb interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6817-2923-7db4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 18f4-6ac7-e68f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd13-e08e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-e821 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0088-6536-254e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static b8ee-652b-80d0 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 685d-43f3-f2b4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 78dd-08f4-334e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd6d-c9e6 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static b8ee-652b-781e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-775c-8df6 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-09dd interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0071-cc4f-edad interface GigabitEthernet0/0/15 vlan 8
+ mac-address static ec55-f985-3763 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e4d5-3d62-af2e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 742f-6848-f6ec interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0024-230a-8dfb interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e006-e63f-2844 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static a088-b48a-a940 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static a088-b48a-d780 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static a088-b4d7-34ac interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6067-201e-6a04 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0811-960a-1b68 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static a44e-313e-009c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-4000 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001f-3b04-a9a1 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 7ce9-d3f6-85f2 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 7ce9-d332-2f87 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e0b9-a562-cdf3 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 14e6-e4f1-c166 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 100d-7fc1-6f21 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6c70-9f59-4228 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static cc3a-613d-0b16 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-8038 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0022-faed-57c8 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-66ae interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8f7-335c-e504 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0022-5f29-6dc2 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3c77-e687-bde1 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd6d-8959 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8f7-335c-eb71 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0022-faef-4a6c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 2016-d82c-4b98 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd61-adb9 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 8c70-5a82-d610 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6c70-5a82-d610 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-0320 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 142d-2756-1c5b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0857-0011-a366 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001c-bfb6-a595 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 904c-e5a1-6806 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static a44e-31a3-bcf0 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001f-3c61-f9f2 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd61-d848 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-4811 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e89a-8f3f-8eb0 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0017-c4e1-d55c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 844b-f551-c334 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 142d-2788-14f3 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-1837 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9c4e-367d-8684 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 5435-301e-1d7f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0024-2c2c-672d interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 74e5-0b9b-051e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dde4-041c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static a44e-31a4-5530 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static a44e-3199-a33c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 2477-0358-4720 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static a44e-31a3-bcf1 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 7ce9-d3f1-9a06 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e006-e6cd-2b87 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 904c-e589-6797 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 74de-2b88-e5c4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0008-cac0-5270 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 68a3-c40e-76bb interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 68a3-c40e-6f93 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static d0df-9a4e-3edd interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 2cd0-5afc-4930 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 24fd-5244-99bb interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 24fd-5244-9af9 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-77aa-d340 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 485a-b6c1-a5b5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0022-6986-9bee interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0022-fabd-6f16 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0024-2c23-4896 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-ddb8-276b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e006-e6ce-6f49 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static fc25-3f11-4084 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 60fa-cd0e-bf56 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 94ce-2c6a-4b6b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 54ae-27da-744a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static acf7-f3e3-9cf5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 64b3-10b2-8216 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9cb7-0d33-ab0d interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8e0-eb54-6347 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static d830-6250-e32e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static b005-94ee-f24f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 2cd0-5ab1-572f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 74e5-0be8-1640 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 2cd0-5ab1-6080 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static a499-475a-e9c2 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0021-5d89-b1d6 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0800-2700-bca7 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 50cc-f87c-671b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 485a-b60a-7263 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static acf7-f35a-e70a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static d0df-9a46-a4ec interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0cbd-5112-529d interface GigabitEthernet0/0/15 vlan 8
+ mac-address static ac81-121a-7824 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 087a-4c12-0394 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static ac81-1211-650f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3848-4c7d-d67e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static ec55-f9a3-496a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e88d-28cd-3117 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e006-e68c-6bf5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 485a-b60a-6d53 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static d8d1-cb3b-87a2 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e4ce-8f4a-5930 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 40cb-a8ad-5004 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-825d-6df9 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 68a3-c4fe-4201 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 18dc-5688-097b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static f4f1-5a6e-a849 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 241b-1380-600e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static fc25-3f13-0e7e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0c30-21c4-5188 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c446-1954-ced5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 4c0f-6e94-8ff0 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 78e4-006c-5751 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 68a8-6d0a-005e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-ddb8-276c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001f-1698-1de9 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static ec55-f969-488d interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3c97-0e72-62da interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 78e4-0052-5287 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001f-16a0-8851 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static f07b-cb8c-e92c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001e-4c27-4f87 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd10-0e37 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0c82-683e-ce19 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 60d8-19c5-b4d5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-e263 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 88e3-ab6f-57dc interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 485a-b6c1-a869 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 28e3-4755-ab80 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-b62b-051c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-46b4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1e-3223 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 28e3-4760-066a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001e-6578-bd82 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0013-02b8-cd6e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-0a28 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-eb46 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-bc47 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e006-e674-3d17 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 74e5-0bf4-aa80 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0021-630a-2256 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 485d-609c-6dd0 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 74de-2b8d-b4ab interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 485d-6070-d870 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 742f-6873-31ce interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c018-859d-a97b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 28e3-4755-ab7a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 28e3-4755-a746 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 485a-b6c1-b143 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 889f-fa69-7bd4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd10-1058 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd10-1059 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-392a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3883-451a-f290 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 485a-b6c1-b195 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8f7-335d-2145 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 28e3-4755-ae85 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 4c0f-6e91-febb interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-806a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-e3fc interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9c4e-36c6-70a8 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-0019 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0036-dd19-0019 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 485a-b6c1-b69b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6894-2310-8a99 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0036-762c-5a6d interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-c746-5e68 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 446d-57e8-6c51 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0013-e85f-8595 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 446d-57e8-a537 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 446d-57e8-2375 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0023-4ed7-96b8 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 28e3-4755-af85 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-38d5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-bb1a-38d5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-bbea-38d5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 68df-dd67-53b5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-7790-43f9 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-7790-43ff interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6c3b-e581-6ae9 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 50b7-c3fe-5675 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static a4db-3090-2bcc interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0025-d3bd-a752 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 12b7-c3fe-5675 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 2016-d81e-e795 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6894-2312-e730 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e4d5-3d62-a72e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 60d8-19c6-f30b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 28e3-4755-a72b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 485a-b6c1-b18f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 28e3-4755-a74a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8f7-335d-4e3b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6894-23a3-eab3 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776d-c193 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd11-5323 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 485a-b6c1-d6eb interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001f-3c85-9ebe interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8f7-3352-84b5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd63-e205 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd64-0474 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 8c4e-367d-a9b4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9c4e-367d-a900 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 24fd-52f5-1a62 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static a417-3152-b70d interface GigabitEthernet0/0/15 vlan 8
+ mac-address static d0df-9a3a-672e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-41db interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9c4e-367d-a901 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd13-3f8f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 5cac-4ca5-aaf4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-4802 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-775a-f2ee interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6c71-d95f-1381 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-c6c9 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 80fb-0635-0e7c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static b876-3f00-a8c1 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd10-0dc9 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-2d5e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd0f-d6c4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 74e5-0b9a-d0a2 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 38aa-3cf0-abe0 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6817-291b-d4a1 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3859-f9e9-1e27 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-77d5-be0c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e89a-8f8e-2e2f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static ca17-fedf-fa46 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 98ff-d0f7-4774 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e0b9-a52f-aafc interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-c72d-ef16 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776d-bb83 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9c4e-3685-3910 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6067-2003-ed80 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776d-b625 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6817-291f-7953 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c0cb-384f-c7de interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-c755 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0025-d364-e8a8 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-c827 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-77aa-ff9a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001c-bf2d-2283 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-414f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-c789-b528 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 7ce9-d3f7-62b3 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8f7-335c-74a7 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9c4e-367d-a9b8 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd0f-e308 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-be09 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3c77-e687-c175 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-2430 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 7ce9-d3f7-f71b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c417-fedf-fa46 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001f-3bb1-bff3 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001a-738e-977d interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9c4e-367d-9c9c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static f4f9-5169-b62e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static dc85-de41-7e0b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c417-fe45-b864 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 8ca9-823d-0832 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 60d8-19c6-3f60 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9c4e-367d-1f40 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-beae interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6c71-d925-7056 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-82aa-cabc interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 844b-f5c5-65b1 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 48d2-24fb-382c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 1c65-9d99-f512 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 68a8-6d13-21ec interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6894-23f3-c1f3 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 7ce9-d3ed-2727 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-775b-4dca interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0017-c46b-28cc interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-c733-2fb4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 74e5-43d1-6074 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 7ce9-d3f4-bc29 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 701a-042e-8f7b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 8ca9-82b6-ccee interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 2cd0-5afb-f468 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static d0df-9a4e-424e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static d0df-9a4e-3d08 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static d0df-9a3a-675c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-add3 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-8207-93e7 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 2cd0-5a8c-6362 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-15fc-c589 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 74de-2b14-087d interface GigabitEthernet0/0/15 vlan 8
+ mac-address static f0de-f1ee-c9c1 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static ec55-f97c-f6ce interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-823d-9995 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 4433-4c79-d22e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 4433-4c79-c9f1 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd10-8533 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-d48e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0013-e821-93b3 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 2002-af26-4d13 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9c4e-367d-a9b0 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-28bd interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-20ad interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e0b9-a5d1-3087 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-79e4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd11-5346 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9c4e-3679-e334 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6894-23ec-b487 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static dca9-711b-28b2 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0024-d22c-429c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6c88-1430-eca4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 8c70-5ab9-f16c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static ec55-f9c0-3644 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd12-fdc7 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-e0ce interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-0be4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-be18 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd11-5580 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-20da interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-83c2 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-3411 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8f7-335c-8c08 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 4c0f-6e67-9500 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-83cc interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd11-4e05 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 2cd0-5a4c-e98c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0024-2ce4-1814 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6071-d925-7056 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-7955 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-1846 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-224c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd11-558a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-bc4c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-005a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-a2c5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd61-7006 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-46af interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-1841 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-79ad interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd12-fd31 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-0a00 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-6170 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 74e5-0b83-bd96 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd11-754c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-7790-1e94 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static d0df-9a95-18ae interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd11-7182 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-419f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-dfc4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8f7-335c-fd78 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9c4e-367b-a9b0 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd10-1053 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd11-7155 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-4c53 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-3c27 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-8462 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-64ff interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 485d-6003-e71c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 1c4b-d674-32cd interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd13-e084 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-039d interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-0dd6-cbd3 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-c74b-b64a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0018-de02-b80f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0c82-6811-527a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd10-0e0a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-5e54-77f5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0024-2b3d-ba00 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd6d-ca31 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-66bc interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 4c8d-7914-837b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0023-4ed5-2799 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0018-de02-880f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 4487-fccb-f516 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd60-cbd3 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-290d interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd0f-c58f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-30cf interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0013-0296-63ff interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 08ed-b9ca-32fd interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6c71-d925-6ecd interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 2aed-b9ca-32fd interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8f7-3352-9afe interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-7a7a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 7892-9c19-80a4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static bc85-5686-a6f0 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd12-fd4a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd11-532d interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-c74b-c5f6 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-8048 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e006-e6c1-3cca interface GigabitEthernet0/0/15 vlan 8
+ mac-address static d0df-9a4a-7ea2 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-28f4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static ac81-1236-cbf3 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-3c04 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static b075-d598-9724 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static b075-d598-97a2 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c864-c715-4e4d interface GigabitEthernet0/0/15 vlan 8
+ mac-address static b075-d598-993b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c864-c715-4e15 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static b075-d598-9953 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static b075-d598-986e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c864-c715-4edd interface GigabitEthernet0/0/15 vlan 8
+ mac-address static b075-d598-9896 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c864-c715-4ecb interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c864-c715-4dc8 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-e083 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001a-7370-7d5a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd61-96fd interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001e-6492-6b7e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6c71-d927-8684 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6c71-d925-912c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-03a2 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001c-bf81-f1d8 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-c6a6-14a8 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 000c-f117-75ae interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-6cc4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-c748-5b66 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-c748-6f38 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6045-bd83-22fc interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 100b-a93b-f8f0 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-a2bb interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 74e5-0b00-d5c0 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static b876-3fcf-8702 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0008-caa0-b9e2 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-77aa-5f66 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 485d-6057-3223 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 2cd0-5a6c-c9ad interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-3bcd interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 40a6-d902-b370 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-c643-c26a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static b0d0-9c67-89a7 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-09e2 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 5063-13c1-592b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static a088-b40f-0da0 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-046f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 1ce6-2b28-9fd1 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 98d6-bb44-5859 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 183d-a257-6ae5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0016-e36b-e4ce interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e006-e6c9-5699 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-03b1 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0022-faf0-3eee interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd6d-ff79 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 889f-fa78-1bcf interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 74e5-4356-fd08 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-834f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6c71-d96b-0c67 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-66ad interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd11-7169 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd60-c930 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 843a-4b08-b352 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 74e5-0b00-dddc interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 8ca9-8262-5dfe interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd61-ad37 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 78e4-00d3-e344 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9c4e-366b-21ec interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-1eaa interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 485d-606d-3c32 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e811-32ea-a81f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3859-f9dc-1f05 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static bc85-5602-331f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd0f-e2e5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-8322 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-7a89 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-8345 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-dd2c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-28fe interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-8232 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd7f-5314 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-7ddc interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-942e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd10-0e28 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-dd45 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-8039 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8f7-3352-8550 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9c4e-367d-9d4c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-7d7d interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-7781-3a1c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-82ef-5564 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-4c99 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0008-ca6e-6be5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6817-291f-7610 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd13-33dc interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd11-549f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-616b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-2d72 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8f7-3376-e1ca interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 78dd-08e2-b396 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-be19 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-7d69 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8f7-3352-a11b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-1c7f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static b474-9fbe-207a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-4154 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8f7-3366-1e08 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-e812 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-be04 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd0f-e2e0 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 74e5-43b2-d00d interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-03ca interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0021-6a34-1e18 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0053-4500-0000 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd11-532e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 74de-2b8c-df87 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-7a6b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-66a3 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8f7-335d-0962 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-6518 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-184b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-80a1 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-806b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-7944 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9c4e-367d-1f14 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001f-3c9e-1632 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd70-45eb interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-8476 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-8957 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static acf1-df00-af7f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static f83d-fff7-1e49 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-846c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-a2b1 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-47fd interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd0f-c567 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-c82c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-c705 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-8467 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-c773 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd11-5599 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-13dc interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-adce interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-addd interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-03a7 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static c8f7-335c-8ba9 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-2138 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd6d-6abe interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-a2cf interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd10-108a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-38f3 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-4807 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd0f-c576 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-8453 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-79c1 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd11-5324 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd10-0e64 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-844e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-38d6 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-423a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-66b2 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd6d-16d1 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-be13 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd13-efe3 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-b693 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-41ae interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-bc51 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-09f1 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd10-1076 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd62-03ea interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-80b0 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-0a29 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-4812 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd13-00b5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd12-fd1d interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-64e6 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-e08d interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd10-8565 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-7957 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-002d interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd10-8493 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-2d5f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd10-1067 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-e0e7 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9c4e-367d-2140 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9c4e-367d-a910 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9c4e-367d-9ca8 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-3b91 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-20d5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-2903 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd11-5571 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-ac71 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-80ab interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9c4e-3679-e344 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-41a4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-3c09 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd0f-d6c5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-845d interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-dd3a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-28ae interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd11-2b1e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-2577 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd11-5481 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-2292 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-239f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-0451 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-03f7 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-8097 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-185a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-d493 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-28ef interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd0f-e2f4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-eb5f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-dd36 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd13-00c4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd10-105d interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9c4e-367d-200c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 100b-a93b-27bc interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-780e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-0028 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-eb50 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-4c35 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9c4e-367e-18d0 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd12-fcf0 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd10-0e5a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd11-715f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9c4e-367d-a9b4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9c41-367e-18d0 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd13-e07a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e006-e689-9603 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9c4e-367d-9d24 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9c4e-367d-a8fc interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd11-55a3 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-beaf interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd11-7150 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-a2b6 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-c74b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd11-5567 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd10-8524 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-a2de interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-c823 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd14-7d5f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-0a1e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd19-0023 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-4c3f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-df24 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd15-c8cc interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd1a-3bd7 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6036-dd10-0dce interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 84a6-c851-09b6 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-772f-8375 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-77aa-6dd9 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 5c0a-5b8f-a5e9 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-77aa-5704 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 9cb7-0d1f-f507 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-774b-abf0 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 78e4-001e-8612 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 980c-82af-0fc8 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 000e-3576-0c6b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0016-44ef-efa4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e0ca-9449-5bcb interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-77aa-d67a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static ec55-f986-a16d interface GigabitEthernet0/0/15 vlan 8
+ mac-address static ec55-f986-8748 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0810-7610-ab5b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776f-6f58 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static a088-b45d-50f4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static d0df-9a3a-6976 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0013-e869-32cf interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-8250-62e3 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 74de-2b0d-a872 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-7790-20e6 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-c760-22e2 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 68a8-6d74-9eb2 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 64a7-6983-3461 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0025-560f-0468 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0016-6f15-b407 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-77a2-285d interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0022-faf4-b33c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 68a8-6d3c-e9f0 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776d-bade interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-77ab-1dc6 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-c748-54ca interface GigabitEthernet0/0/15 vlan 8
+ mac-address static ec55-f986-febd interface GigabitEthernet0/0/15 vlan 8
+ mac-address static ec55-f987-4930 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static ec55-f986-fe80 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0022-faef-4e32 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 6c83-36f8-b72b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0024-23f3-26de interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 980c-8231-7005 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776f-6a95 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3c43-8ed7-718f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static d0df-c722-b0eb interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776d-b53a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 1887-96e4-d274 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static b8ff-6152-c84c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776f-731a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0013-e869-3229 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-7755-5377 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static b0d0-9c67-eb65 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0013-0224-abe4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static ec55-f986-b4ee interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776f-72e4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776d-b624 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001a-738b-aea0 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static a4d1-d297-ee54 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-775b-6c40 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-77aa-3b82 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776f-599c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 8ca9-8202-2ea6 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-775c-c0cc interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-c644-9664 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-c748-5672 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-775b-7fbe interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-c643-e132 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-775b-b6e6 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 78e4-00ac-55cc interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001a-736b-0b5b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001a-736a-e37b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0022-fae0-3568 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776f-5b60 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776f-5ffa interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0013-e85f-cad7 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-775c-a4ef interface GigabitEthernet0/0/15 vlan 8
+ mac-address static d89e-3f70-7516 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776f-6e89 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776d-b877 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static ccaf-78c7-16eb interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776f-70b7 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776f-7082 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776d-b557 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 78d6-f048-c116 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776f-7272 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static d023-db90-4e5c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001f-3bd1-97b9 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001c-bf26-337a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001f-3cce-b881 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776f-70f6 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 040c-cece-c45c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 8ca9-8210-d580 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-c755-4ae2 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776d-db05 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 148f-c62e-52a7 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-77ab-1caf interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 24ab-816d-a49e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-775b-8b74 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-7704-01df interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0025-d37d-6957 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001a-738e-94de interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e0b9-a50f-0f85 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-77ab-078e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776f-70d8 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static b8c7-5de1-1e8d interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3c5a-37d9-c851 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0800-28b3-6179 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3c5a-37ef-c503 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3c5a-37d9-d43f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3c5a-37d9-d549 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 00e0-fc8e-78a8 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3c5a-3707-e91d interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3c5a-37d9-c265 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001a-738b-af29 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776f-4cf4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776d-ba0d interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3c8b-feb9-30da interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0800-2801-7b3e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001a-73c2-18e8 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001a-736a-e207 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-77aa-07e7 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-c748-7746 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0022-faed-4ae2 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776d-f4af interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 5894-6b75-81e8 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static d8b3-77fa-e832 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0024-d61c-5846 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3c5a-37e0-e0c6 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776f-72da interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-775a-eed5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 109a-dd43-754c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001c-bf9e-ef81 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static d89e-3ff2-94c0 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776d-b4d8 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776f-7079 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776d-b4ba interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0025-48d1-179f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0022-faed-57ce interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001a-4b6e-28a4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776f-6242 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001a-738e-9990 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776f-5fbe interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776d-c185 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-775b-9dc7 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001f-3bde-97b9 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776f-62e3 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-7790-45a3 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-c748-7747 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0026-c6a5-bd80 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 8ca9-8239-6934 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001d-e0c6-1d03 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0022-fa94-ff86 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0018-de9c-c440 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0013-e85f-c913 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001a-738b-af0a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-77aa-9e5d interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-2450-4985 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-774b-aa41 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001a-736a-e50a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776f-5a30 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3c8b-feb7-a012 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0024-230e-90ae interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 38e7-d883-a578 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 38e7-d883-a5d3 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 38e7-d883-a57b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 38e7-d883-a577 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 38e7-d883-a54e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 38e7-d883-a5cd interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 38e7-d883-a48c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static f8db-7f8c-a439 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 38e7-d883-a338 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 38e7-d882-4027 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0800-2874-0c79 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3c5a-37e0-dfca interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3c5a-37e0-e0b4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 44a7-cf1c-4be5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776f-44ee interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776d-d938 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 38e7-d883-a2f2 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 38e7-d883-a5ed interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 38e7-d883-a7ce interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3c5a-37e0-e2f4 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0024-230e-6820 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 38e7-d883-a7df interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3c5a-37dd-f3c5 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0024-2311-733f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0024-230e-9062 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static e8e5-d6ee-437b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 38e7-d883-a2d3 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 38e7-d883-a7d3 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0024-230d-74ed interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 38e7-d883-a818 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 3c5a-37e0-df90 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776d-b42f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776d-d8dd interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776f-6a73 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776f-724c interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776d-b69f interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776f-7070 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0016-ea70-071a interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-7760-c54b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0022-5f28-8f4b interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776f-6e01 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0013-7791-0436 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001e-4c53-86f6 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 000c-f119-ad9e interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001a-736a-e6fe interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 0018-de64-4d76 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-776f-6b38 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-7760-db24 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-77aa-c696 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001a-738e-9604 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 001b-775c-c064 interface GigabitEthernet0/0/15 vlan 8
+ mac-address static 000f-e22a-c984 interface Ethernet1/0/7 vlan 4093
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.189.46.1 preference 100
+#
+ snmp-agent
+ snmp-agent local-engineid 800007DB000FE223112B6877
+ snmp-agent community read MSRM
+ snmp-agent community read cqmcnm
+ snmp-agent community read public
+ snmp-agent community read Oavpn@123
+ snmp-agent sys-info contact Huawei 02363632386
+ snmp-agent sys-info location CQYDDCN
+ snmp-agent sys-info version all
+ snmp-agent group v1 cqmcnm
+ snmp-agent group v2c cqmcnm
+ snmp-agent group v3 cqmcnm
+ snmp-agent trap enable configuration
+ snmp-agent trap enable system
+ snmp-agent trap enable standard
+ snmp-agent trap enable vrrp
+ snmp-agent trap enable bgp
+ snmp-agent trap enable flash
+#
+ ntp-service authentication enable
+ ntp-service refclock-master  1
+#
+ ssh authentication-type default all
+ ssh server authentication-retries 5
+ ssh user cqyddcn authentication-type password
+ ssh user cqyddcn service-type stelnet
+#
+user-interface aux 0
+user-interface vty 0 4
+ authentication-mode scheme
+ user privilege level 3
+ set authentication password simple hDA!23mN
+#
+return

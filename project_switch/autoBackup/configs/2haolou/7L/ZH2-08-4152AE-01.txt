@@ -1,0 +1,320 @@
+sh run
+Current configuration:
+!
+   hostname ZH2-08-4152AE-01 
+   vendorcontact 400-886-8669 
+   vendorlocation No.16 Jiuxing Avenue High-tech Park Chengdu P.R.China 610041 
+!
+   spanning-tree 
+   spanning-tree mode stp 
+!
+   snmp-server enable 
+   snmp-server securityip disable 
+   snmp-server community ro Oavpn@123 
+   snmp-server view v1defaultviewname 1.3. include 
+   rmon enable 
+!
+   username admin password 0 jswy123 
+   username qware password 0 jswy123 
+   telnet-user qware password 7 da3bf908c5f467f75fc31c14d78b2581 
+   telnet-user jswyyd password 7 da3bf908c5f467f75fc31c14d78b2581 
+!
+!
+Vlan 1
+   vlan 1 
+!
+Vlan 2
+   vlan 2 
+   name management 
+!
+Vlan 10
+   vlan 10 
+   name zhongduanGS 
+!
+Vlan 13
+   vlan 13 
+!
+Vlan 14
+   vlan 14 
+!
+Vlan 16
+   vlan 16 
+!
+Vlan 18
+   vlan 18 
+!
+Vlan 27
+   vlan 27 
+   name C4_BOSSVPN 
+!
+Vlan 28
+   vlan 28 
+!
+Vlan 101
+   vlan 101 
+   name C4_OAVPN1 
+!
+Vlan 102
+   vlan 102 
+   name C4_OAVPN2 
+!
+Vlan 110
+   vlan 110 
+!
+   am enable 
+!
+!
+Interface Ethernet0/0/1
+   switchport access vlan 13 
+   am port 
+   am mac-ip-pool 11-11-11-11-11-12 10.189.75.44 
+!
+Interface Ethernet0/0/2
+   switchport access vlan 13 
+   am port 
+   am mac-ip-pool 11-11-11-11-11-12 10.189.75.44 
+!
+Interface Ethernet0/0/3
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/4
+   switchport access vlan 13 
+   am port 
+   am mac-ip-pool 20-89-84-E1-C5-6D 10.189.75.31 
+   am mac-ip-pool 10-BF-48-6E-1A-FA 10.189.75.32 
+   am mac-ip-pool C8-0A-A9-34-4F-74 10.189.75.33 
+   am mac-ip-pool 20-1A-06-01-F0-0F 10.189.75.34 
+   am mac-ip-pool 20-1A-06-02-2E-F1 10.189.75.35 
+   am mac-ip-pool 3C-97-0E-5D-4C-80 10.189.75.37 
+   am mac-ip-pool 00-23-5A-0F-E2-26 10.189.75.39 
+   am mac-ip-pool 54-04-A6-AB-47-46 10.189.75.40 
+   am mac-ip-pool 40-16-7E-45-35-F7 10.189.75.41 
+   am mac-ip-pool B8-88-E3-33-38-61 10.189.75.42 
+   am mac-ip-pool 08-9E-01-B1-3D-FD 10.189.75.44 
+   am mac-ip-pool 00-14-0B-3F-92-01 10.189.75.51 
+   am mac-ip-pool E8-03-9A-01-27-08 10.189.75.52 
+   am mac-ip-pool 38-EA-A7-E5-13-8B 10.189.75.53 
+   am mac-ip-pool 00-26-18-38-71-C2 10.189.75.54 
+   am mac-ip-pool BC-5F-F4-3F-75-08 10.189.75.55 
+   am mac-ip-pool 20-6A-8A-60-B6-02 10.189.75.56 
+   am mac-ip-pool 54-04-A6-80-C3-E5 10.189.75.57 
+   am mac-ip-pool 90-2B-34-4E-C2-56 10.189.75.58 
+   am mac-ip-pool A0-D3-C1-72-75-FB 10.189.75.59 
+   am mac-ip-pool 00-15-AF-E1-4F-9B 10.189.75.60 
+   am mac-ip-pool 00-1D-7D-BF-FD-AC 10.189.75.61 
+   am mac-ip-pool F0-DE-F1-42-DE-91 10.189.75.62 
+   am mac-ip-pool B8-88-E3-84-BB-49 10.189.75.63 
+   am mac-ip-pool 78-E3-B5-AA-52-6F 10.189.75.64 
+   am mac-ip-pool B8-88-E3-A8-56-6E 10.189.75.65 
+   am mac-ip-pool 24-0A-64-C2-47-55 10.189.75.66 
+   am mac-ip-pool B8-03-9A-39-D2-19 10.189.75.67 
+   am mac-ip-pool 00-24-E8-AB-81-CF 10.189.75.68 
+   am mac-ip-pool 00-26-18-0B-9A-E9 10.189.75.69 
+   am mac-ip-pool 00-1E-68-5E-D4-E3 10.189.75.70 
+   am mac-ip-pool 54-04-A6-06-52-3A 10.189.75.72 
+   am mac-ip-pool 20-1A-06-94-A4-00 10.189.75.82 
+!
+Interface Ethernet0/0/5
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/6
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/7
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/8
+   switchport access vlan 13 
+   am port 
+   am mac-ip-pool 6C-3B-E5-80-FA-CE 10.189.75.11 
+!
+Interface Ethernet0/0/9
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/10
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/11
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/12
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/13
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/14
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/15
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/16
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/17
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/18
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/19
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/20
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/21
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/22
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/23
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/24
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/25
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/26
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/27
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/28
+   switchport access vlan 28 
+!
+Interface Ethernet0/0/29
+   switchport access vlan 13 
+   am port 
+   am mac-ip-pool F8-A9-63-3E-05-AC 10.189.75.43 
+   am mac-ip-pool 00-01-7A-F4-74-CE 10.189.75.45 
+   am mac-ip-pool 00-1E-90-20-1A-04 10.189.75.46 
+   am mac-ip-pool 3C-97-0E-4D-6D-5D 10.189.75.47 
+   am mac-ip-pool C8-9C-DC-39-29-A9 10.189.75.48 
+   am mac-ip-pool 6C-62-6D-61-C1-7B 10.189.75.49 
+   am mac-ip-pool 6C-62-6D-61-BD-1A 10.189.75.50 
+   am mac-ip-pool B4-B5-2F-D6-B6-71 10.189.75.73 
+   am mac-ip-pool C0-3F-D5-0A-CB-2F 10.189.75.75 
+   am mac-ip-pool 78-E3-B5-AA-51-D5 10.189.75.83 
+!
+Interface Ethernet0/0/30
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/31
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/32
+   switchport access vlan 14 
+!
+Interface Ethernet0/0/33
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/34
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/35
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/36
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/37
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/38
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/39
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/40
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/41
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/42
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/43
+   switchport access vlan 14 
+!
+Interface Ethernet0/0/44
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/45
+   switchport access vlan 13 
+   am port 
+   am mac-ip-pool 00-00-00-00-00-01 10.189.75.20 
+!
+Interface Ethernet0/0/46
+   switchport access vlan 13 
+!
+Interface Ethernet0/0/47
+   switchport access vlan 13 
+   am port 
+   am mac-ip-pool 11-12-11-11-11-11 10.189.75.10 
+   am mac-ip-pool 3C-97-0E-55-A6-97 10.189.75.98 
+   am mac-ip-pool 3C-97-0E-4D-73-FC 10.189.75.99 
+   am mac-ip-pool 3C-97-0E-4D-78-EC 10.189.75.100 
+   am mac-ip-pool 3C-07-54-33-7C-73 10.189.75.101 
+   am mac-ip-pool 6C-62-6D-75-B4-9F 10.189.75.102 
+   am mac-ip-pool 54-53-ED-31-C3-7C 10.189.75.103 
+   am mac-ip-pool 50-46-5D-2E-8C-16 10.189.75.104 
+   am mac-ip-pool 00-1F-C6-E9-31-DC 10.189.75.105 
+   am mac-ip-pool 3C-97-0E-4D-7B-A6 10.189.75.106 
+   am mac-ip-pool E0-3F-49-B9-80-00 10.189.75.107 
+   am mac-ip-pool 60-EB-69-DE-E5-B2 10.189.75.108 
+   am mac-ip-pool 00-22-68-85-1D-8D 10.189.75.109 
+   am mac-ip-pool EC-9A-74-4E-89-C2 10.189.75.110 
+!
+Interface Ethernet0/0/48
+   switchport access vlan 13 
+   am port 
+!
+Interface Ethernet0/0/49
+   switchport mode trunk 
+!
+Interface Ethernet0/0/50
+!
+Interface Ethernet0/0/51
+!
+Interface Ethernet0/0/52
+   switchport access vlan 13 
+   am port 
+   am mac-ip-pool 3C-97-0E-E0-8F-4E 10.189.75.12 
+   am mac-ip-pool C8-9C-DC-2F-F7-77 10.189.75.14 
+   am mac-ip-pool C4-54-44-19-FB-D3 10.189.75.15 
+   am mac-ip-pool C8-0A-A9-4B-B9-5D 10.189.75.16 
+   am mac-ip-pool 10-78-D2-DD-3F-46 10.189.75.18 
+   am mac-ip-pool 44-37-E6-59-4F-6F 10.189.75.19 
+   am mac-ip-pool EC-A8-6B-89-66-FD 10.189.75.20 
+   am mac-ip-pool 00-00-85-D3-0B-9A 10.189.75.22 
+   am mac-ip-pool 00-22-68-85-1D-AE 10.189.75.23 
+   am mac-ip-pool C8-9C-DC-03-09-98 10.189.75.24 
+   am mac-ip-pool 00-21-97-9C-E6-46 10.189.75.25 
+   am mac-ip-pool 90-FB-A6-38-E2-94 10.189.75.26 
+   am mac-ip-pool 00-E0-4C-00-D3-78 10.189.75.71 
+   am mac-ip-pool 00-E0-4C-36-4C-D2 10.189.75.74 
+   am mac-ip-pool 08-00-37-F4-FF-06 10.189.75.75 
+   am mac-ip-pool 44-37-E6-59-4F-1C 10.189.75.77 
+   am mac-ip-pool 00-18-8B-DA-5D-51 10.189.75.78 
+   am mac-ip-pool C8-9C-DC-69-BC-8C 10.189.75.79 
+   am mac-ip-pool 00-1E-90-21-DE-5F 10.189.75.81 
+   am mac-ip-pool B8-88-E3-33-93-B4 10.189.75.97 
+!
+!
+interface Vlan2 
+   interface vlan 2 
+   ip address 10.189.72.80 255.255.255.192 
+!
+   ip http server 
+   web-user gg password 7 bf2bc2545a4a5f5683d9ef3ed0d977e0 
+!
+   ip route 0.0.0.0 0.0.0.0 10.189.72.100 
+!

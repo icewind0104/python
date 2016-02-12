@@ -1,0 +1,235 @@
+dis curr
+#
+ sysname CQYD-DCN-14F-S2403H-EI-2
+#
+ super password level 3 cipher $<^;D^CFXR(8KB4G4!%(,A!!
+#
+radius scheme system
+ server-type huawei
+ primary authentication 127.0.0.1 1645
+ primary accounting 127.0.0.1 1646
+ user-name-format without-domain
+
+domain icu
+ radius-scheme system
+ access-limit disable
+ state active
+ vlan-assignment-mode integer
+ idle-cut disable
+ self-service-url disable
+ messenger time disable
+
+domain system
+ radius-scheme system
+ access-limit disable
+ state active
+ vlan-assignment-mode integer
+ idle-cut disable
+ self-service-url disable
+ messenger time disable
+
+ domain default enable system
+#
+ local-server nas-ip 127.0.0.1 key huawei
+
+local-user cqyddcn
+ password cipher $<^;D^CFXR'Q=^Q`MAF4<1!!
+ service-type telnet level 1
+#
+ queue-scheduler wrr 1 2 4 8
+#
+vlan 1
+#
+vlan 19
+#
+vlan 4093
+#
+interface Vlan-interface4093
+ ip address 10.189.46.53 255.255.255.192
+#
+interface Aux0/0
+#
+interface Ethernet0/1
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 19 4093
+#
+interface Ethernet0/2
+ mac-address max-mac-count 0
+ port access vlan 19
+ line-rate outbound 32
+#
+interface Ethernet0/3
+ description zhb\14D25\liuxue
+ mac-address max-mac-count 0
+ port access vlan 19
+ line-rate outbound 32
+#
+interface Ethernet0/4
+ description zhb\14d26\liuxue\qt
+ mac-address max-mac-count 0
+ port access vlan 19
+ line-rate outbound 32
+#
+interface Ethernet0/5
+ mac-address max-mac-count 0
+ port access vlan 19
+ line-rate outbound 32
+#
+interface Ethernet0/6
+ mac-address max-mac-count 0
+ port access vlan 19
+ line-rate outbound 32
+#
+interface Ethernet0/7
+ mac-address max-mac-count 0
+ port access vlan 19
+ line-rate outbound 32
+#
+interface Ethernet0/8
+ mac-address max-mac-count 0
+ port access vlan 19
+ line-rate outbound 32
+#
+interface Ethernet0/9
+ mac-address max-mac-count 0
+ port access vlan 19
+ line-rate outbound 32
+#
+interface Ethernet0/10
+ mac-address max-mac-count 0
+ port access vlan 19
+ line-rate outbound 32
+#
+interface Ethernet0/11
+ mac-address max-mac-count 0
+ port access vlan 19
+ line-rate outbound 32
+#
+interface Ethernet0/12
+ mac-address max-mac-count 0
+ port access vlan 19
+ line-rate outbound 32
+#
+interface Ethernet0/13
+ mac-address max-mac-count 0
+ port access vlan 19
+ line-rate outbound 32
+#
+interface Ethernet0/14
+ mac-address max-mac-count 0
+ port access vlan 19
+ line-rate outbound 32
+#
+interface Ethernet0/15
+ mac-address max-mac-count 0
+ port access vlan 19
+ line-rate outbound 32
+#
+interface Ethernet0/16
+ mac-address max-mac-count 0
+ port access vlan 19
+ line-rate outbound 32
+#
+interface Ethernet0/17
+ mac-address max-mac-count 0
+ port access vlan 19
+ line-rate outbound 32
+#
+interface Ethernet0/18
+ description zhb\14D40\wangchenggang
+ mac-address max-mac-count 0
+ port access vlan 19
+ line-rate outbound 32
+#
+interface Ethernet0/19
+ description nsb\14D41\yuna
+ mac-address max-mac-count 2
+ port access vlan 19
+ line-rate outbound 32
+#
+interface Ethernet0/20
+ mac-address max-mac-count 0
+ port access vlan 19
+ line-rate outbound 32
+#
+interface Ethernet0/21
+ mac-address max-mac-count 0
+ port access vlan 19
+ line-rate outbound 32
+#
+interface Ethernet0/22
+ description zhb\14D44\chenxueqiang
+ mac-address max-mac-count 0
+ port access vlan 19
+ line-rate outbound 32
+#
+interface Ethernet0/23
+ description zhb\14D45\kuangyang
+ shutdown
+ mac-address max-mac-count 0
+ port access vlan 19
+ line-rate inbound 2
+ line-rate outbound 2
+#
+interface Ethernet0/24
+ mac-address max-mac-count 0
+ port access vlan 19
+ line-rate outbound 32
+#
+interface Ethernet0/25
+#
+interface NULL0
+#
+ mac-address static 54ee-757d-17b2 interface Ethernet0/2 vlan 19
+ mac-address static 3c97-0e4d-70dc interface Ethernet0/2 vlan 19
+ mac-address static 00ff-a64a-a7fc interface Ethernet0/4 vlan 19
+ mac-address static 00e0-4c98-4307 interface Ethernet0/4 vlan 19
+ mac-address static 0015-f2ec-d938 interface Ethernet0/4 vlan 19
+ mac-address static 507b-9d61-d338 interface Ethernet0/5 vlan 19
+ mac-address static 3c07-5465-2d5f interface Ethernet0/5 vlan 19
+ mac-address static 0050-56c0-0008 interface Ethernet0/5 vlan 19
+ mac-address static 00e0-4c27-4099 interface Ethernet0/5 vlan 19
+ mac-address static 3c97-0e4d-7710 interface Ethernet0/6 vlan 19
+ mac-address static 001b-b9d8-7a4c interface Ethernet0/10 vlan 19
+ mac-address static 3c97-0e4d-6f8b interface Ethernet0/11 vlan 19
+ mac-address static 00e0-4c27-3893 interface Ethernet0/11 vlan 19
+ mac-address static b075-d598-9944 interface Ethernet0/11 vlan 19
+ mac-address static 0016-d3ba-f7ce interface Ethernet0/11 vlan 19
+ mac-address static 0015-c577-f1c0 interface Ethernet0/11 vlan 19
+ mac-address static 001b-2456-449b interface Ethernet0/11 vlan 19
+ mac-address static 001e-c908-4c35 interface Ethernet0/12 vlan 19
+ mac-address static 74d0-2b80-6a26 interface Ethernet0/13 vlan 19
+ mac-address static 54ee-7502-7261 interface Ethernet0/14 vlan 19
+ mac-address static 60eb-695e-2a58 interface Ethernet0/14 vlan 19
+ mac-address static 3c97-0e4d-7dea interface Ethernet0/15 vlan 19
+ mac-address static 001b-2458-1ed8 interface Ethernet0/15 vlan 19
+ mac-address static 3c97-0e52-23d5 interface Ethernet0/18 vlan 19
+ mac-address static 3c97-0e4d-6ef3 interface Ethernet0/18 vlan 19
+ mac-address static 001b-a9c1-3013 interface Ethernet0/20 vlan 19
+ mac-address static 0016-ec4d-6434 interface Ethernet0/20 vlan 19
+ mac-address static 0016-d326-11c2 interface Ethernet0/21 vlan 19
+ mac-address static f8a9-633e-10b6 interface Ethernet0/22 vlan 19
+ mac-address static 60eb-6925-a337 interface Ethernet0/22 vlan 19
+ mac-address static b88d-1252-b040 interface Ethernet0/22 vlan 19
+ mac-address static 00e0-4c78-3b47 interface Ethernet0/22 vlan 19
+ mac-address static 3c97-0e4d-7d03 interface Ethernet0/23 vlan 19
+ mac-address static 00e0-4c68-028d interface Ethernet0/23 vlan 19
+ mac-address static 001b-2456-40d5 interface Ethernet0/23 vlan 19
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.189.46.1 preference 100
+#
+ snmp-agent
+ snmp-agent local-engineid 800007DB000FE22AC9726877
+ snmp-agent community read  MSRM
+ snmp-agent community read  Oavpn@123
+ snmp-agent sys-info contact Huawei 02363632386
+ snmp-agent sys-info location CQYDDCN
+ snmp-agent sys-info version v2c v3
+#
+user-interface aux 0
+user-interface vty 0 4
+ user privilege level 3
+ set authentication password simple q#FD45dV
+#
+return

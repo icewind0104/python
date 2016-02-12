@@ -1,0 +1,11 @@
+#!/usr/local/python
+# -*- coding utf-8 -*-
+
+import math, re, string, switch, time, sqlite3, os
+from switch import logging
+import pexpect
+
+Switches = switch.getSW('/home/meidl/python/project_switch/indicator/switches.txt')
+SW = switch.switch_maipu(**Switches[0])
+res = SW.getInfo(['sh run'])
+print(res['sh run'])

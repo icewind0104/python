@@ -1,0 +1,244 @@
+sh run
+Current configuration:
+!
+   hostname ZH2-07-4152AE-01 
+   vendorcontact 400-886-8669 
+   vendorlocation No.16 Jiuxing Avenue High-tech Park Chengdu P.R.China 610041 
+!
+   snmp-server enable 
+   snmp-server securityip disable 
+   snmp-server community ro Oavpn@123 
+   snmp-server view v1defaultviewname 1.3. include 
+   rmon enable 
+!
+   username admin password 0 jswy123 
+   username qware password 0 jswy123 
+   telnet-user qware password 7 da3bf908c5f467f75fc31c14d78b2581 
+   telnet-user jswyyd password 7 da3bf908c5f467f75fc31c14d78b2581 
+   telnet-user wf password 7 5848221f693fbc8131ab8e4bf6debbcc 
+!
+!
+Vlan 1
+   vlan 1 
+!
+Vlan 2
+   vlan 2 
+   name management 
+!
+Vlan 13
+   vlan 13 
+!
+Vlan 14
+   vlan 14 
+!
+Vlan 28
+   vlan 28 
+!
+Vlan 40
+   vlan 40 
+   name DSxinVPN 
+!
+Vlan 80
+   vlan 80 
+!
+   am enable 
+!
+!
+Interface Ethernet0/0/1
+   switchport access vlan 14 
+   am port 
+   am mac-ip-pool 3C-97-0E-4D-70-AD 10.189.75.160 
+!
+Interface Ethernet0/0/2
+   switchport access vlan 14 
+   am port 
+   am mac-ip-pool C8-9C-DC-78-DC-08 10.189.75.184 
+!
+Interface Ethernet0/0/3
+   switchport access vlan 28 
+   am port 
+   am mac-ip-pool 8C-89-A5-8E-EF-E5 10.189.220.41 
+!
+Interface Ethernet0/0/4
+   switchport access vlan 14 
+   am port 
+   am mac-ip-pool C8-9C-DC-7A-A9-C3 10.189.75.203 
+!
+Interface Ethernet0/0/5
+   switchport access vlan 14 
+!
+Interface Ethernet0/0/6
+   switchport access vlan 14 
+!
+Interface Ethernet0/0/7
+   switchport access vlan 14 
+!
+Interface Ethernet0/0/8
+   switchport access vlan 14 
+   am port 
+   am mac-ip-pool 3C-97-0E-4D-79-B6 10.189.75.232 
+!
+Interface Ethernet0/0/9
+   switchport access vlan 14 
+   am port 
+   am mac-ip-pool 11-11-11-11-11-12 10.189.75.121 
+!
+Interface Ethernet0/0/10
+   switchport access vlan 14 
+!
+Interface Ethernet0/0/11
+   switchport access vlan 14 
+   am port 
+   am mac-ip-pool 6C-62-6D-AB-3A-3C 10.189.75.166 
+!
+Interface Ethernet0/0/12
+   switchport access vlan 14 
+!
+Interface Ethernet0/0/13
+   switchport access vlan 14 
+   am port 
+   am mac-ip-pool C8-9C-DC-7A-AB-65 10.189.75.194 
+!
+Interface Ethernet0/0/14
+   switchport access vlan 14 
+   am port 
+   am mac-ip-pool D0-27-88-8E-B0-3A 10.189.75.230 
+!
+Interface Ethernet0/0/15
+   switchport access vlan 14 
+   am port 
+   am mac-ip-pool 3C-97-0E-4D-71-33 10.189.75.171 
+!
+Interface Ethernet0/0/16
+   switchport access vlan 14 
+!
+Interface Ethernet0/0/17
+   switchport access vlan 14 
+!
+Interface Ethernet0/0/18
+   switchport access vlan 14 
+!
+Interface Ethernet0/0/19
+   switchport access vlan 14 
+   am port 
+   am mac-ip-pool 00-23-24-62-E0-4C 10.189.75.185 
+!
+Interface Ethernet0/0/20
+   switchport access vlan 14 
+!
+Interface Ethernet0/0/21
+   switchport access vlan 14 
+!
+Interface Ethernet0/0/22
+   switchport access vlan 14 
+!
+Interface Ethernet0/0/23
+   switchport access vlan 14 
+!
+Interface Ethernet0/0/24
+   switchport access vlan 14 
+   am port 
+   am mac-ip-pool 00-01-6C-D0-FF-06 10.189.75.175 
+!
+Interface Ethernet0/0/25
+   switchport access vlan 14 
+!
+Interface Ethernet0/0/26
+   switchport access vlan 14 
+   am port 
+   am mac-ip-pool 3C-97-0E-4D-71-26 10.189.75.156 
+!
+Interface Ethernet0/0/27
+   switchport access vlan 14 
+!
+Interface Ethernet0/0/28
+   switchport access vlan 14 
+   am port 
+   am mac-ip-pool 3C-97-0E-4D-70-20 10.189.75.216 
+!
+Interface Ethernet0/0/29
+   switchport access vlan 14 
+   am port 
+   am mac-ip-pool 74-27-EA-C4-04-83 10.189.75.229 
+!
+Interface Ethernet0/0/30
+   switchport access vlan 14 
+!
+Interface Ethernet0/0/31
+   switchport access vlan 14 
+!
+Interface Ethernet0/0/32
+   switchport access vlan 14 
+!
+Interface Ethernet0/0/33
+   switchport access vlan 14 
+!
+Interface Ethernet0/0/34
+   switchport access vlan 14 
+!
+Interface Ethernet0/0/35
+   switchport access vlan 14 
+!
+Interface Ethernet0/0/36
+   switchport access vlan 14 
+!
+Interface Ethernet0/0/37
+   switchport access vlan 14 
+!
+Interface Ethernet0/0/38
+   switchport access vlan 14 
+   am port 
+   am mac-ip-pool 3C-97-0E-4D-79-66 10.189.75.170 
+!
+Interface Ethernet0/0/39
+   switchport access vlan 14 
+!
+Interface Ethernet0/0/40
+   switchport access vlan 14 
+!
+Interface Ethernet0/0/41
+   switchport access vlan 14 
+   am port 
+   am mac-ip-pool D8-CB-8A-04-2C-7F 10.189.75.150 
+!
+Interface Ethernet0/0/42
+   switchport access vlan 14 
+!
+Interface Ethernet0/0/43
+   switchport access vlan 14 
+!
+Interface Ethernet0/0/44
+   switchport access vlan 14 
+!
+Interface Ethernet0/0/45
+   switchport access vlan 14 
+!
+Interface Ethernet0/0/46
+   switchport access vlan 14 
+!
+Interface Ethernet0/0/47
+   switchport access vlan 14 
+!
+Interface Ethernet0/0/48
+   switchport access vlan 14 
+!
+Interface Ethernet0/0/49
+   switchport mode trunk 
+!
+Interface Ethernet0/0/50
+!
+Interface Ethernet0/0/51
+!
+Interface Ethernet0/0/52
+!
+!
+interface Vlan2 
+   interface vlan 2 
+   ip address 10.189.72.78 255.255.255.192 
+!
+   web-user gg password 7 bf2bc2545a4a5f5683d9ef3ed0d977e0 
+!
+   ip route 0.0.0.0 0.0.0.0 10.189.72.100 
+!
+   
+!

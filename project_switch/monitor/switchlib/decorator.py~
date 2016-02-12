@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+
+import sys
+sys.path.append('/home/meidl/python/project_switch/monitor')
+import config
+
+default = config.configs.RRD_create_option_default
+
+def rrd_options(**kw):
+    def decorator(func):
+        def wrapper(*args, **kw):
+            return func(*args, **kw)
+        wrapper.step = kw.get('step', default['step'])
+        wrapper.DST = kw.get('DST', default['DST'])
+        wrapper.max = kw.get('max', default['max'])
+        wrapper.min = kw.get('min', default['min'])
+        wrapper.CF = kw.get('CF', default['CF'])
+        wrapper.CDP = kw.get('CDP', default['CDP'])
+        wrapper.size = kw.get('size', default['size'])
+        return wrapper
+    return decorator

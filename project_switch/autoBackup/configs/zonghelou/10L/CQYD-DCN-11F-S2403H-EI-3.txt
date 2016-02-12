@@ -1,0 +1,139 @@
+dis curr
+#
+ sysname CQYD-DCN-11F-S2403H-EI-3
+#
+ super password level 3 cipher $<^;D^CFXR(8KB4G4!%(,A!!
+#
+radius scheme system
+ server-type huawei
+ primary authentication 127.0.0.1 1645
+ primary accounting 127.0.0.1 1646
+ user-name-format without-domain
+
+domain system
+ radius-scheme system
+ access-limit disable
+ state active
+ vlan-assignment-mode integer
+ idle-cut disable
+ self-service-url disable
+ messenger time disable
+
+ domain default enable system
+#
+ local-server nas-ip 127.0.0.1 key huawei
+
+local-user cqyddcn
+ password cipher $<^;D^CFXR'Q=^Q`MAF4<1!!
+ service-type telnet level 1
+#
+ queue-scheduler wrr 1 2 4 8
+#
+vlan 1
+#
+vlan 14
+#
+vlan 26
+ description to_wangguan_VPN_shujubu
+#
+vlan 4093
+#
+interface Vlan-interface4093
+ ip address 10.189.46.43 255.255.255.192
+#
+interface Aux0/0
+#
+interface Ethernet0/1
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 14 26 4093
+#
+interface Ethernet0/2
+ port access vlan 14
+#
+interface Ethernet0/3
+ port access vlan 14
+#
+interface Ethernet0/4
+ port access vlan 14
+#
+interface Ethernet0/5
+ port access vlan 14
+#
+interface Ethernet0/6
+ port access vlan 14
+#
+interface Ethernet0/7
+ port access vlan 14
+#
+interface Ethernet0/8
+ port access vlan 14
+#
+interface Ethernet0/9
+ port access vlan 14
+#
+interface Ethernet0/10
+ port access vlan 14
+#
+interface Ethernet0/11
+ port access vlan 14
+#
+interface Ethernet0/12
+ port access vlan 14
+#
+interface Ethernet0/13
+ port access vlan 14
+#
+interface Ethernet0/14
+ port access vlan 14
+#
+interface Ethernet0/15
+ port access vlan 14
+#
+interface Ethernet0/16
+ port access vlan 14
+#
+interface Ethernet0/17
+ port access vlan 14
+#
+interface Ethernet0/18
+ port access vlan 14
+#
+interface Ethernet0/19
+ port access vlan 14
+#
+interface Ethernet0/20
+ port access vlan 14
+#
+interface Ethernet0/21
+ port access vlan 14
+#
+interface Ethernet0/22
+ port access vlan 14
+#
+interface Ethernet0/23
+ port access vlan 14
+#
+interface Ethernet0/24
+ port access vlan 14
+#
+interface Ethernet0/25
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.189.46.1 preference 100
+#
+ snmp-agent
+ snmp-agent local-engineid 800007DB000FE22AC97B6877
+ snmp-agent community read  MSRM
+ snmp-agent community read  Oavpn@123
+ snmp-agent sys-info contact Huawei 02363632386
+ snmp-agent sys-info location CQYDDCN
+ snmp-agent sys-info version v2c v3
+#
+user-interface aux 0
+user-interface vty 0 4
+ user privilege level 3
+ set authentication password simple q#FD45dV
+#
+return

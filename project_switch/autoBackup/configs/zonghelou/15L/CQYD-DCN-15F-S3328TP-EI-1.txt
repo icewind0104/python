@@ -1,0 +1,244 @@
+dis curr
+#
+!Software Version V100R005C01SPC100
+ sysname CQYD-DCN-15F-S3328TP-EI-1
+#
+ super password level 3 cipher $<^;D^CFXR'Q=^Q`MAF4<1!!
+#
+ vlan batch 20 4093
+#
+ cluster enable
+ ntdp enable
+ ntdp hop 16
+ ndp enable
+#
+ dhcp enable
+#
+ undo http server enable
+#
+aaa
+ authentication-scheme default
+ authorization-scheme default
+ accounting-scheme default
+ domain default
+ domain default_admin
+ local-user admin password simple admin
+ local-user admin service-type http
+ local-user cqyddcn password cipher $<^;D^CFXR'Q=^Q`MAF4<1!!
+ local-user cqyddcn privilege level 3
+ local-user cqyddcn service-type telnet
+ local-user wf password cipher _CR0@.$VO#B/3:L02.;;!Q!!
+ local-user wf privilege level 3
+ local-user wf service-type telnet
+#
+interface Vlanif1
+ ip address dhcp-alloc
+#
+interface Vlanif4093
+ ip address 10.189.46.58 255.255.255.192
+#
+interface Ethernet0/0/1
+ port link-type trunk
+ undo port trunk allow-pass vlan 1
+ port trunk allow-pass vlan 20 4093
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/2
+ port link-type access
+ port default vlan 20
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/3
+ port link-type access
+ port default vlan 20
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/4
+ port link-type access
+ port default vlan 20
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/5
+ port link-type access
+ port default vlan 20
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/6
+ port link-type access
+ port default vlan 20
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/7
+ port link-type access
+ port default vlan 20
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/8
+ port link-type access
+ port default vlan 20
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/9
+ port link-type access
+ port default vlan 20
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/10
+ port link-type access
+ port default vlan 20
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/11
+ port link-type access
+ port default vlan 20
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/12
+ port link-type access
+ port default vlan 20
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/13
+ port link-type access
+ port default vlan 20
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/14
+ port link-type access
+ port default vlan 20
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/15
+ port link-type access
+ port default vlan 20
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/16
+ port link-type access
+ port default vlan 20
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/17
+ port link-type access
+ port default vlan 20
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/18
+ port link-type access
+ port default vlan 20
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/19
+ port link-type access
+ port default vlan 20
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/20
+ port link-type access
+ port default vlan 20
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/21
+ port link-type access
+ port default vlan 20
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/22
+ port link-type access
+ port default vlan 20
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/23
+ port link-type access
+ port default vlan 20
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface Ethernet0/0/24
+ port link-type access
+ port default vlan 20
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface GigabitEthernet0/0/1
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface GigabitEthernet0/0/2
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface GigabitEthernet0/0/3
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface GigabitEthernet0/0/4
+ ntdp enable
+ ndp enable
+ bpdu enable
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.189.46.1 preference 100
+#
+ snmp-agent
+ snmp-agent local-engineid 000007DB7F0000010000460A
+ snmp-agent community read  MSRM
+ snmp-agent community read  Oavpn@123
+ snmp-agent sys-info version v2c v3
+#
+user-interface con 0
+ idle-timeout 0 0
+user-interface vty 0 4
+ authentication-mode aaa
+#
+return

@@ -1,0 +1,32 @@
+#!/usr/bin/python3
+
+import threading, pexpect, time
+
+def telnet(IP):
+    child = pexpect.spawn('telnet '+IP)
+    child.expect('Username:', timeout=10)
+    child.sendline('cqyddcn')
+    child.expect('Password:', timeout=10)
+    child.sendline('q#FD45dV')
+    child.expect('>', timeout=10)
+    child.sendline('dis curr')
+    while True: 
+        i = child.expect(['>', '---- More ----'], timeout=10)
+        #print(child.before.decode('utf-8'), end='')
+        if i == 0:
+            child.sendline('end')
+            child.expect('>', timeout=10)
+            child.sendline('exit')
+            print("%s done" % IP)
+            break
+        if i == 1:
+            child.send(' ')
+
+global outPut
+job1 = threading.Thread(target = telnet, args=('10.189.46.9',))
+job2 = threading.Thread(target = telnet, args=('10.189.46.8',))
+job2 = threading.Thread(target = telnet, args=('10.189.46.10',))
+job1.start()
+job2.start()
+
+    

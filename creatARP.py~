@@ -1,0 +1,56 @@
+#!/usr/local/python
+import math, re, string
+
+# create IP list
+class IP():
+    def __init__(self, IP_str):
+        self.ip = re.match('(([0-9]{1,3}).([0-9]{1,3}).([0-9]{1,3}).([0-9]{1,3}))/([0-9]{1,2})', IP_str)
+        if not self.ip:
+            raise RuntimeError('%s is not a legal IP address' % IP_str)
+        for each in range(2,6):
+            if int(self.ip.group(each)) > 255:
+                raise RuntimeError('%s is not a legal IP address' % IP_str)
+
+        self.ip_addr = self.ip.group(1)
+        self.__A = self.ip.group(2)
+        self.__B = self.ip.group(3)
+        self.__C = self.ip.group(4)
+        self.__D = self.ip.group(5)
+        self.__A_bin = bin(int(self.__A))[2:].rjust(8,'0')
+        self.__B_bin = bin(int(self.__B))[2:].rjust(8,'0')
+        self.__C_bin = bin(int(self.__C))[2:].rjust(8,'0')
+        self.__D_bin = bin(int(self.__D))[2:].rjust(8,'0')
+        self.Mask = int(self.ip.group(6))
+        self.IP_bin = self.__A_bin + self.__B_bin + self.__C_bin + self.__D_bin
+        self.IP_bin_net = self.IP_bin[:self.Mask].ljust(32,'0')
+
+    def getHosts(self):
+        num = 2**(32-self.Mask)-1
+        Mask_A = math.floor(num / 256**3)
+        num = num % 256**3
+        Mask_B = math.floor(num / 256**2)
+        num = num % 256**2
+        Mask_C = math.floor(num / 256**1)
+        num = num % 256**1
+        Mask_D = num %256
+
+        IP_net_A = int(self.IP_bin_net[0:8], 2)
+        IP_net_B = int(self.IP_bin_net[8:16], 2)
+        IP_net_C = int(self.IP_bin_net[16:24], 2)
+        IP_net_D = int(self.IP_bin_net[24:32], 2)
+
+        Hosts = []
+        part = [None]*4
+        for a in range(0, Mask_A + 1):
+            part[0] = str(IP_net_A + a)
+            for b in range(0, Mask_B + 1):
+                part[1] = str(IP_net_B + b)
+                for c in range(0, Mask_C + 1):
+                    part[2] = str(IP_net_C + c)
+                    for d in range(0, Mask_D + 1):
+                        part[3] = str(IP_net_D + d)
+                        Hosts.append('.'.join(part))
+        return Hosts[1:-1]
+
+Ip = IP('10.189.20.0/23')
+print(Ip.getHosts[::10])

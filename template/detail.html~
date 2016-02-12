@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}INDICATOR GRAPH{% endblock %}
+
+{% block content %}
+<img src="{{ cpu_img }}">
+<img src="{{ memory_img }}">
+{% for each in customize %}
+<img src="{{ each }}">
+{% endfor %}
+{% endblock %}

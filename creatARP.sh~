@@ -1,0 +1,24 @@
+#!/usr/local/python
+import math
+
+# create IP list
+def get_IP_list():
+    IP_list = []
+    for num in range(4,511):
+        C = 20 + math.floor(num/256)
+        D = num % 256
+        IP_list.append('10.189.'+str(C)+'.'+str(D))
+    return IP_list
+
+File="/root/mac/IPs.txt"
+
+(echo "cqyddcn"; sleep 0.3
+echo "hDA!23mN"; sleep 0.3
+for each in `cat $File`;do
+    echo "ping -c 1 -t 200 $each"; sleep 0.3
+done
+    sleep 0.3
+) | telnet 10.189.46.9 > /root/mac/record.txt
+
+
+echo "done"

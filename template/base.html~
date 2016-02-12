@@ -1,0 +1,13 @@
+<!-- base.html -->
+<html>
+    <head>
+        <title>{% block title %}<!-- title -->{% endblock %}</title>
+        <link rel="stylesheet" href="/static/css/uikit.min.css">
+        <link rel="stylesheet" href="/static/css/uikit.gradient.min.css">
+        <script src="/static/js/uikit.min.js"></script>
+        </head>
+    <body>
+            <nav class="uk-navbar uk-navbar-attached uk-margin-bottom"></nav>
+        {% block content %}<!-- content -->{% endblock %}
+    </body>
+</html>

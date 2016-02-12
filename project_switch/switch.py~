@@ -1,0 +1,118 @@
+#!/usr/bin/python3
+
+import threading, pexpect, re
+
+class switch():
+    def __init__(self, ip, user, passwd, supasswd, vendor=None):
+        self.ip = ip
+        self.user = user
+        self.passwd = passwd
+        self.supasswd = supasswd
+        self.vendor = vendor
+        self.name = ''
+        self.__timeOut = 3
+        self.info2cmd = {
+            'config':'dis curr',
+            'cpu':'dis cpu',
+            'memory':'dis memory'
+        }
+
+    def getInfo(self, info=None):
+        result = {}
+        child = pexpect.spawn('telnet '+self.ip)
+        try:
+            err_login = self.login(child)
+            if err_login:
+                return {'error':err_login}
+            for each in info:
+                result[each] = self.getOutput(child, self.info2cmd[each])
+            self.logout(child)
+        except Exception as e:
+            return {'error':e}
+        return result
+
+    def getOutput(self, child, cmd):
+        outPut = ''
+        child.sendline(cmd)
+        while True: 
+            i = child.expect(['<'+self.name+'>', '---- More ----'], timeout=self.__timeOut)
+            outPut += child.before.decode('utf-8')
+            if i == 0:
+                break
+            if i == 1:
+                child.send(' ') 
+        return outPut
+
+    def login(self, child):
+        if self.user:
+            try:
+                child.expect('Username:', timeout=self.__timeOut)
+            except Exception:
+                return 'connection error'
+            child.sendline(self.user)
+        try:
+            child.expect('Password:', timeout=self.__timeOut)
+        except:
+            return 'connection error'
+        child.sendline(self.passwd)
+        try:
+            child.expect('>', timeout=self.__timeOut)
+        except Exception:
+            return 'login_error: User or Passworld incorrect'
+        self.name = re.search('<(.*)$',child.before.decode('utf-8')).group(1)
+        if self.supasswd:
+            child.sendline('super')
+            child.expect('Password:', timeout=self.__timeOut)
+            child.sendline(self.supasswd)
+            try:
+                child.expect('<'+self.name+'>', timeout=self.__timeOut)
+            except Exception:
+                return 'login_error: Super password incorrect'
+        return None
+
+    def logout(self, child):
+        child.sendline('quit')
+
+'''
+===========================================================
+'''
+
+def getSW(Path):
+    SW = []
+    with open(Path) as openFile:
+        innerContext = openFile.readlines()
+        for each in innerContext[1:]:
+            L = each[:-1].split(':')
+            vendor = L[0]
+            ip = L[1]
+            user = L[2] if L[2] else None
+            passwd = L[3] if L[3] else None
+            supasswd = L[4] if L[4] else None
+            SW.append({
+                'vendor':vendor,
+                'ip':ip,
+                'user':user,
+                'passwd':passwd,
+                'supasswd':supasswd
+            })
+        return SW
+
+class threadRunner():
+    def __init__(self, tasks):
+        self.tasks = tasks
+        self.result = [None]*len(tasks)
+        self.T = [None]*len(tasks)
+
+    def trace_func(self, func, args, seq):
+        res = func(**args)
+        self.result[seq] = res
+
+    def run(self):
+        for index, each in enumerate(self.tasks):
+            self.T[index] = threading.Thread(target=self.trace_func, args=(each['func'], each['args'], index))
+            self.T[index].start()
+        for each in self.T:
+            each.join()
+
+    def getRes(self):
+        return self.result

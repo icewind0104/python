@@ -1,0 +1,29 @@
+#!/usr/bin/python3.5
+
+import aiomysql
+import asyncio
+
+loop = asyncio.get_event_loop()
+
+@asyncio.coroutine
+def create_pool():
+    global __pool
+    __pool = yield from aiomysql.create_pool(
+        host = '192.168.134.128',
+        port = 3306,
+        user = 'root',
+        password = 'my&sql',
+        db = 'test2',
+        loop=loop)
+
+@asyncio.coroutine
+def select(sql):
+    global __pool
+    with (yield from __pool) as conn:
+        cur = yield from conn.cursor(aiomysql.DictCursor)
+        yield from cur.execute(sql)
+        rs = yield from cur.fetchall()
+        yield from cur.close()
+        return rs
+
+loop.run_until_complete(create_pool())

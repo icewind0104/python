@@ -1,0 +1,297 @@
+dis curr
+#
+ sysname CQYD-DCN-16F-S6502
+#
+ super password level 3 simple q#FD45dV
+#
+ local-server nas-ip 127.0.0.1 key huawei
+#
+ local-user password-display-mode cipher-force
+#
+ domain default enable system
+#
+ temperature-limit 0 10 70
+ temperature-limit 1 10 70
+#
+ poe power max-value 2400
+#
+radius scheme system
+ primary authentication 127.0.0.1 1645
+ primary accounting 127.0.0.1 1646
+ user-name-format without-domain
+#
+domain system
+ vlan-assignment-mode integer
+ access-limit disable
+ state active
+ idle-cut disable
+ self-service-url disable
+ messenger time disable
+#
+local-user cqyddcn
+ password cipher $<^;D^CFXR'Q=^Q`MAF4<1!!
+ service-type telnet
+ level 1
+local-user huawei
+ password cipher N`C55QK<`=/Q=^Q`MAF4<1!!
+ service-type telnet
+ level 1
+local-user wf
+ password cipher _CR0@.$VO#B/3:L02.;;!Q!!
+ service-type ssh telnet
+ level 3
+#
+ stp TC-protection enable
+#
+vlan 1
+#
+vlan 20
+#
+vlan 22
+#
+vlan 24
+#
+vlan 4093
+#
+interface Vlan-interface4093
+ ip address 10.189.46.10 255.255.255.192
+#
+interface Aux0/0/0
+#
+interface M-Ethernet0/0/0
+#
+interface Ethernet1/0/1
+ description TO CQYD-DCN-15F-S2403H-EI-1
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 20 22 24 4093
+#
+interface Ethernet1/0/2
+ description TO CQYD-DCN-15F-S2403H-EI-2
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 20 22 24 4093
+#
+interface Ethernet1/0/3
+ description TO CQYD-DCN-15F-S2403H-EI-3
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 20 22 4093
+#
+interface Ethernet1/0/4
+ description TO CQYD-DCN-16F-S2403H-EI-1-Ethernet0/1
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 20 24 4093
+#
+interface Ethernet1/0/5
+ description TO CQYD-DCN-17F-S2403H-EI-1
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 20 4093
+#
+interface Ethernet1/0/6
+ shutdown
+#
+interface Ethernet1/0/7
+ shutdown
+#
+interface Ethernet1/0/8
+ shutdown
+#
+interface Ethernet1/0/9
+ shutdown
+#
+interface Ethernet1/0/10
+ shutdown
+#
+interface Ethernet1/0/11
+ shutdown
+#
+interface Ethernet1/0/12
+ shutdown
+#
+interface Ethernet1/0/13
+ shutdown
+#
+interface Ethernet1/0/14
+ shutdown
+#
+interface Ethernet1/0/15
+ shutdown
+#
+interface Ethernet1/0/16
+ shutdown
+#
+interface Ethernet1/0/17
+ shutdown
+#
+interface Ethernet1/0/18
+ shutdown
+#
+interface Ethernet1/0/19
+ shutdown
+#
+interface Ethernet1/0/20
+ shutdown
+#
+interface Ethernet1/0/21
+ shutdown
+#
+interface Ethernet1/0/22
+ shutdown
+#
+interface Ethernet1/0/23
+ shutdown
+#
+interface Ethernet1/0/24
+ shutdown
+#
+interface Ethernet1/0/25
+ shutdown
+#
+interface Ethernet1/0/26
+ shutdown
+#
+interface Ethernet1/0/27
+ shutdown
+#
+interface Ethernet1/0/28
+ shutdown
+#
+interface Ethernet1/0/29
+ shutdown
+#
+interface Ethernet1/0/30
+ shutdown
+#
+interface Ethernet1/0/31
+ shutdown
+#
+interface Ethernet1/0/32
+ shutdown
+#
+interface Ethernet1/0/33
+ shutdown
+#
+interface Ethernet1/0/34
+ shutdown
+#
+interface Ethernet1/0/35
+ shutdown
+#
+interface Ethernet1/0/36
+ shutdown
+#
+interface Ethernet1/0/37
+ shutdown
+#
+interface Ethernet1/0/38
+ shutdown
+#
+interface Ethernet1/0/39
+ shutdown
+#
+interface Ethernet1/0/40
+ shutdown
+#
+interface Ethernet1/0/41
+ shutdown
+#
+interface Ethernet1/0/42
+ shutdown
+#
+interface Ethernet1/0/43
+ shutdown
+#
+interface Ethernet1/0/44
+ shutdown
+#
+interface Ethernet1/0/45
+ shutdown
+#
+interface Ethernet1/0/46
+ shutdown
+#
+interface Ethernet1/0/47
+ shutdown
+#
+interface Ethernet1/0/48
+ shutdown
+#
+interface GigabitEthernet0/0/1
+ shutdown
+#
+interface GigabitEthernet0/0/2
+ shutdown
+#
+interface GigabitEthernet0/0/3
+ shutdown
+#
+interface GigabitEthernet0/0/4
+ shutdown
+#
+interface GigabitEthernet0/0/5
+ shutdown
+#
+interface GigabitEthernet0/0/6
+ shutdown
+#
+interface GigabitEthernet0/0/7
+ shutdown
+#
+interface GigabitEthernet0/0/8
+ shutdown
+#
+interface GigabitEthernet0/0/9
+ shutdown
+#
+interface GigabitEthernet0/0/10
+ shutdown
+#
+interface GigabitEthernet0/0/11
+ shutdown
+#
+interface GigabitEthernet0/0/12
+ shutdown
+#
+interface GigabitEthernet0/0/13
+ description TO CQYD-DCN-S8505-1-GE2/2/4
+ duplex full
+ speed 1000
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 20 22 24 4093
+#
+interface GigabitEthernet0/0/14
+ description TO CQYD-DCN-S8505-2-GE2/2/4
+ duplex full
+ speed 1000
+ port link-type trunk
+ undo port trunk permit vlan 1
+ port trunk permit vlan 20 22
+#
+interface GigabitEthernet0/0/15
+ shutdown
+#
+interface GigabitEthernet0/0/16
+ shutdown
+#
+interface NULL0
+#
+ ip route-static 0.0.0.0 0.0.0.0 10.189.46.1 preference 100
+#
+ snmp-agent
+ snmp-agent local-engineid 800007DB000FE223113A6877
+ snmp-agent community read MSRM
+ snmp-agent community read Oavpn@123
+ snmp-agent sys-info contact Huawei 02363632386
+ snmp-agent sys-info location CQYDDCN
+ snmp-agent sys-info version v2c v3
+#
+user-interface aux 0
+user-interface vty 0 4
+ authentication-mode scheme
+ set authentication password simple hDA!23mN
+#
+return

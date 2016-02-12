@@ -1,0 +1,20 @@
+#!/bin/usr/env python3
+# -*- coding: utf-8 -*-
+
+class configs():
+    db = {
+        'host' : '192.168.150.131',
+        'port' : 3306,
+        'user' : 'root',
+        'password' : 'my&sql',
+        'db' : 'monitor',
+        'maxsize' : 10,
+        'minsize' : 1
+    }
+
+    server = {
+        'host' : '192.168.150.141',
+        'port' : 8001
+    }
+
+

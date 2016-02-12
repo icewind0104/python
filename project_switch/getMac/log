@@ -1,0 +1,390 @@
+2016-1-28 9:30 [INFO] : Begin
+2016-1-28 9:30 [INFO] : checking network ...
+2016-1-28 9:30 [INFO] : Creating ARP ...
+2016-1-28 9:31 [INFO] : Getting wireless MAC ...
+2016-1-28 9:31 [INFO] : 128(128) wireless mac find
+2016-1-28 9:31 [INFO] : Getting Ethernet MAC ...
+2016-1-28 9:31 [INFO] : 138(303) eth mac find at 10.189.46.66
+2016-1-28 9:31 [INFO] : 144(173) eth mac find at 10.189.46.7
+2016-1-28 9:31 [INFO] : 115(145) eth mac find at 10.189.46.8
+2016-1-28 9:31 [INFO] : 104(137) eth mac find at 10.189.46.9
+2016-1-28 9:31 [INFO] : 58(64) eth mac find at 10.189.46.10
+2016-1-28 9:31 [INFO] : saving into database ...
+2016-1-28 9:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('68db-ca46-cd69','10.189.46.66','2016-1-28 9:30:3')
+2016-1-28 9:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('c89c-dc57-3be7','10.189.46.7','2016-1-28 9:30:3')
+2016-1-28 9:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('0022-faef-43a0','10.189.46.7','2016-1-28 9:30:3')
+2016-1-28 9:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('3c97-0e4d-7827','10.189.46.8','2016-1-28 9:30:3')
+2016-1-28 9:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('68db-ca46-cd69','10.189.46.9','2016-1-28 9:30:3')
+2016-1-28 9:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('6036-dd1a-2138','10.189.46.9','2016-1-28 9:30:3')
+2016-1-28 9:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('0022-faef-43a0','10.189.46.9','2016-1-28 9:30:3')
+2016-1-28 9:31 [INFO] : save complete - 680 has update, 7 has insert
+2016-1-28 9:31 [INFO] : End
+
+2016-1-28 10:30 [INFO] : Begin
+2016-1-28 10:30 [INFO] : checking network ...
+2016-1-28 10:30 [INFO] : Creating ARP ...
+2016-1-28 10:31 [INFO] : Getting wireless MAC ...
+2016-1-28 10:31 [INFO] : 84(84) wireless mac find
+2016-1-28 10:31 [INFO] : Getting Ethernet MAC ...
+2016-1-28 10:31 [INFO] : 144(314) eth mac find at 10.189.46.66
+2016-1-28 10:31 [INFO] : 147(176) eth mac find at 10.189.46.7
+2016-1-28 10:31 [INFO] : 113(144) eth mac find at 10.189.46.8
+2016-1-28 10:31 [INFO] : 105(138) eth mac find at 10.189.46.9
+2016-1-28 10:31 [INFO] : 58(65) eth mac find at 10.189.46.10
+2016-1-28 10:31 [INFO] : saving into database ...
+2016-1-28 10:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('c8f7-335d-2145','10.189.46.66','2016-1-28 10:30:4')
+2016-1-28 10:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('c8f7-335d-2145','10.189.46.9','2016-1-28 10:30:4')
+2016-1-28 10:31 [INFO] : save complete - 649 has update, 2 has insert
+2016-1-28 10:31 [INFO] : End
+
+2016-1-28 11:30 [INFO] : Begin
+2016-1-28 11:30 [INFO] : checking network ...
+2016-1-28 11:30 [INFO] : Creating ARP ...
+2016-1-28 11:31 [INFO] : Getting wireless MAC ...
+2016-1-28 11:31 [INFO] : 152(153) wireless mac find
+2016-1-28 11:31 [INFO] : Getting Ethernet MAC ...
+2016-1-28 11:31 [INFO] : 154(327) eth mac find at 10.189.46.66
+2016-1-28 11:31 [INFO] : 151(180) eth mac find at 10.189.46.7
+2016-1-28 11:31 [INFO] : 113(144) eth mac find at 10.189.46.8
+2016-1-28 11:31 [INFO] : 112(145) eth mac find at 10.189.46.9
+2016-1-28 11:31 [INFO] : 59(66) eth mac find at 10.189.46.10
+2016-1-28 11:31 [INFO] : saving into database ...
+2016-1-28 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('480f-cf3a-a08c','10.189.46.66','2016-1-28 11:30:3')
+2016-1-28 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('c8ff-2850-8237','10.189.46.66','2016-1-28 11:30:3')
+2016-1-28 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('480f-cf3a-a275','10.189.46.66','2016-1-28 11:30:3')
+2016-1-28 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('0023-cd24-4cd6','10.189.46.66','2016-1-28 11:30:3')
+2016-1-28 11:31 [INFO] : save complete - 737 has update, 4 has insert
+2016-1-28 11:31 [INFO] : End
+
+2016-1-28 12:30 [INFO] : Begin
+2016-1-28 12:30 [INFO] : checking network ...
+2016-1-28 12:30 [INFO] : Creating ARP ...
+2016-1-28 12:31 [INFO] : Getting wireless MAC ...
+2016-1-28 12:31 [INFO] : 138(138) wireless mac find
+2016-1-28 12:31 [INFO] : Getting Ethernet MAC ...
+2016-1-28 12:31 [INFO] : 136(296) eth mac find at 10.189.46.66
+2016-1-28 12:31 [INFO] : 146(175) eth mac find at 10.189.46.7
+2016-1-28 12:31 [INFO] : 104(135) eth mac find at 10.189.46.8
+2016-1-28 12:31 [INFO] : 100(133) eth mac find at 10.189.46.9
+2016-1-28 12:31 [INFO] : 59(67) eth mac find at 10.189.46.10
+2016-1-28 12:31 [INFO] : saving into database ...
+2016-1-28 12:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('acfd-cef2-4716','10.189.46.7','2016-1-28 12:30:4')
+2016-1-28 12:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('ace0-1025-c05b','10.189.46.7','2016-1-28 12:30:4')
+2016-1-28 12:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('acfd-cef2-4716','10.189.46.9','2016-1-28 12:30:4')
+2016-1-28 12:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('ace0-1025-c05b','10.189.46.9','2016-1-28 12:30:4')
+2016-1-28 12:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('5cac-4c98-c827','10.189.46.9','2016-1-28 12:30:4')
+2016-1-28 12:31 [INFO] : save complete - 678 has update, 5 has insert
+2016-1-28 12:31 [INFO] : End
+
+2016-1-28 13:30 [INFO] : Begin
+2016-1-28 13:30 [INFO] : checking network ...
+2016-1-28 13:30 [INFO] : Creating ARP ...
+2016-1-28 13:31 [INFO] : Getting wireless MAC ...
+2016-1-28 13:31 [INFO] : 137(137) wireless mac find
+2016-1-28 13:31 [INFO] : Getting Ethernet MAC ...
+2016-1-28 13:31 [INFO] : 149(255) eth mac find at 10.189.46.66
+2016-1-28 13:31 [INFO] : 147(176) eth mac find at 10.189.46.7
+2016-1-28 13:31 [INFO] : 115(145) eth mac find at 10.189.46.8
+2016-1-28 13:31 [INFO] : 112(145) eth mac find at 10.189.46.9
+2016-1-28 13:31 [INFO] : 59(67) eth mac find at 10.189.46.10
+2016-1-28 13:31 [INFO] : saving into database ...
+2016-1-28 13:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('6036-dd10-0e5a','10.189.46.66','2016-1-28 13:30:3')
+2016-1-28 13:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('2c5b-b8ea-a923','10.189.46.66','2016-1-28 13:30:3')
+2016-1-28 13:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('f8a9-633f-d5cf','10.189.46.8','2016-1-28 13:30:3')
+2016-1-28 13:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('0026-c760-22e2','10.189.46.9','2016-1-28 13:30:3')
+2016-1-28 13:31 [INFO] : save complete - 715 has update, 4 has insert
+2016-1-28 13:31 [INFO] : End
+
+2016-1-28 14:30 [INFO] : Begin
+2016-1-28 14:30 [INFO] : checking network ...
+2016-1-28 14:30 [INFO] : Creating ARP ...
+2016-1-28 14:31 [INFO] : Getting wireless MAC ...
+2016-1-28 14:31 [INFO] : 153(153) wireless mac find
+2016-1-28 14:31 [INFO] : Getting Ethernet MAC ...
+2016-1-28 14:31 [INFO] : 146(320) eth mac find at 10.189.46.66
+2016-1-28 14:31 [INFO] : 148(177) eth mac find at 10.189.46.7
+2016-1-28 14:31 [INFO] : 107(138) eth mac find at 10.189.46.8
+2016-1-28 14:31 [INFO] : 108(141) eth mac find at 10.189.46.9
+2016-1-28 14:31 [INFO] : 60(68) eth mac find at 10.189.46.10
+2016-1-28 14:31 [INFO] : saving into database ...
+2016-1-28 14:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('d81d-7290-7c10','10.189.46.9','2016-1-28 14:30:3')
+2016-1-28 14:31 [INFO] : save complete - 721 has update, 1 has insert
+2016-1-28 14:31 [INFO] : End
+
+2016-1-28 15:30 [INFO] : Begin
+2016-1-28 15:30 [INFO] : checking network ...
+2016-1-28 15:30 [INFO] : Creating ARP ...
+2016-1-28 15:31 [INFO] : Getting wireless MAC ...
+2016-1-28 15:31 [INFO] : 155(158) wireless mac find
+2016-1-28 15:31 [INFO] : Getting Ethernet MAC ...
+2016-1-28 15:31 [INFO] : 142(311) eth mac find at 10.189.46.66
+2016-1-28 15:31 [INFO] : 152(181) eth mac find at 10.189.46.7
+2016-1-28 15:31 [INFO] : 111(141) eth mac find at 10.189.46.8
+2016-1-28 15:31 [INFO] : 107(140) eth mac find at 10.189.46.9
+2016-1-28 15:31 [INFO] : 59(67) eth mac find at 10.189.46.10
+2016-1-28 15:31 [INFO] : saving into database ...
+2016-1-28 15:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('3c97-0e4d-7594','10.189.46.7','2016-1-28 15:30:3')
+2016-1-28 15:31 [INFO] : save complete - 725 has update, 1 has insert
+2016-1-28 15:31 [INFO] : End
+
+2016-1-28 16:59 [INFO] : Begin
+2016-1-28 16:59 [INFO] : checking network ...
+2016-1-28 16:59 [INFO] : Creating ARP ...
+2016-1-28 17:1 [INFO] : Getting wireless MAC ...
+2016-1-28 17:1 [INFO] : 154(156) wireless mac find
+2016-1-28 17:1 [INFO] : Getting Ethernet MAC ...
+2016-1-28 17:1 [INFO] : 144(313) eth mac find at 10.189.46.66
+2016-1-28 17:1 [INFO] : 149(178) eth mac find at 10.189.46.7
+2016-1-28 17:1 [INFO] : 110(140) eth mac find at 10.189.46.8
+2016-1-28 17:1 [INFO] : 103(136) eth mac find at 10.189.46.9
+2016-1-28 17:1 [INFO] : 58(66) eth mac find at 10.189.46.10
+2016-1-28 17:1 [INFO] : saving into database ...
+2016-1-28 17:1 [INFO] : save complete - 718 has update, 0 has insert
+2016-1-28 17:1 [INFO] : End
+
+2016-1-29 12:30 [INFO] : Begin
+2016-1-29 12:30 [INFO] : checking network ...
+2016-1-29 12:30 [INFO] : Creating ARP ...
+2016-1-29 12:31 [INFO] : Program exit.
+
+2016-1-29 13:54 [INFO] : Begin
+2016-1-29 13:54 [INFO] : checking network ...
+2016-1-29 13:54 [INFO] : Creating ARP ...
+2016-1-29 13:56 [INFO] : Getting wireless MAC ...
+2016-1-29 13:56 [INFO] : 118(119) wireless mac find
+2016-1-29 13:56 [INFO] : Getting Ethernet MAC ...
+2016-1-29 13:56 [INFO] : 127(279) eth mac find at 10.189.46.66
+2016-1-29 13:56 [INFO] : 144(173) eth mac find at 10.189.46.7
+2016-1-29 13:56 [INFO] : 115(145) eth mac find at 10.189.46.8
+2016-1-29 13:56 [INFO] : 98(129) eth mac find at 10.189.46.9
+2016-1-29 13:56 [INFO] : 61(69) eth mac find at 10.189.46.10
+2016-1-29 13:56 [INFO] : saving into database ...
+2016-1-29 13:56 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('480f-cf3b-8d60','10.189.46.66','2016-1-29 13:54:46')
+2016-1-29 13:56 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('480f-cf3b-90f5','10.189.46.66','2016-1-29 13:54:46')
+2016-1-29 13:56 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('6c3b-e581-0057','10.189.46.7','2016-1-29 13:54:46')
+2016-1-29 13:56 [INFO] : save complete - 660 has update, 3 has insert
+2016-1-29 13:56 [INFO] : End
+
+2016-1-29 14:30 [INFO] : Begin
+2016-1-29 14:30 [INFO] : checking network ...
+2016-1-29 14:30 [INFO] : Creating ARP ...
+2016-1-29 14:31 [INFO] : Getting wireless MAC ...
+2016-1-29 14:31 [INFO] : 137(137) wireless mac find
+2016-1-29 14:31 [INFO] : Getting Ethernet MAC ...
+2016-1-29 14:31 [INFO] : 140(301) eth mac find at 10.189.46.66
+2016-1-29 14:31 [INFO] : 147(176) eth mac find at 10.189.46.7
+2016-1-29 14:31 [INFO] : 117(148) eth mac find at 10.189.46.8
+2016-1-29 14:31 [INFO] : 114(147) eth mac find at 10.189.46.9
+2016-1-29 14:31 [INFO] : 62(69) eth mac find at 10.189.46.10
+2016-1-29 14:31 [INFO] : saving into database ...
+2016-1-29 14:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('6036-dd63-e205','10.189.46.66','2016-1-29 14:30:3')
+2016-1-29 14:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('c8ff-2850-60d7','10.189.46.66','2016-1-29 14:30:3')
+2016-1-29 14:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('6036-dd12-fd4a','10.189.46.9','2016-1-29 14:30:3')
+2016-1-29 14:31 [INFO] : save complete - 714 has update, 3 has insert
+2016-1-29 14:31 [INFO] : End
+
+2016-1-29 15:30 [INFO] : Begin
+2016-1-29 15:30 [INFO] : checking network ...
+2016-1-29 15:30 [INFO] : Creating ARP ...
+2016-1-29 15:31 [INFO] : Getting wireless MAC ...
+2016-1-29 15:31 [INFO] : 132(133) wireless mac find
+2016-1-29 15:31 [INFO] : Getting Ethernet MAC ...
+2016-1-29 15:31 [INFO] : 136(296) eth mac find at 10.189.46.66
+2016-1-29 15:31 [INFO] : 146(175) eth mac find at 10.189.46.7
+2016-1-29 15:31 [INFO] : 111(142) eth mac find at 10.189.46.8
+2016-1-29 15:31 [INFO] : 107(140) eth mac find at 10.189.46.9
+2016-1-29 15:31 [INFO] : 60(67) eth mac find at 10.189.46.10
+2016-1-29 15:31 [INFO] : saving into database ...
+2016-1-29 15:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('c8f7-3366-2169','10.189.46.7','2016-1-29 15:30:3')
+2016-1-29 15:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('c8f7-3366-2169','10.189.46.9','2016-1-29 15:30:3')
+2016-1-29 15:31 [INFO] : save complete - 690 has update, 2 has insert
+2016-1-29 15:31 [INFO] : End
+
+2016-1-29 16:30 [INFO] : Begin
+2016-1-29 16:30 [INFO] : checking network ...
+2016-1-29 16:30 [INFO] : Creating ARP ...
+2016-1-29 16:30 [INFO] : Program exit.
+
+2016-1-31 0:59 [INFO] : Begin
+2016-1-31 0:59 [INFO] : checking network ...
+2016-1-31 0:59 [ERROR] : network check failed
+2016-1-31 0:59 [INFO] : Program exit.
+
+2016-1-31 1:0 [INFO] : Begin
+2016-1-31 1:0 [INFO] : checking network ...
+2016-1-31 1:0 [ERROR] : network check failed
+2016-1-31 1:0 [INFO] : Program exit.
+
+2016-2-3 9:30 [INFO] : Begin
+2016-2-3 9:30 [INFO] : checking network ...
+2016-2-3 9:30 [ERROR] : network check failed
+2016-2-3 9:30 [INFO] : Program exit.
+
+2016-2-3 10:30 [INFO] : Begin
+2016-2-3 10:30 [INFO] : checking network ...
+2016-2-3 10:30 [ERROR] : network check failed
+2016-2-3 10:30 [INFO] : Program exit.
+
+2016-2-3 11:30 [INFO] : Begin
+2016-2-3 11:30 [INFO] : checking network ...
+2016-2-3 11:30 [INFO] : Creating ARP ...
+2016-2-3 11:31 [INFO] : Getting wireless MAC ...
+2016-2-3 11:31 [INFO] : 120(121) wireless mac find
+2016-2-3 11:31 [INFO] : Getting Ethernet MAC ...
+2016-2-3 11:31 [INFO] : 156(332) eth mac find at 10.189.46.66
+2016-2-3 11:31 [INFO] : 161(189) eth mac find at 10.189.46.7
+2016-2-3 11:31 [INFO] : 112(142) eth mac find at 10.189.46.8
+2016-2-3 11:31 [INFO] : 102(135) eth mac find at 10.189.46.9
+2016-2-3 11:31 [INFO] : 62(70) eth mac find at 10.189.46.10
+2016-2-3 11:31 [INFO] : saving into database ...
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('c454-4419-ff65','10.189.46.66','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('3c97-0e4d-71c0','10.189.46.66','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('c454-4419-fe4c','10.189.46.66','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('3c97-0edf-9f1c','10.189.46.66','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('b870-f40f-4bb8','10.189.46.66','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('88ae-1dc8-a72b','10.189.46.66','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('c454-4419-fb17','10.189.46.66','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('0023-5a21-ab71','10.189.46.66','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('480f-cf3b-90f6','10.189.46.66','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('3c97-0e4d-734d','10.189.46.66','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('3c97-0edb-3125','10.189.46.66','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('3c97-0e4d-75a7','10.189.46.66','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('3c97-0e4d-7091','10.189.46.66','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('54ee-750e-996c','10.189.46.66','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('3c97-0e4d-6cfa','10.189.46.66','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('6036-dd0f-c58f','10.189.46.66','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('3c97-0e4d-73d0','10.189.46.66','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('c454-4449-3aa2','10.189.46.66','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('54ee-757d-1dc0','10.189.46.66','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('3c97-0eb6-ebb2','10.189.46.66','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('54ee-750e-9683','10.189.46.66','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('480f-cf3b-8f6b','10.189.46.66','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('4487-fcf0-dce9','10.189.46.66','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('3c97-0e4d-7977','10.189.46.66','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('0013-7400-0000','10.189.46.66','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('3c97-0ee0-9265','10.189.46.66','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('c89c-dc58-6da4','10.189.46.66','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('3c97-0e51-8bb2','10.189.46.66','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('c454-4419-fdb4','10.189.46.66','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('c454-4419-ffaf','10.189.46.66','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('480f-cf3b-8f74','10.189.46.66','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('54ee-757d-228e','10.189.46.66','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('f0de-f114-7ff2','10.189.46.66','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('3c97-0e4d-7422','10.189.46.66','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('3c97-0e4d-7e5e','10.189.46.66','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('3c97-0e4d-6d4d','10.189.46.7','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('3c97-0e4d-79e0','10.189.46.7','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('4c34-8808-2889','10.189.46.7','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('c89c-dc5a-1dd1','10.189.46.7','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('3c97-0e4d-743f','10.189.46.7','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('6036-dd15-8079','10.189.46.7','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('3c97-0e4d-7b0f','10.189.46.7','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('c89c-dc5b-372a','10.189.46.7','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('001b-2450-485d','10.189.46.7','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('d027-8891-c57b','10.189.46.7','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('3c97-0e4d-77ec','10.189.46.7','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('3c97-0e4d-77eb','10.189.46.7','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('185e-0fec-7de5','10.189.46.7','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('3c97-0e4d-71f6','10.189.46.7','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('3412-9842-5a8a','10.189.46.7','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('c89c-dca2-cdf2','10.189.46.7','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('6036-dd15-dfba','10.189.46.7','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('c89c-dc5c-7aaa','10.189.46.7','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('3c97-0e55-af73','10.189.46.7','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('0013-e869-2eab','10.189.46.7','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('c89c-dc5c-7ab2','10.189.46.7','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('c89c-dc5a-b83e','10.189.46.7','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('6036-dd13-8d05','10.189.46.7','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('e89a-8f82-7429','10.189.46.7','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('3c97-0e4d-773c','10.189.46.8','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('4c34-8808-2889','10.189.46.9','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('c8ff-2850-8071','10.189.46.9','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('6036-dd15-8079','10.189.46.9','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('185e-0fec-7de5','10.189.46.9','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('3412-9842-5a8a','10.189.46.9','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('6036-dd15-dfba','10.189.46.9','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('6036-dd19-20d5','10.189.46.9','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('0013-e869-2eab','10.189.46.9','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('6036-dd13-8d05','10.189.46.9','2016-2-3 11:30:3')
+2016-2-3 11:31 [INFO] : save complete - 644 has update, 69 has insert
+2016-2-3 11:31 [INFO] : End
+
+2016-2-3 12:30 [INFO] : Begin
+2016-2-3 12:30 [INFO] : checking network ...
+2016-2-3 12:30 [INFO] : Creating ARP ...
+2016-2-3 12:31 [INFO] : Getting wireless MAC ...
+2016-2-3 12:31 [INFO] : 112(112) wireless mac find
+2016-2-3 12:31 [INFO] : Getting Ethernet MAC ...
+2016-2-3 12:31 [INFO] : 133(270) eth mac find at 10.189.46.66
+2016-2-3 12:31 [INFO] : 148(177) eth mac find at 10.189.46.7
+2016-2-3 12:31 [INFO] : 110(140) eth mac find at 10.189.46.8
+2016-2-3 12:31 [INFO] : 91(122) eth mac find at 10.189.46.9
+2016-2-3 12:31 [INFO] : 59(66) eth mac find at 10.189.46.10
+2016-2-3 12:31 [INFO] : saving into database ...
+2016-2-3 12:31 [INFO] : save complete - 653 has update, 0 has insert
+2016-2-3 12:31 [INFO] : End
+
+2016-2-3 13:30 [INFO] : Begin
+2016-2-3 13:30 [INFO] : checking network ...
+2016-2-3 13:30 [INFO] : Creating ARP ...
+2016-2-3 13:31 [INFO] : Getting wireless MAC ...
+2016-2-3 13:31 [INFO] : 122(123) wireless mac find
+2016-2-3 13:31 [INFO] : Getting Ethernet MAC ...
+2016-2-3 13:31 [INFO] : 159(336) eth mac find at 10.189.46.66
+2016-2-3 13:31 [INFO] : 151(180) eth mac find at 10.189.46.7
+2016-2-3 13:31 [INFO] : 114(144) eth mac find at 10.189.46.8
+2016-2-3 13:31 [INFO] : 103(136) eth mac find at 10.189.46.9
+2016-2-3 13:31 [INFO] : 59(67) eth mac find at 10.189.46.10
+2016-2-3 13:31 [INFO] : saving into database ...
+2016-2-3 13:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('54ee-757d-1e29','10.189.46.66','2016-2-3 13:30:3')
+2016-2-3 13:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('6236-dd10-0e3b','10.189.46.66','2016-2-3 13:30:3')
+2016-2-3 13:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('047d-7b10-2278','10.189.46.66','2016-2-3 13:30:3')
+2016-2-3 13:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('3c97-0edb-324d','10.189.46.66','2016-2-3 13:30:3')
+2016-2-3 13:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('acbc-32c1-2a27','10.189.46.66','2016-2-3 13:30:3')
+2016-2-3 13:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('3c97-0e4d-7c02','10.189.46.66','2016-2-3 13:30:3')
+2016-2-3 13:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('185e-0fe3-4d56','10.189.46.7','2016-2-3 13:30:3')
+2016-2-3 13:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('3c97-0e51-8af8','10.189.46.7','2016-2-3 13:30:3')
+2016-2-3 13:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('3c97-0e4d-7310','10.189.46.7','2016-2-3 13:30:3')
+2016-2-3 13:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('f8a9-633f-d66f','10.189.46.7','2016-2-3 13:30:3')
+2016-2-3 13:31 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('6036-dd0f-c58f','10.189.46.9','2016-2-3 13:30:3')
+2016-2-3 13:31 [INFO] : save complete - 697 has update, 11 has insert
+2016-2-3 13:31 [INFO] : End
+
+2016-2-3 14:30 [INFO] : Begin
+2016-2-3 14:30 [INFO] : checking network ...
+2016-2-3 14:30 [ERROR] : network check failed
+2016-2-3 14:30 [INFO] : Program exit.
+
+2016-2-3 16:29 [INFO] : Begin
+2016-2-3 16:29 [INFO] : checking network ...
+2016-2-3 16:29 [INFO] : Creating ARP ...
+2016-2-3 16:30 [INFO] : Begin
+2016-2-3 16:30 [INFO] : checking network ...
+2016-2-3 16:30 [INFO] : Creating ARP ...
+2016-2-3 16:30 [INFO] : Getting wireless MAC ...
+2016-2-3 16:30 [INFO] : 124(127) wireless mac find
+2016-2-3 16:30 [INFO] : Getting Ethernet MAC ...
+2016-2-3 16:30 [INFO] : 158(341) eth mac find at 10.189.46.66
+2016-2-3 16:30 [INFO] : 149(178) eth mac find at 10.189.46.7
+2016-2-3 16:30 [INFO] : 109(140) eth mac find at 10.189.46.8
+2016-2-3 16:30 [INFO] : 104(137) eth mac find at 10.189.46.9
+2016-2-3 16:30 [INFO] : 58(66) eth mac find at 10.189.46.10
+2016-2-3 16:30 [INFO] : saving into database ...
+2016-2-3 16:30 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('000f-e21b-9f9e','10.189.46.66','2016-2-3 16:29:7')
+2016-2-3 16:30 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('3c97-0e4d-6ebb','10.189.46.66','2016-2-3 16:29:7')
+2016-2-3 16:30 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('3c97-0e4d-7922','10.189.46.66','2016-2-3 16:29:7')
+2016-2-3 16:30 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('6817-291b-d3bb','10.189.46.7','2016-2-3 16:29:7')
+2016-2-3 16:30 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('6817-291b-d42e','10.189.46.7','2016-2-3 16:29:7')
+2016-2-3 16:30 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('c8ff-2850-6189','10.189.46.7','2016-2-3 16:29:7')
+2016-2-3 16:30 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('28e3-4755-b715','10.189.46.7','2016-2-3 16:29:7')
+2016-2-3 16:30 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('3c97-0e8f-5c78','10.189.46.8','2016-2-3 16:29:7')
+2016-2-3 16:30 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('90fb-a638-e299','10.189.46.9','2016-2-3 16:29:7')
+2016-2-3 16:30 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('6817-291b-d3bb','10.189.46.9','2016-2-3 16:29:7')
+2016-2-3 16:30 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('6817-291b-d42e','10.189.46.9','2016-2-3 16:29:7')
+2016-2-3 16:30 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('c8ff-2850-6189','10.189.46.9','2016-2-3 16:29:7')
+2016-2-3 16:30 [INFO] : INSERT INTO mac(mac,switch,datetime) VALUES ('28e3-4755-b715','10.189.46.9','2016-2-3 16:29:7')
+2016-2-3 16:30 [INFO] : save complete - 689 has update, 13 has insert
+2016-2-3 16:30 [INFO] : End
+
+2016-2-3 16:31 [INFO] : Program exit.
+

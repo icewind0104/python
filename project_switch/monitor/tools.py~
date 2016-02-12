@@ -1,0 +1,34 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import os, re, sys, time
+
+class device():
+    def __init__(self, host, vendor, model, version='2c', community='public'):
+        self._version = version
+        self._community = community
+        self._host = host
+        self._base_snmpget_cmd = ('snmpget -v %s -c %s %s ' % (self._version, self._community, self._host))
+        self._base_snmpwalk_cmd = ('snmpwalk -v %s -c %s %s ' % (self._version, self._community, self._host))
+        self._model = vendor+'_'+model
+        self._mod = __import__('switchlib.'+self._model, globals(), locals(), self._model)
+        self._common_mod = __import__('switchlib.common', globals(), locals(), 'common')
+
+        def exec_snmpget(oid):
+            return ''.join(os.popen(self._base_snmpget_cmd+oid))
+        self.get_oid = exec_snmpget
+        self._mod.get_oid = self.get_oid    # import function : get_oid into imported model
+
+        def exec_snmpwalk(oid):
+            return ''.join(os.popen(self._base_snmpwalk_cmd+oid))
+        self.walk_oid = exec_snmpwalk
+        self._mod.walk_oid = self.walk_oid    # import function : walk_oid into imported model
+
+    def get_indicator(self, name):
+        func = getattr(self._mod, name, None)
+        if func is None:
+           func = getattr(self._common_mod, name, None)
+           if func is None:
+               raise ValueError ('can`t find function %s in lib \'%s\' or \'common.py\'' % (name, self._mod))
+        r = func()
+        return r
