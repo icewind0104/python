@@ -9,8 +9,29 @@ import asyncio, aiohttp
 from aiohttp import web
 from jinja2 import Environment, FileSystemLoader
 from coroweb import add_routers, add_static
+import sys
+'''
+def argv2conf(argv):
+    args = argv[1:]
 
+    refer = {
+        '-p' : 'port',
+        '-h' : 'host'
+    }
 
+    param_value = {}
+    for i in range(len(args)//2 + len(args)%2):
+        param = refer[args.pop(0)]
+        value = args.pop(0)
+        param_value[param] = value
+
+    return param_value
+
+def merge(default, sysArgv):
+    for key, value in sysArgv.items():
+        default[key] = value
+    return default
+'''
 def init_jinja2(app):
     path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'template')
     app['env'] = Environment(loader=FileSystemLoader(path))
@@ -26,7 +47,7 @@ def factory(app, handler):
             return r
 
         if isinstance(r, str):
-            resp = web.Response(body=r.encode('utf-8'), headers={'Content-Disposition':' attachment;filename=download.txt'})
+            resp = web.Response(body=r.encode('utf-8'))
 
         if isinstance(r, bytes):
             fname = request.path.split('/').pop()
@@ -46,6 +67,9 @@ def init(loop):
     init_jinja2(app)
     add_static(app)
     add_routers(app, 'handlers')
+
+    #server_config = merge(config.configs.server, argv2conf(sys.argv))
+
     srv = yield from loop.create_server(app.make_handler(), **config.configs.server)
     print('service start - %s:%s' % (config.configs.server['host'], config.configs.server['port']))
     return srv

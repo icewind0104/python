@@ -14,5 +14,5 @@ def memory(get_oid):
 
 @decorator.rrd_options(DS='CPU_uility')
 def cpu(get_oid):
-    r = 100 - int(re.search('Last  5 second CPU IDLE:  (.*)%\n', get_oid('1.3.6.1.4.1.5651.6.7.2.99.1.8.0')).group(1))
+    r = int(re.search('Last  5 second CPU usage:  (.*)%\n', get_oid('1.3.6.1.4.1.5651.6.7.2.99.1.8.0')).group(1))
     return (r,)

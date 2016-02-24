@@ -46,24 +46,25 @@ def execute(sql, args):
 #================= Feild ==================
 
 class Feild(object):
-    def __init__(self, name, column_type, primary_key, default, auto_increment=False):
+    def __init__(self, name, column_type, primary_key, default, auto_increment=False, foreign_key=False):
         self.name		= name
         self.column_type	= column_type
         self.primary_key	= primary_key
         self.default		= default
         self.auto_increment	= auto_increment
+        self.foreign_key	= foreign_key
 
     def __str__(self):
         return '%s,%s:%s' % (self.__class__.__name__, self.column_type, self.name)
 
 
 class StringFeild(Feild):
-    def __init__(self, ddl='varchar(50)', name=None, primary_key=False, default=None, auto_increment=False):
-        super().__init__(name, ddl, primary_key, default, auto_increment)
+    def __init__(self, ddl='varchar(50)', name=None, primary_key=False, default=None, auto_increment=False, foreign_key=False):
+        super().__init__(name, ddl, primary_key, default, auto_increment, foreign_key)
 
 class IntegerFeild(Feild):
-    def __init__(self, ddl='integer', name=None, primary_key=False, default=None, auto_increment=False):
-        super().__init__(name, ddl, primary_key, default, auto_increment)
+    def __init__(self, ddl='integer', name=None, primary_key=False, default=None, auto_increment=False, foreign_key=False):
+        super().__init__(name, ddl, primary_key, default, auto_increment, foreign_key)
 
 #================= Meta class ====================
 
@@ -79,12 +80,15 @@ class ModelMetaClass(type):
         feilds		= []
         primary_key	= None
         unInc_feilds	= []
+        foreign_key	= []
         for key, value in attrs.items():
             if isinstance(value, Feild):
                 #print("Model_log : found Feild : %s" % value.name)
                 mappings[key] = value
                 if not value.auto_increment:
                     unInc_feilds.append(key)
+                if value.foreign_key:
+                    foreign_key.append((key,) + value.foreign_key)
                 if value.primary_key:
                     if primary_key:
                         raise RuntimeError('Duplicate primary key for fieild : %s' & key)
@@ -105,6 +109,7 @@ class ModelMetaClass(type):
         attrs['__feilds__']		= feilds
         attrs['__unInc_feilds__']	= unInc_feilds
         attrs['__primary_key__']	= primary_key
+        attrs['__foreign_key__']	= foreign_key
         attrs['__select__']		= 'select `%s`,%s from `%s`' % (primary_key, ','.join(escaped_feilds), tableName)
         attrs['__insert__']		= 'insert into %s (%s) values (%s)' % (tableName, ','.join(escaped_unInc_feilds), ','.join(['?']*len(unInc_feilds)))
 
@@ -162,4 +167,7 @@ class Model(dict, metaclass=ModelMetaClass):
         rows = yield from execute(self.__insert__, args)
         if rows != 1:
             raise RuntimeError ('failed to insert record: affected rows: %s' % rows)
+
+
+
 

@@ -105,7 +105,7 @@ interface Ethernet1/0/3
  line-rate outbound 5120
 #
 interface Ethernet1/0/4
- mac-address max-mac-count 0
+ mac-address max-mac-count 99
  port access vlan 11
  loopback-detection enable
  mac-address static 00e0-4cc4-23f1 vlan 11

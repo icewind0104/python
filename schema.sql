@@ -15,6 +15,7 @@ create table users(
 
 create table switches(
     `id` integer not null auto_increment,
+    `name` varchar(50),
     `vendor` varchar(50) not null,
     `model` varchar(50) not null,
     `host` varchar(50) not null,
@@ -34,7 +35,7 @@ create table indicator(
     `argument` varchar(50) not null,
     `title` varchar(50),
     foreign key (`switch_id`) references switches(`id`),
-    unique key `index_switch_indicator` (`switch_id`, `name`),
+    unique key `indicator` (`switch_id`, `name`,`argument`),
     primary key (`id`)
 ) engine=innodb default charset=utf8;
 
@@ -46,5 +47,29 @@ create table quick_indicator(
     `cpu` varchar(50),
     `memory` varchar(50),
     foreign key (`switch_id`) references switches(`id`),
+    primary key (`id`)
+) engine=innodb default charset=utf8;
+
+create table switches_groups(
+    `id` integer not null auto_increment,
+    `switch_id` int not null,
+    `group_id` int not null,
+    foreign key (`switch_id`) references switches(`id`),
+    foreign key (`group_id`) references groups(`id`),
+    primary key (`id`)
+) engine=innodb default charset=utf8;
+
+create table groups(
+    `id` integer not null auto_increment,
+    `name` varchar(50) not null,
+    `priority` integer,
+    `category_id` integer,
+    foreign key (`category_id`) references category(`id`),
+    primary key (`id`)
+) engine=innodb default charset=utf8;
+
+create table category(
+    `id` integer not null auto_increment,
+    `name` varchar(50) not null,
     primary key (`id`)
 ) engine=innodb default charset=utf8;

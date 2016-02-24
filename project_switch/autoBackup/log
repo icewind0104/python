@@ -1,13 +1,11 @@
 *** Non changed list ***
 [CQYD-DCN-1F-S2403H] 10.189.46.18
 [CQYD-DCN-1F-S3026C] 10.189.46.17
-[zonghelou_4F_huiju_S9303] 10.189.46.66
 [CQYD-DCN-6F-S2403H-EI-1] 10.189.46.19
 [CQYD-DCN-6F-S2403H-EI-2] 10.189.58.139
 [CQYD-DCN-6F-S2403H-EI-3] 10.189.46.21
 [CQYD-DCN-6F-S2403H-EI-4] 10.189.46.22
 [CQYD-DCN-6F-S2403H-EI-5] 10.189.46.23
-[CQYD-DCN-6F-S6502] 10.189.46.7
 [CQYD-DCN-7F-S2403H-EI-1] 10.189.46.24
 [CQYD-DCN-7F-S2403H-EI-2] 10.189.46.25
 [CQYD-DCN-7F-S2403H-EI-4] 10.189.46.27
@@ -15,6 +13,7 @@
 [CQYD-DCN-7F-S2403H-EI-6] 10.189.46.29
 [CQYD-DCN-7F-S2403H-EI-7] 10.189.46.30
 [CQYD-DCN-8F-S2403H-EI-1] 10.189.46.31
+[CQYD-DCN-8F-S2403H-EI-2] 10.189.46.32
 [CQYD-DCN-8F-S2403H-EI-3] 10.189.46.33
 [CQYD-DCN-8F-S2403H-EI-4] 10.189.46.34
 [CQYD-DCN-9F-S2403H-EI-1] 10.189.46.35
@@ -22,8 +21,6 @@
 [CQYD-DCN-9F-S2403H-EI-3] 10.189.46.37
 [CQYD-DCN-10F-S6502] 10.189.46.8
 [CQYD-DCN-10F-S2403H-EI-1] 10.189.46.38
-[CQYD-DCN-10F-S2403H-EI-2] 10.189.46.39
-[CQYD-DCN-10F-S2403H-EI-3] 10.189.46.40
 [CQYD-DCN-11F-S2403H-EI-1] 10.189.46.41
 [CQYD-DCN-11F-S2403H-EI-2] 10.189.46.42
 [CQYD-DCN-11F-S2403H-EI-3] 10.189.46.43
@@ -46,7 +43,6 @@
 [CQYD-DCN-16F-S3328TP-EI-1] 10.189.46.59
 [ZH2-LG-01-S4152AE-01] 10.189.72.67
 [ZH2-01-4152F-01] 10.189.72.101
-[ZH2-03-4152AE-01] 10.189.72.70
 [ZH2-03-4152AE-02] 10.189.72.71
 [ZH2-03-4152AE-03] 10.189.72.72
 [ZH2-03-4152AE-04] 10.189.72.73
@@ -59,48 +55,167 @@
 [ZH2-08-4152F-03] 10.189.72.65
 [ZH2-08-4152AE-01] 10.189.72.80
 [ZH2-09-4152AE-01] 10.189.72.82
+[ZH2-09-4152AE-02] 10.189.72.83
 [ZH2-09-4152AE-03] 10.189.72.84
 [10F-S2300-01] 10.189.72.75
 [10F-S2300-02] 10.189.72.76
 *** Changed list ***
+[zonghelou_4F_huiju_S9303] 10.189.46.66
+    [add] :  rule 81 permit source-mac acbc-32c7-8145 ffff-ffff-ffff
+    [add] :  rule 331 permit source-mac 480f-cf3d-8f34 ffff-ffff-ffff
+    [add] :  rule 9 permit source-mac 480f-cf3d-8c77 ffff-ffff-ffff
+    [add] :  rule 10 permit source-mac 480f-cf3b-8fd3 ffff-ffff-ffff
+    [add] :  rule 15 permit source-mac 0024-5458-081d ffff-ffff-ffff
+    [add] :  rule 16 permit source-mac 201a-0660-476e ffff-ffff-ffff
+    [add] :  rule 18 permit source-mac 901b-0e34-7b4c ffff-ffff-ffff
+    [delete] :  rule 103 permit source-mac 480f-cf3b-8fd3 ffff-ffff-ffff
+    [delete] :  rule 6 permit source-mac 448a-5bab-a029 ffff-ffff-ffff
+    [delete] :  rule 9 permit source-mac 3c97-7e4d-7ef0 ffff-ffff-ffff
+    [delete] :  rule 10 permit source-mac 0016-d3ba-f436 ffff-ffff-ffff
+    [delete] :  rule 19 permit source-mac 3c97-0ebb-c5b4 ffff-ffff-ffff
+    [delete] :  rule 20 permit source-mac f0de-f17f-1e85 ffff-ffff-ffff
+    [delete] :  rule 22 permit source-mac f0de-f17f-1db1 ffff-ffff-ffff
+    [delete] :  rule 23 permit source-mac ecf4-bb04-685b ffff-ffff-ffff
+    [delete] :  rule 27 permit source-mac 0021-97a3-5de2 ffff-ffff-ffff
+    [delete] :  rule 34 permit source-mac 3c97-0e35-30bf ffff-ffff-ffff
+    [delete] :  rule 38 permit source-mac 001a-4b1c-2ed5 ffff-ffff-ffff
+    [delete] :  rule 39 permit source-mac 00e0-4ce0-2591 ffff-ffff-ffff
+    [delete] :  rule 40 permit source-mac 0016-d3ba-f77b ffff-ffff-ffff
+    [delete] :  rule 43 permit source-mac e89a-8f8a-eafa ffff-ffff-ffff
+    [delete] :  rule 55 permit source-mac 28d2-44e0-d452 ffff-ffff-ffff
+    [delete] :  rule 56 permit source-mac 28d2-44e0-dd0a ffff-ffff-ffff
+    [delete] :  rule 57 permit source-mac 3c97-0ebb-c84f ffff-ffff-ffff
+    [delete] :  rule 58 permit source-mac e0db-55fa-9637 ffff-ffff-ffff
+    [delete] :  rule 60 permit source-mac 0013-d4bf-82b3 ffff-ffff-ffff
+    [delete] :  rule 68 permit source-mac 6c3b-e501-005d ffff-ffff-ffff
+    [delete] :  rule 70 permit source-mac 0016-d3ca-2e3f ffff-ffff-ffff
+    [delete] :  rule 130 permit source-mac 0025-b35a-78d2 ffff-ffff-ffff
+    [delete] :  rule 190 permit source-mac 0016-d3ba-f7be ffff-ffff-ffff
+    [delete] :  rule 250 permit source-mac 0018-8bc5-9250 ffff-ffff-ffff
+    [delete] :  rule 260 permit source-mac 000d-607e-90e2 ffff-ffff-ffff
+    [delete] :  rule 270 permit source-mac 001d-7229-c4f2 ffff-ffff-ffff
+    [delete] :  rule 280 permit source-mac b8ac-6f58-dfe7 ffff-ffff-ffff
+    [delete] :  rule 290 permit source-mac 0016-d3ba-f749 ffff-ffff-ffff
+    [delete] :  rule 300 permit source-mac 18a9-05e4-fcd2 ffff-ffff-ffff
+    [delete] :  rule 310 permit source-mac 0016-d430-30e0 ffff-ffff-ffff
+    [delete] :  rule 320 permit source-mac 0023-cd24-4805 ffff-ffff-ffff
+    [delete] :  rule 330 permit source-mac 0023-cd24-4804 ffff-ffff-ffff
+    [delete] :  rule 340 permit source-mac 485b-392f-18aa ffff-ffff-ffff
+    [delete] :  rule 350 permit source-mac 001d-729c-89ff ffff-ffff-ffff
+    [delete] :  rule 360 permit source-mac 001a-4b1c-3eee ffff-ffff-ffff
+    [delete] :  rule 370 permit source-mac 001a-4b1d-c780 ffff-ffff-ffff
+    [delete] :  rule 380 permit source-mac 0023-5a21-cc7d ffff-ffff-ffff
+    [delete] :  rule 400 permit source-mac 0015-587f-5efa ffff-ffff-ffff
+    [delete] :  rule 420 permit source-mac 001b-3832-16f8 ffff-ffff-ffff
+    [delete] :  rule 430 permit source-mac 0023-5a22-7aac ffff-ffff-ffff
+    [delete] :  rule 440 permit source-mac 001e-ec81-3a38 ffff-ffff-ffff
+    [delete] :  rule 460 permit source-mac 0017-4232-5d17 ffff-ffff-ffff
+    [delete] :  rule 490 permit source-mac 0017-420d-b8c7 ffff-ffff-ffff
+    [delete] :  rule 500 permit source-mac 0026-c644-a0ee ffff-ffff-ffff
+    [delete] :  rule 510 permit source-mac 0016-d3ba-fa6b ffff-ffff-ffff
+    [delete] :  rule 530 permit source-mac 0021-97ad-d734 ffff-ffff-ffff
+    [delete] :  rule 540 permit source-mac 0025-11f6-8f48 ffff-ffff-ffff
+    [delete] :  rule 550 permit source-mac 0022-6885-1e0f ffff-ffff-ffff
+    [delete] :  rule 570 permit source-mac 1078-d27f-2b45 ffff-ffff-ffff
+    [delete] :  rule 580 permit source-mac 0022-6885-1e5f ffff-ffff-ffff
+    [delete] :  rule 590 permit source-mac 0016-d3c6-3fb3 ffff-ffff-ffff
+    [delete] :  rule 600 permit source-mac 001e-9007-db0a ffff-ffff-ffff
+    [delete] :  rule 630 permit source-mac 0026-9e61-4a91 ffff-ffff-ffff
+    [delete] :  rule 640 permit source-mac 001a-4b6e-9885 ffff-ffff-ffff
+    [delete] :  rule 650 permit source-mac 001b-2450-73b4 ffff-ffff-ffff
+    [delete] :  rule 660 permit source-mac 001b-2458-185c ffff-ffff-ffff
+    [delete] :  rule 670 permit source-mac 0025-b35e-b563 ffff-ffff-ffff
+    [delete] :  rule 690 permit source-mac 0017-31dd-bd2f ffff-ffff-ffff
+    [delete] :  rule 720 permit source-mac 001e-ecaf-ea66 ffff-ffff-ffff
+    [delete] :  rule 790 permit source-mac 0016-d3f4-5a97 ffff-ffff-ffff
+    [delete] :  rule 920 permit source-mac 001f-1698-1dfd ffff-ffff-ffff
+    [delete] :  rule 930 permit source-mac 0021-cc63-4900 ffff-ffff-ffff
+    [delete] :  rule 970 permit source-mac 0021-70a4-7ad5 ffff-ffff-ffff
+    [delete] :  rule 980 permit source-mac c80a-a99c-598e ffff-ffff-ffff
+    [delete] :  rule 1000 permit source-mac 60eb-69b2-d5d8 ffff-ffff-ffff
+    [delete] :  rule 1010 permit source-mac 001e-6841-97cf ffff-ffff-ffff
+    [delete] :  rule 1050 permit source-mac 0023-5ac2-5efa ffff-ffff-ffff
+    [delete] :  rule 1090 permit source-mac 001b-2458-1426 ffff-ffff-ffff
+    [delete] :  rule 1110 permit source-mac 001b-388a-4104 ffff-ffff-ffff
+    [delete] :  rule 1120 permit source-mac 001b-38c3-8c5a ffff-ffff-ffff
+    [delete] :  rule 1130 permit source-mac f0de-f16e-a3cc ffff-ffff-ffff
+    [delete] :  rule 1140 permit source-mac f0de-f179-e3ef ffff-ffff-ffff
+    [delete] :  rule 1150 permit source-mac 001b-2458-17e2 ffff-ffff-ffff
+    [delete] :  rule 1160 permit source-mac 705a-b69c-0686 ffff-ffff-ffff
+    [delete] :  rule 1170 permit source-mac 88ae-1db2-64f2 ffff-ffff-ffff
+    [delete] :  rule 1180 permit source-mac f0de-f175-6a13 ffff-ffff-ffff
+    [delete] :  rule 1200 permit source-mac 0022-6811-6bba ffff-ffff-ffff
+    [delete] :  rule 1210 permit source-mac 0016-d397-1983 ffff-ffff-ffff
+    [delete] :  rule 1220 permit source-mac 001b-2450-6fab ffff-ffff-ffff
+    [delete] :  rule 1240 permit source-mac 0016-d3b8-38de ffff-ffff-ffff
+    [delete] :  rule 1250 permit source-mac f0de-f1d6-e03a ffff-ffff-ffff
+    [delete] :  rule 1260 permit source-mac 0025-b351-e1cb ffff-ffff-ffff
+    [delete] :  rule 1300 permit source-mac f0de-f1d6-d47a ffff-ffff-ffff
+    [delete] :  rule 1310 permit source-mac 0016-d3ba-f6f8 ffff-ffff-ffff
+    [delete] :  rule 1320 permit source-mac 0023-5435-401c ffff-ffff-ffff
+    [delete] :  rule 1340 permit source-mac 0015-c576-eeb9 ffff-ffff-ffff
+    [delete] :  rule 1350 permit source-mac 0019-99bb-5af1 ffff-ffff-ffff
+    [delete] :  rule 1360 permit source-mac 0019-99bb-59ee ffff-ffff-ffff
+    [delete] :  rule 1380 permit source-mac 001a-4b6e-f87b ffff-ffff-ffff
+    [delete] :  rule 1390 permit source-mac 00e0-4c46-8789 ffff-ffff-ffff
+    [delete] :  rule 1400 permit source-mac 00e0-4c46-8799 ffff-ffff-ffff
+    [delete] :  rule 1410 permit source-mac 00e0-4c46-870f ffff-ffff-ffff
+    [delete] :  rule 1420 permit source-mac 00e0-4c98-4387 ffff-ffff-ffff
+    [delete] :  rule 1430 permit source-mac 00e0-4ce0-26ff ffff-ffff-ffff
+    [delete] :  rule 1440 permit source-mac 00e0-4c46-86be ffff-ffff-ffff
+    [delete] :  rule 1450 permit source-mac 00e0-4c46-868b ffff-ffff-ffff
+    [delete] :  rule 1461 permit source-mac 00e0-4c78-3ae6 ffff-ffff-ffff
+    [delete] :  rule 1470 permit source-mac 00e0-4c27-3a18 ffff-ffff-ffff
+    [delete] :  rule 1480 permit source-mac 00e0-4c27-4047 ffff-ffff-ffff
+    [delete] :  rule 1490 permit source-mac 0019-99bb-5baf ffff-ffff-ffff
+    [delete] :  rule 1500 permit source-mac 001a-4b82-c872 ffff-ffff-ffff
+    [delete] :  rule 1540 permit source-mac 2c41-3817-6087 ffff-ffff-ffff
+    [delete] :  rule 1550 permit source-mac 00e0-4cd1-1ce8 ffff-ffff-ffff
+    [delete] :  rule 1560 permit source-mac 00e0-4cd1-1ce7 ffff-ffff-ffff
+    [delete] :  rule 1570 permit source-mac 00e0-4c27-4180 ffff-ffff-ffff
+    [delete] :  rule 1580 permit source-mac 0025-b35a-197a ffff-ffff-ffff
+    [delete] :  rule 1590 permit source-mac 0022-4331-7b42 ffff-ffff-ffff
+    [delete] :  rule 1630 permit source-mac 0022-faef-60dc ffff-ffff-ffff
+    [delete] :  rule 1790 permit source-mac 001a-4b6e-d846 ffff-ffff-ffff
+    [delete] :  rule 1870 permit source-mac 705a-b697-8b30 ffff-ffff-ffff
+    [delete] :  rule 1880 permit source-mac a088-b4c6-9cb4 ffff-ffff-ffff
+    [delete] :  rule 1890 permit source-mac 3c97-0e23-3e7d ffff-ffff-ffff
+    [delete] :  rule 1980 permit source-mac 705a-b6a4-4df8 ffff-ffff-ffff
+    [delete] :  rule 1990 permit source-mac 001b-38be-a3ce ffff-ffff-ffff
+    [delete] :  rule 2000 permit source-mac 001e-ec87-b966 ffff-ffff-ffff
+    [delete] :  rule 2010 permit source-mac 705a-b69c-0eb2 ffff-ffff-ffff
+    [delete] :  rule 2020 permit source-mac f0de-f176-5a53 ffff-ffff-ffff
+    [delete] :  rule 2030 permit source-mac f0de-f175-6ef5 ffff-ffff-ffff
+    [delete] :  rule 2040 permit source-mac f0de-f179-e9c1 ffff-ffff-ffff
+    [delete] :  rule 2050 permit source-mac 0025-b351-016b ffff-ffff-ffff
+    [delete] :  rule 2060 permit source-mac 001f-162d-11cb ffff-ffff-ffff
+    [delete] :  rule 2140 permit source-mac 5cff-350c-35ff ffff-ffff-ffff
+    [delete] :  rule 2150 permit source-mac f0de-f101-cf30 ffff-ffff-ffff
+    [delete] :  rule 4403 permit source-mac 705a-b629-b7c3 ffff-ffff-ffff
+    [delete] :  rule 4404 permit source-mac 206a-8a5e-e807 ffff-ffff-ffff
+    [delete] :  rule 4405 permit source-mac d067-e531-44ec ffff-ffff-ffff
+    [delete] :  rule 4406 permit source-mac 0021-70a4-5e25 ffff-ffff-ffff
+    [delete] :  rule 4999 permit source-mac 001e-ec66-9f16 ffff-ffff-ffff
+[CQYD-DCN-6F-S6502] 10.189.46.7
+    [delete] :  mac-address static 6036-dd15-be04 interface GigabitEthernet0/0/15 vlan 8
 [CQYD-DCN-7F-S2403H-EI-3] 10.189.46.26
-    [add] :  mac-address max-mac-count 0
-    [add] :  mac-address max-mac-count 0
-    [add] :  mac-address max-mac-count 0
-    [add] :  mac-address max-mac-count 0
-    [add] :  mac-address max-mac-count 0
-    [add] :  mac-address max-mac-count 0
-    [add] :  mac-address max-mac-count 0
-    [add] :  mac-address max-mac-count 0
-    [add] :  mac-address max-mac-count 0
-    [add] :  mac-address max-mac-count 0
-    [add] :  mac-address max-mac-count 0
-    [add] :  mac-address max-mac-count 0
-    [add] :  mac-address max-mac-count 0
-    [add] :  mac-address max-mac-count 0
-    [add] :  mac-address max-mac-count 0
-    [add] :  mac-address max-mac-count 0
-    [delete] :  mac-address max-mac-count 2
-    [delete] :  mac-address max-mac-count 2
-    [delete] :  mac-address max-mac-count 2
-    [delete] :  mac-address max-mac-count 2
-    [delete] :  mac-address max-mac-count 2
-    [delete] :  mac-address max-mac-count 2
-    [delete] :  mac-address max-mac-count 2
-    [delete] :  mac-address max-mac-count 2
-    [delete] :  mac-address max-mac-count 2
-    [delete] :  mac-address max-mac-count 2
-    [delete] :  mac-address max-mac-count 2
-    [delete] :  mac-address max-mac-count 2
-    [delete] :  mac-address max-mac-count 2
-    [delete] :  mac-address max-mac-count 2
-    [delete] :  mac-address max-mac-count 2
-    [delete] :  mac-address max-mac-count 2
-[CQYD-DCN-8F-S2403H-EI-2] 10.189.46.32
-    [add] :  mac-address static 28d2-441f-01c5 interface Ethernet0/6 vlan 9
+    [add] :  mac-address static 3c97-0e4d-7233 interface Ethernet0/13 vlan 7
+    [add] :  mac-address static 3c97-0e4d-78f5 interface Ethernet0/15 vlan 7
+[CQYD-DCN-10F-S2403H-EI-2] 10.189.46.39
+    [add] :  mac-address static 3c97-0e52-30e5 interface Ethernet0/24 vlan 12
+[CQYD-DCN-10F-S2403H-EI-3] 10.189.46.40
+    [add] :  mac-address static 54ee-757d-1a8d interface Ethernet0/6 vlan 12
+    [add] :  mac-address static 54ee-757d-1a75 interface Ethernet0/10 vlan 12
 [CQYD-DCN-12F-S6502] 10.189.46.9
-    [add] :  mac-address static bc85-5660-aba1 interface GigabitEthernet0/0/15 vlan 8
-[ZH2-09-4152AE-02] 10.189.72.83
-    [delete] :    
-    [delete] : !
+    [add] :  mac-address static c8ff-2850-61f3 interface GigabitEthernet0/0/15 vlan 8
+    [add] :  mac-address static d0df-9a95-23f5 interface GigabitEthernet0/0/15 vlan 8
+    [add] :  mac-address static c8ff-2850-60f7 interface GigabitEthernet0/0/15 vlan 8
+    [add] :  mac-address static 6036-dd6d-6aa5 interface GigabitEthernet0/0/15 vlan 8
+    [add] :  mac-address static 6036-dd0f-c578 interface GigabitEthernet0/0/15 vlan 8
+    [add] :  mac-address static c8ff-2850-83db interface GigabitEthernet0/0/15 vlan 8
+    [add] :  mac-address static 185e-0fb9-447f interface GigabitEthernet0/0/15 vlan 8
+    [add] :  mac-address static acbc-32c7-8145 interface GigabitEthernet0/0/15 vlan 8
+[ZH2-03-4152AE-01] 10.189.72.70
+    [add] :    
+    [add] : !
 

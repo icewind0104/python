@@ -233,6 +233,7 @@ interface NULL0
  mac-address static 00e0-4c27-3f2b interface Ethernet0/23 vlan 12
  mac-address static 00e0-4c27-3f2a interface Ethernet0/23 vlan 12
  mac-address static 0016-d33c-f9ed interface Ethernet0/23 vlan 12
+ mac-address static 3c97-0e52-30e5 interface Ethernet0/24 vlan 12
  mac-address static 3c97-0e4d-7f0e interface Ethernet0/24 vlan 12
  mac-address static 0800-4669-e7e5 interface Ethernet0/24 vlan 12
  mac-address static 0080-923c-8a5e interface Ethernet0/24 vlan 12

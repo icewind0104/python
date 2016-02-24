@@ -298,6 +298,7 @@ Interface Ethernet0/0/48
    am mac-ip-pool 00-1D-72-20-6E-EC 10.189.17.150 
    am mac-ip-pool 00-16-D3-BA-F6-F9 10.189.17.155 
    am mac-ip-pool 00-26-9E-8A-70-94 10.189.17.158 
+   am mac-ip-pool 2C-60-0C-EB-95-64 10.189.17.160 
    am mac-ip-pool C8-0A-A9-05-24-4B 10.189.17.161 
    am mac-ip-pool 00-0E-C6-FB-25-30 10.189.17.165 
    am mac-ip-pool 3C-97-0E-4D-7E-98 10.189.17.168 

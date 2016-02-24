@@ -1,5 +1,0 @@
-#!/usr/local/python
-# -*- coding utf-8 -*-
-
-import math, re, string, switch, time, sqlite3, os
-from switch import logging

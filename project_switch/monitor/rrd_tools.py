@@ -79,7 +79,8 @@ def get_min(fname, CF='AVERAGE'):
     return r
 
 def graph(fname, DS, **kw):
-    gname = os.path.join(config.configs.web_path + config.configs.graph_save_path, os.path.basename(fname).replace('.rra', '.png'))
+    file_name = os.path.basename(fname).replace('.rrd', '.png')
+    gname = os.path.join(config.configs.web_path + config.configs.graph_save_path, file_name)
     cmd = 'rrdtool graph %s ' % (gname)
     # 设置时间区间
     cmd += '--start now-1h '
@@ -100,7 +101,7 @@ def graph(fname, DS, **kw):
         cmd += 'LINE2:value%s%s:%s ' % (index, config.configs.graph_default_color[color], value)
     cmd += '> /dev/null'
     os.system(cmd)
-    return os.path.join(config.configs.graph_save_path, os.path.basename(fname).replace('.rra', '.png'))
+    return os.path.join(config.configs.graph_save_path, file_name)
     
 
 

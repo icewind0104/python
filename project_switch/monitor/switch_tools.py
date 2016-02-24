@@ -41,6 +41,10 @@ class device():
         self.walk_oid = exec_snmpwalk
         #self._mod.walk_oid = self.walk_oid    # import function : walk_oid into imported model
 
+    @property
+    def id(self):
+        return self._id
+
     def create_switch_dir(self):
         fname = self._dir
         if not os.path.exists(fname):
@@ -55,7 +59,7 @@ class device():
                 self.loggings.error('can`t find function %s in lib \'%s\' or \'common.py\'' % (indicator, self._mod.__name__))
         return func
 
-    def get_indicator_value(self, indicator, argu):
+    def get_indicator_value(self, indicator, argu=None):
         func = self.get_indicator_func(indicator)   
 
         # 根据API的参数要求传参
@@ -83,12 +87,6 @@ class device():
         if r is None:
             return None    # func return None means unused
         if isinstance(r, tuple):
-            for each in r:
-                try:
-                    float(each)
-                except ValueError:
-                    self.loggings.error('API %s returns is not a tuple ' % func.__name__)
-                    return None
             return r
         else:
             self.loggings.error('API %s returns is not a tuple ' % func.__name__)

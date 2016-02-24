@@ -1,11 +1,31 @@
-{% extends 'base.html' %}
+{% extends 'body.html' %}
 
-{% block title %}INDICATOR GRAPH{% endblock %}
+{% block left %}
+    <div class="uk-grid">
+        <li>当前路径：<a href="/">设备总览</a> > 详细指标</li>
+    </div>
 
-{% block content %}
-<img src="{{ cpu_img }}">
-<img src="{{ memory_img }}">
-{% for each in customize_indicator %}
-<img src="{{ each }}">
-{% endfor %}
+    <hr class="uk-article-divider">
+    <h2>当前设备 : {{ switch['name'][0] }}</h2>
+
+    <!-- 输出CPU利用率图表 -->
+    <hr class="uk-article-divider">
+    {% if cpu_img != None %}
+    <div>CPU 利用率 ：</div>
+    <img src="{{ cpu_img }}">
+    {% endif %}
+
+    <!-- 输出内存利用率图表 -->
+    <hr class="uk-article-divider">
+    <div>内存 利用率 ：</div>
+    {% if memory_img != None %}
+    <img src="{{ memory_img }}">
+    {% endif %}
+
+    <!-- 输出其他自定义图表 -->
+    {% for each in customize_indicator %}
+    <hr class="uk-article-divider">
+    <img src="{{ each }}">
+    {% endfor %}
+
 {% endblock %}

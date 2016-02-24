@@ -7,12 +7,6 @@ Current configuration:
 !
    l3-forward enable 
 !
-   snmp-server enable 
-   snmp-server securityip disable 
-   snmp-server community ro Oavpn@123 
-   snmp-server view v1defaultviewname 1.3. include 
-   rmon enable 
-!
    username admin password 0 ydjk123 
    username qware password 0 ydjk123 
    telnet-user qware password 0 jkyd123 
@@ -225,4 +219,6 @@ interface Vlan12
    ip address 192.168.0.4 255.255.255.0 
 !
    ip route 0.0.0.0 0.0.0.0 10.189.72.100 
+!
+   
 !

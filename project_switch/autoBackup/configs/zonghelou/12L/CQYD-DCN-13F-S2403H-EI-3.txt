@@ -174,6 +174,7 @@ interface NULL0
  mac-address static 3c97-0e47-c14f interface Ethernet0/3 vlan 17
  mac-address static 54ee-757d-23a3 interface Ethernet0/5 vlan 17
  mac-address static 00ff-3550-e6c1 interface Ethernet0/5 vlan 17
+ mac-address static 54ee-757d-1ded interface Ethernet0/6 vlan 17
  mac-address static 3c97-0e4d-7a10 interface Ethernet0/6 vlan 17
  mac-address static 3c97-0eaf-e7b8 interface Ethernet0/6 vlan 17
  mac-address static 3c97-0e4d-7fe3 interface Ethernet0/6 vlan 17

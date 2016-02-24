@@ -97,9 +97,9 @@ def update_quick_indicators(collections):
 
 def main():
     start_time = float(time.time())
-    switches			= db.select('select `switches`.`id`,`host`,`vendor`,`model`,`snmp_version`,`snmp_community`,`name`,`argument` from switches left join indicator on `switches`.`id` = `switch_id`')
+    switches			= db.select('select `switches`.`id`,`host`,`vendor`,`model`,`snmp_version`,`snmp_community`,`indicator`.`name`,`argument` from switches left join indicator on `switches`.`id` = `switch_id`')
     common_indicator		= config.configs.common_indicator
-    additional_indicator	= db.select('select * from indicator')
+    #additional_indicator	= db.select('select * from indicator')
 
     Tasks = task(switches, common_indicator)
     collections = collecting(Tasks)

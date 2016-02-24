@@ -64,6 +64,7 @@ def task(switches, common_indicator):
     prev_switch = {}
     for each in switches:
         curr_switch = each.copy()
+        print(each)
         name = curr_switch.pop('name')
         argument = curr_switch.pop('argument')
         if curr_switch['id'] != prev_switch.get('id', None):
@@ -96,16 +97,16 @@ def update_quick_indicators(collections):
             db.insert(sql)
 
 def main():
-    #start_time = float(time.time())
-    switches			= db.select('select `switches`.`id`,`host`,`vendor`,`model`,`snmp_version`,`snmp_community`,`name`,`argument` from switches left join indicator on `switches`.`id` = `switch_id`')
+    start_time = float(time.time())
+    switches			= db.select('select `switches`.`id`,`host`,`vendor`,`model`,`snmp_version`,`snmp_community`,`indicator`.`name`,`argument` from switches left join indicator on `switches`.`id` = `switch_id`')
     common_indicator		= config.configs.common_indicator
-    additional_indicator	= db.select('select * from indicator')
+    #additional_indicator	= db.select('select * from indicator')
 
     Tasks = task(switches, common_indicator)
     collections = collecting(Tasks)
     saving(collections)
     update_quick_indicators(collections)
-    #end_time = float(time.time())
-    #logging.information('poller.py excute complete, use %s seconds' % str(end_time-start_time))
+    end_time = float(time.time())
+    logging.information('poller.py excute complete, use %s seconds' % str(end_time-start_time))
 main()
 

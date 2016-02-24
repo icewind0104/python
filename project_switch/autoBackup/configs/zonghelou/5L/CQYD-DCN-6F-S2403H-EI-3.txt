@@ -191,6 +191,7 @@ interface NULL0
  mac-address static 0030-18aa-e305 interface Ethernet0/16 vlan 5
  mac-address static 3c97-0e4d-7902 interface Ethernet0/2 vlan 6
  mac-address static 00e0-4c27-40ca interface Ethernet0/2 vlan 6
+ mac-address static 3c97-0e4d-7720 interface Ethernet0/3 vlan 6
  mac-address static 00e0-4c2c-4807 interface Ethernet0/3 vlan 6
  mac-address static 001b-2450-6fa1 interface Ethernet0/3 vlan 6
  mac-address static 3c97-0e4d-7c9b interface Ethernet0/4 vlan 6

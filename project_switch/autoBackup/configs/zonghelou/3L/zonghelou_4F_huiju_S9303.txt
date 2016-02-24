@@ -103,6 +103,8 @@ acl number 4004
  rule 84 permit source-mac 3c97-0e4d-6ebb ffff-ffff-ffff
  rule 85 permit source-mac 000f-e21b-9f9e ffff-ffff-ffff
  rule 86 permit source-mac 74e6-e234-0ec5 ffff-ffff-ffff
+ rule 87 permit source-mac 90fb-a635-8550 ffff-ffff-ffff
+ rule 88 permit source-mac 90fb-a635-8784 ffff-ffff-ffff
  rule 5000 deny
 #
 acl number 4018
@@ -183,6 +185,9 @@ acl number 4018
  rule 76 permit source-mac 185e-0fbf-9c7b ffff-ffff-ffff
  rule 77 permit source-mac 185e-0fb9-4475 ffff-ffff-ffff
  rule 78 permit source-mac acbc-32c7-8133 ffff-ffff-ffff
+ rule 79 permit source-mac 185e-0fe3-4d56 ffff-ffff-ffff
+ rule 80 permit source-mac 9c4e-367e-18cc ffff-ffff-ffff
+ rule 81 permit source-mac acbc-32c7-8145 ffff-ffff-ffff
  rule 318 permit source-mac 84db-ac09-a793 ffff-ffff-ffff
  rule 803 permit source-mac 6045-bdf3-759c ffff-ffff-ffff
  rule 804 permit source-mac c0f2-fb58-be70 ffff-ffff-ffff
@@ -550,7 +555,6 @@ acl number 4024
  rule 100 permit source-mac 480f-cf3a-a08d ffff-ffff-ffff
  rule 101 permit source-mac 480f-cf3d-8fb1 ffff-ffff-ffff
  rule 102 permit source-mac 480f-cf3b-909f ffff-ffff-ffff
- rule 103 permit source-mac 480f-cf3b-8fd3 ffff-ffff-ffff
  rule 104 permit source-mac 480f-cf3a-a40f ffff-ffff-ffff
  rule 105 permit source-mac 480f-cf3b-8f77 ffff-ffff-ffff
  rule 106 permit source-mac 480f-cf3b-8d60 ffff-ffff-ffff
@@ -593,6 +597,7 @@ acl number 4024
  rule 310 permit source-mac 0021-9704-3356 ffff-ffff-ffff
  rule 320 permit source-mac 0053-4500-0000 ffff-ffff-ffff
  rule 330 permit source-mac 0021-9704-30c8 ffff-ffff-ffff
+ rule 331 permit source-mac 480f-cf3d-8f34 ffff-ffff-ffff
  rule 390 permit source-mac 0013-7791-0436 ffff-ffff-ffff
  rule 420 permit source-mac 0016-d3ba-f6ec ffff-ffff-ffff
  rule 430 permit source-mac 0021-9705-7508 ffff-ffff-ffff
@@ -744,44 +749,33 @@ acl number 4029
  rule 3 permit source-mac 3c97-0e13-41d0 ffff-ffff-ffff
  rule 4 permit source-mac 3c97-0e31-21a6 ffff-ffff-ffff
  rule 5 permit source-mac f0de-f17f-0c9d ffff-ffff-ffff
- rule 6 permit source-mac 448a-5bab-a029 ffff-ffff-ffff
  rule 7 permit source-mac 001b-2480-529d ffff-ffff-ffff
  rule 8 permit source-mac f0de-f114-9833 ffff-ffff-ffff
- rule 9 permit source-mac 3c97-7e4d-7ef0 ffff-ffff-ffff
- rule 10 permit source-mac 0016-d3ba-f436 ffff-ffff-ffff
+ rule 9 permit source-mac 480f-cf3d-8c77 ffff-ffff-ffff
+ rule 10 permit source-mac 480f-cf3b-8fd3 ffff-ffff-ffff
  rule 11 permit source-mac 0090-f5e8-ce1d ffff-ffff-ffff
- rule 12 permit source-mac 0050-56cd-0001 ffff-ffff-ffff
+ rule 12 permit source-mac 00e0-4c36-4cd2 ffff-ffff-ffff
  rule 13 permit source-mac 28d2-442b-9d8e ffff-ffff-ffff
  rule 14 permit source-mac 3c97-0efc-3b0b ffff-ffff-ffff
  rule 15 permit source-mac 00e0-4c98-4352 ffff-ffff-ffff
  rule 16 permit source-mac a048-1c8f-7139 ffff-ffff-ffff
- rule 17 permit source-mac b888-e3f9-cc89 ffff-ffff-ffff
+ rule 17 permit source-mac b888-e333-93b4 ffff-ffff-ffff
  rule 18 permit source-mac 00e0-4ce0-25d5 ffff-ffff-ffff
- rule 19 permit source-mac 3c97-0ebb-c5b4 ffff-ffff-ffff
- rule 20 permit source-mac f0de-f17f-1e85 ffff-ffff-ffff
  rule 21 permit source-mac 3c97-0e4d-7247 ffff-ffff-ffff
- rule 22 permit source-mac f0de-f17f-1db1 ffff-ffff-ffff
- rule 23 permit source-mac ecf4-bb04-685b ffff-ffff-ffff
- rule 24 permit source-mac 448a-5bab-989a ffff-ffff-ffff
+ rule 24 permit source-mac f0de-f127-fa48 ffff-ffff-ffff
  rule 25 permit source-mac 448a-5bab-9f8b ffff-ffff-ffff
  rule 26 permit source-mac 0016-41ee-5e3c ffff-ffff-ffff
- rule 27 permit source-mac 0021-97a3-5de2 ffff-ffff-ffff
  rule 28 permit source-mac 0021-9704-2644 ffff-ffff-ffff
  rule 29 permit source-mac 001e-90bc-348b ffff-ffff-ffff
  rule 30 permit source-mac 0016-d3ba-f728 ffff-ffff-ffff
  rule 31 permit source-mac 201a-0600-c0cb ffff-ffff-ffff
  rule 32 permit source-mac 0021-9704-2d61 ffff-ffff-ffff
  rule 33 permit source-mac 0021-9704-30c8 ffff-ffff-ffff
- rule 34 permit source-mac 3c97-0e35-30bf ffff-ffff-ffff
  rule 35 permit source-mac 0021-9704-31ae ffff-ffff-ffff
  rule 36 permit source-mac eca8-6b89-6bc7 ffff-ffff-ffff
  rule 37 permit source-mac 3c97-0e4d-7ef0 ffff-ffff-ffff
- rule 38 permit source-mac 001a-4b1c-2ed5 ffff-ffff-ffff
- rule 39 permit source-mac 00e0-4ce0-2591 ffff-ffff-ffff
- rule 40 permit source-mac 0016-d3ba-f77b ffff-ffff-ffff
  rule 41 permit source-mac 0025-b35a-5b53 ffff-ffff-ffff
  rule 42 permit source-mac 0025-b35a-2960 ffff-ffff-ffff
- rule 43 permit source-mac e89a-8f8a-eafa ffff-ffff-ffff
  rule 44 permit source-mac 6431-501e-d252 ffff-ffff-ffff
  rule 45 permit source-mac 3c97-0e4d-7888 ffff-ffff-ffff
  rule 46 permit source-mac 0021-ccd9-0732 ffff-ffff-ffff
@@ -793,12 +787,7 @@ acl number 4029
  rule 52 permit source-mac 303a-64f2-a2e7 ffff-ffff-ffff
  rule 53 permit source-mac e006-e6f1-4969 ffff-ffff-ffff
  rule 54 permit source-mac 3c97-0eb4-2e77 ffff-ffff-ffff
- rule 55 permit source-mac 28d2-44e0-d452 ffff-ffff-ffff
- rule 56 permit source-mac 28d2-44e0-dd0a ffff-ffff-ffff
- rule 57 permit source-mac 3c97-0ebb-c84f ffff-ffff-ffff
- rule 58 permit source-mac e0db-55fa-9637 ffff-ffff-ffff
  rule 59 permit source-mac 1c3e-84ec-fa3f ffff-ffff-ffff
- rule 60 permit source-mac 0013-d4bf-82b3 ffff-ffff-ffff
  rule 61 permit source-mac 28d2-44a0-9569 ffff-ffff-ffff
  rule 62 permit source-mac e82a-ea73-c747 ffff-ffff-ffff
  rule 63 permit source-mac 28d2-44c8-1831 ffff-ffff-ffff
@@ -806,9 +795,7 @@ acl number 4029
  rule 65 permit source-mac 446d-577c-7d45 ffff-ffff-ffff
  rule 66 permit source-mac f076-1c6d-3b88 ffff-ffff-ffff
  rule 67 permit source-mac 0021-9703-5c3b ffff-ffff-ffff
- rule 68 permit source-mac 6c3b-e501-005d ffff-ffff-ffff
  rule 69 permit source-mac 0862-6653-1dd1 ffff-ffff-ffff
- rule 70 permit source-mac 0016-d3ca-2e3f ffff-ffff-ffff
  rule 71 permit source-mac 6c0b-846a-6988 ffff-ffff-ffff
  rule 72 permit source-mac 6c0b-846a-6960 ffff-ffff-ffff
  rule 73 permit source-mac 6c0b-846a-695e ffff-ffff-ffff
@@ -840,116 +827,27 @@ acl number 4029
  rule 110 permit source-mac 0016-d3ba-fa1f ffff-ffff-ffff
  rule 111 permit source-mac 448a-5bab-9a23 ffff-ffff-ffff
  rule 112 permit source-mac 480f-cf3d-8f34 ffff-ffff-ffff
+ rule 113 permit source-mac 6c0b-846a-6981 ffff-ffff-ffff
+ rule 114 permit source-mac 448a-5bab-9b54 ffff-ffff-ffff
  rule 120 permit source-mac 0021-9705-7508 ffff-ffff-ffff
- rule 130 permit source-mac 0025-b35a-78d2 ffff-ffff-ffff
  rule 140 permit source-mac 0021-9704-2ffd ffff-ffff-ffff
  rule 150 permit source-mac 001e-90bd-bb9c ffff-ffff-ffff
  rule 160 permit source-mac 001e-90bd-b54b ffff-ffff-ffff
  rule 170 permit source-mac 0021-9703-c0f0 ffff-ffff-ffff
  rule 180 permit source-mac 0021-9703-7bfe ffff-ffff-ffff
- rule 190 permit source-mac 0016-d3ba-f7be ffff-ffff-ffff
  rule 210 permit source-mac 0019-2176-d155 ffff-ffff-ffff
- rule 250 permit source-mac 0018-8bc5-9250 ffff-ffff-ffff
- rule 260 permit source-mac 000d-607e-90e2 ffff-ffff-ffff
- rule 270 permit source-mac 001d-7229-c4f2 ffff-ffff-ffff
- rule 280 permit source-mac b8ac-6f58-dfe7 ffff-ffff-ffff
- rule 290 permit source-mac 0016-d3ba-f749 ffff-ffff-ffff
- rule 300 permit source-mac 18a9-05e4-fcd2 ffff-ffff-ffff
- rule 310 permit source-mac 0016-d430-30e0 ffff-ffff-ffff
- rule 320 permit source-mac 0023-cd24-4805 ffff-ffff-ffff
- rule 330 permit source-mac 0023-cd24-4804 ffff-ffff-ffff
- rule 340 permit source-mac 485b-392f-18aa ffff-ffff-ffff
- rule 350 permit source-mac 001d-729c-89ff ffff-ffff-ffff
- rule 360 permit source-mac 001a-4b1c-3eee ffff-ffff-ffff
- rule 370 permit source-mac 001a-4b1d-c780 ffff-ffff-ffff
- rule 380 permit source-mac 0023-5a21-cc7d ffff-ffff-ffff
- rule 400 permit source-mac 0015-587f-5efa ffff-ffff-ffff
- rule 420 permit source-mac 001b-3832-16f8 ffff-ffff-ffff
- rule 430 permit source-mac 0023-5a22-7aac ffff-ffff-ffff
- rule 440 permit source-mac 001e-ec81-3a38 ffff-ffff-ffff
  rule 450 permit source-mac 001d-7280-0dee ffff-ffff-ffff
- rule 460 permit source-mac 0017-4232-5d17 ffff-ffff-ffff
- rule 490 permit source-mac 0017-420d-b8c7 ffff-ffff-ffff
- rule 500 permit source-mac 0026-c644-a0ee ffff-ffff-ffff
- rule 510 permit source-mac 0016-d3ba-fa6b ffff-ffff-ffff
  rule 520 permit source-mac 0021-9702-7d22 ffff-ffff-ffff
- rule 530 permit source-mac 0021-97ad-d734 ffff-ffff-ffff
- rule 540 permit source-mac 0025-11f6-8f48 ffff-ffff-ffff
- rule 550 permit source-mac 0022-6885-1e0f ffff-ffff-ffff
- rule 570 permit source-mac 1078-d27f-2b45 ffff-ffff-ffff
- rule 580 permit source-mac 0022-6885-1e5f ffff-ffff-ffff
- rule 590 permit source-mac 0016-d3c6-3fb3 ffff-ffff-ffff
- rule 600 permit source-mac 001e-9007-db0a ffff-ffff-ffff
  rule 620 permit source-mac 0001-6ce9-0f87 ffff-ffff-ffff
- rule 630 permit source-mac 0026-9e61-4a91 ffff-ffff-ffff
- rule 640 permit source-mac 001a-4b6e-9885 ffff-ffff-ffff
- rule 650 permit source-mac 001b-2450-73b4 ffff-ffff-ffff
- rule 660 permit source-mac 001b-2458-185c ffff-ffff-ffff
- rule 670 permit source-mac 0025-b35e-b563 ffff-ffff-ffff
  rule 680 permit source-mac 0021-70a4-c648 ffff-ffff-ffff
- rule 690 permit source-mac 0017-31dd-bd2f ffff-ffff-ffff
  rule 710 permit source-mac 0016-d3ba-f724 ffff-ffff-ffff
- rule 720 permit source-mac 001e-ecaf-ea66 ffff-ffff-ffff
- rule 790 permit source-mac 0016-d3f4-5a97 ffff-ffff-ffff
- rule 920 permit source-mac 001f-1698-1dfd ffff-ffff-ffff
- rule 930 permit source-mac 0021-cc63-4900 ffff-ffff-ffff
- rule 970 permit source-mac 0021-70a4-7ad5 ffff-ffff-ffff
- rule 980 permit source-mac c80a-a99c-598e ffff-ffff-ffff
  rule 999 permit source-mac 480f-cf3a-a08a ffff-ffff-ffff
- rule 1000 permit source-mac 60eb-69b2-d5d8 ffff-ffff-ffff
- rule 1010 permit source-mac 001e-6841-97cf ffff-ffff-ffff
  rule 1020 permit source-mac 0021-7096-5f51 ffff-ffff-ffff
- rule 1050 permit source-mac 0023-5ac2-5efa ffff-ffff-ffff
- rule 1090 permit source-mac 001b-2458-1426 ffff-ffff-ffff
- rule 1110 permit source-mac 001b-388a-4104 ffff-ffff-ffff
- rule 1120 permit source-mac 001b-38c3-8c5a ffff-ffff-ffff
- rule 1130 permit source-mac f0de-f16e-a3cc ffff-ffff-ffff
- rule 1140 permit source-mac f0de-f179-e3ef ffff-ffff-ffff
- rule 1150 permit source-mac 001b-2458-17e2 ffff-ffff-ffff
- rule 1160 permit source-mac 705a-b69c-0686 ffff-ffff-ffff
- rule 1170 permit source-mac 88ae-1db2-64f2 ffff-ffff-ffff
- rule 1180 permit source-mac f0de-f175-6a13 ffff-ffff-ffff
  rule 1190 permit source-mac f0de-f18c-bf5d ffff-ffff-ffff
- rule 1200 permit source-mac 0022-6811-6bba ffff-ffff-ffff
- rule 1210 permit source-mac 0016-d397-1983 ffff-ffff-ffff
- rule 1220 permit source-mac 001b-2450-6fab ffff-ffff-ffff
  rule 1230 permit source-mac c89c-dcbb-3738 ffff-ffff-ffff
- rule 1240 permit source-mac 0016-d3b8-38de ffff-ffff-ffff
- rule 1250 permit source-mac f0de-f1d6-e03a ffff-ffff-ffff
- rule 1260 permit source-mac 0025-b351-e1cb ffff-ffff-ffff
- rule 1300 permit source-mac f0de-f1d6-d47a ffff-ffff-ffff
- rule 1310 permit source-mac 0016-d3ba-f6f8 ffff-ffff-ffff
- rule 1320 permit source-mac 0023-5435-401c ffff-ffff-ffff
- rule 1340 permit source-mac 0015-c576-eeb9 ffff-ffff-ffff
- rule 1350 permit source-mac 0019-99bb-5af1 ffff-ffff-ffff
- rule 1360 permit source-mac 0019-99bb-59ee ffff-ffff-ffff
- rule 1380 permit source-mac 001a-4b6e-f87b ffff-ffff-ffff
- rule 1390 permit source-mac 00e0-4c46-8789 ffff-ffff-ffff
- rule 1400 permit source-mac 00e0-4c46-8799 ffff-ffff-ffff
- rule 1410 permit source-mac 00e0-4c46-870f ffff-ffff-ffff
- rule 1420 permit source-mac 00e0-4c98-4387 ffff-ffff-ffff
- rule 1430 permit source-mac 00e0-4ce0-26ff ffff-ffff-ffff
- rule 1440 permit source-mac 00e0-4c46-86be ffff-ffff-ffff
- rule 1450 permit source-mac 00e0-4c46-868b ffff-ffff-ffff
  rule 1460 permit source-mac 00e0-4c78-3ae5 ffff-ffff-ffff
- rule 1461 permit source-mac 00e0-4c78-3ae6 ffff-ffff-ffff
- rule 1470 permit source-mac 00e0-4c27-3a18 ffff-ffff-ffff
- rule 1480 permit source-mac 00e0-4c27-4047 ffff-ffff-ffff
- rule 1490 permit source-mac 0019-99bb-5baf ffff-ffff-ffff
- rule 1500 permit source-mac 001a-4b82-c872 ffff-ffff-ffff
  rule 1510 permit source-mac 0021-9703-7c00 ffff-ffff-ffff
  rule 1530 permit source-mac 54e6-fc74-7ccb ffff-ffff-ffff
- rule 1540 permit source-mac 2c41-3817-6087 ffff-ffff-ffff
- rule 1550 permit source-mac 00e0-4cd1-1ce8 ffff-ffff-ffff
- rule 1560 permit source-mac 00e0-4cd1-1ce7 ffff-ffff-ffff
- rule 1570 permit source-mac 00e0-4c27-4180 ffff-ffff-ffff
- rule 1580 permit source-mac 0025-b35a-197a ffff-ffff-ffff
- rule 1590 permit source-mac 0022-4331-7b42 ffff-ffff-ffff
- rule 1630 permit source-mac 0022-faef-60dc ffff-ffff-ffff
- rule 1790 permit source-mac 001a-4b6e-d846 ffff-ffff-ffff
- rule 1870 permit source-mac 705a-b697-8b30 ffff-ffff-ffff
- rule 1880 permit source-mac a088-b4c6-9cb4 ffff-ffff-ffff
- rule 1890 permit source-mac 3c97-0e23-3e7d ffff-ffff-ffff
  rule 1900 permit source-mac 3c97-0e55-a5be ffff-ffff-ffff
  rule 1910 permit source-mac 3c97-0e55-aff6 ffff-ffff-ffff
  rule 1920 permit source-mac 3c97-0e55-a248 ffff-ffff-ffff
@@ -958,18 +856,7 @@ acl number 4029
  rule 1950 permit source-mac 3c97-0e4d-7e8a ffff-ffff-ffff
  rule 1960 permit source-mac 3c97-0e4d-6f6c ffff-ffff-ffff
  rule 1970 permit source-mac 3c97-0e4d-7433 ffff-ffff-ffff
- rule 1980 permit source-mac 705a-b6a4-4df8 ffff-ffff-ffff
- rule 1990 permit source-mac 001b-38be-a3ce ffff-ffff-ffff
- rule 2000 permit source-mac 001e-ec87-b966 ffff-ffff-ffff
- rule 2010 permit source-mac 705a-b69c-0eb2 ffff-ffff-ffff
- rule 2020 permit source-mac f0de-f176-5a53 ffff-ffff-ffff
- rule 2030 permit source-mac f0de-f175-6ef5 ffff-ffff-ffff
- rule 2040 permit source-mac f0de-f179-e9c1 ffff-ffff-ffff
- rule 2050 permit source-mac 0025-b351-016b ffff-ffff-ffff
- rule 2060 permit source-mac 001f-162d-11cb ffff-ffff-ffff
  rule 2070 permit source-mac 3c97-0e4d-7cb2 ffff-ffff-ffff
- rule 2140 permit source-mac 5cff-350c-35ff ffff-ffff-ffff
- rule 2150 permit source-mac f0de-f101-cf30 ffff-ffff-ffff
  rule 2160 permit source-mac e411-5b5d-90b2 ffff-ffff-ffff
  rule 2170 permit source-mac 0020-6be0-4a25 ffff-ffff-ffff
  rule 2190 permit source-mac 0017-c4c3-2fc8 ffff-ffff-ffff
@@ -986,11 +873,6 @@ acl number 4029
  rule 2246 permit source-mac 001d-7214-d60b ffff-ffff-ffff
  rule 2247 permit source-mac 0026-9ebc-d95e ffff-ffff-ffff
  rule 2248 permit source-mac dc0e-a191-9878 ffff-ffff-ffff
- rule 4403 permit source-mac 705a-b629-b7c3 ffff-ffff-ffff
- rule 4404 permit source-mac 206a-8a5e-e807 ffff-ffff-ffff
- rule 4405 permit source-mac d067-e531-44ec ffff-ffff-ffff
- rule 4406 permit source-mac 0021-70a4-5e25 ffff-ffff-ffff
- rule 4999 permit source-mac 001e-ec66-9f16 ffff-ffff-ffff
  rule 5000 deny
 #
 acl number 4034
@@ -1022,6 +904,8 @@ acl number 4034
  rule 38 permit source-mac 54ee-750e-996c ffff-ffff-ffff
  rule 39 permit source-mac 54ee-757d-228e ffff-ffff-ffff
  rule 40 permit source-mac c454-4419-fe4c ffff-ffff-ffff
+ rule 41 permit source-mac 3c97-0e4d-723e ffff-ffff-ffff
+ rule 42 permit source-mac 68f7-28d6-9d84 ffff-ffff-ffff
  rule 400 permit source-mac 74e6-e234-0ec5 ffff-ffff-ffff
  rule 5000 deny
 #
@@ -1090,6 +974,7 @@ acl number 4036
  rule 32 permit source-mac c454-4419-fb17 ffff-ffff-ffff
  rule 33 permit source-mac 3c97-0e4d-73d0 ffff-ffff-ffff
  rule 34 permit source-mac 88ae-1dc8-a72b ffff-ffff-ffff
+ rule 35 permit source-mac 3c97-0e55-aead ffff-ffff-ffff
  rule 5000 deny
 #
 acl number 4037
@@ -1107,6 +992,8 @@ acl number 4037
  rule 12 permit source-mac 3c97-0eb6-ebb2 ffff-ffff-ffff
  rule 13 permit source-mac 0023-5a21-ab71 ffff-ffff-ffff
  rule 14 permit source-mac b870-f40f-4bb8 ffff-ffff-ffff
+ rule 15 permit source-mac 0024-5458-081d ffff-ffff-ffff
+ rule 16 permit source-mac 201a-0660-476e ffff-ffff-ffff
  rule 5000 deny
 #
 acl number 4038
@@ -1115,6 +1002,7 @@ acl number 4038
  rule 2 permit source-mac 0026-abf6-ee4d ffff-ffff-ffff
  rule 3 permit source-mac 30cd-a75f-adb7 ffff-ffff-ffff
  rule 17 permit source-mac 0026-abf7-0e3b ffff-ffff-ffff
+ rule 18 permit source-mac 901b-0e34-7b4c ffff-ffff-ffff
  rule 5000 deny
 #
 acl number 4043
@@ -1279,9 +1167,6 @@ interface Vlanif4000
 #
 interface Vlanif4051
  ip address 10.189.71.202 255.255.255.128
-#
-interface Vlanif4056
- ip address 192.168.99.1 255.255.255.0
 #
 interface Ethernet0/0/0
  undo portswitch
@@ -1549,16 +1434,15 @@ interface GigabitEthernet2/0/21
 #
 interface GigabitEthernet2/0/22
  description to_DCN_8508-2
- shutdown
  port link-type trunk
  undo port trunk allow-pass vlan 1
- port trunk allow-pass vlan 4053
+ port trunk allow-pass vlan 4053 4056
 #
 interface GigabitEthernet2/0/23
  description to_DCN_8508-1
  port link-type trunk
  undo port trunk allow-pass vlan 1
- port trunk allow-pass vlan 21 41 4000 4051 to 4055
+ port trunk allow-pass vlan 21 41 4000 4051 to 4056
 #
 interface NULL0
 #

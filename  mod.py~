@@ -1,4 +1,0 @@
-__import__('aiomysql')
-
-print(locals())
-print(globals())

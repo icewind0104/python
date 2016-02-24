@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}SWITCHES INDICATOR{% endblock %}
+
+{% block content %}
+<div class="uk-container uk-container-center">
+    <div class="uk-grid">
+        <div class="uk-width-medium-4-5">
+            {% block left %}<!-- content -->{% endblock %}
+        </div>
+        <div class="uk-width-medium-1-5">
+            {% block right %}<!-- content -->{% endblock %}
+        </div>
+    </div>
+</div>
+{% endblock %}

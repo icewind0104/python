@@ -1,11 +1,59 @@
-{% extends 'base.html' %}
+{% extends 'body.html' %}
 
-{% block title %}SWITCHES INDICATOR{% endblock %}
 
-{% block content %}
-    <h2>SWITCHES INDICATOR</h2>
-    <a href="/zb.xlsx">下载性能指标</a>
-    {% for each in switches %}
-    <li fontsize=11>name:{{ each['name'] }} host:{{ each['host'] }} cpu:{{ each['cpu'] }} memory:{{ each['memory'] }} <a href='/detail?swid={{ each['id'] }}'>detail...</a></li>
+{% block left %}
+    <div class="uk-grid">
+        <li>当前路径：设备总览</li>
+    </div>
+    <hr class="uk-article-divider">
+
+    {% for group in groups %}
+    <h2>{{ group['grp_name'][0] }}</h2>
+    <div class="uk-grid">
+        <div class="uk-width-medium-1-3">设备名称</div>
+        <div class="uk-width-medium-1-6">管理地址</div>
+        <div class="uk-width-medium-1-6">CPU利用率</div>
+        <div class="uk-width-medium-1-6">内存利用率</div>
+        <div class="uk-width-medium-1-6">查看图表</div>
+    </div>
+    {% for each in group['indicators'] %}
+    <div id="my-grid" class="uk-grid {{each['style']}}">
+        <div class="uk-width-medium-1-3">{{ each['name'] }}</div>
+        <div class="uk-width-medium-1-6">{{ each['host'] }}</div>
+
+        <div class="uk-width-medium-1-6">
+            {% for cpu in each['cpus'] %}
+            <div id="indicator">
+                <div id="number">{{ cpu }}</div>
+                <div id="figure" style="width:{{ cpu }}%"></div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="uk-width-medium-1-6">
+            {% for memory in each['memorys'] %}
+            <div id="indicator">
+                <div id="number">{{ memory }}</div>
+                {% if memory != 'unknown' %}
+                <div id="figure" style="width:{{ memory }}%"></div>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="uk-width-medium-1-6"><a href='/detail?swid={{ each['id'] }}'><i class="uk-icon-search"></i> Detail</a></div>
+    </div>
     {% endfor %}
+    {% endfor %}
+
+{% endblock %}
+
+
+{% block right %}
+    <div>排序</div>
+    <div style="margin-left:35px;"><a href="/">无排序</a></div>
+    {% for category in categorys %}
+    <div style="margin-left:35px;"><a href="/?order={{ category['id'] }}">{{ category['name'] }}</a></div>
+    {% endfor %}
+    <div><a href="/zb.xlsx">下载性能指标</a></div>
 {% endblock %}

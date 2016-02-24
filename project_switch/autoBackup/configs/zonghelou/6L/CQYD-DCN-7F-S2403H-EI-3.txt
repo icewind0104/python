@@ -195,9 +195,15 @@ interface LoopBack0
  mac-address static 3c97-0edf-96e0 interface Ethernet0/5 vlan 7
  mac-address static 00e0-4ce0-1bfc interface Ethernet0/6 vlan 7
  mac-address static 3c97-0e4d-6fa0 interface Ethernet0/8 vlan 7
+ mac-address static f8a9-633e-0d76 interface Ethernet0/10 vlan 7
+ mac-address static 00e0-4c46-86e3 interface Ethernet0/10 vlan 7
+ mac-address static 3c97-0e4d-72a3 interface Ethernet0/12 vlan 7
+ mac-address static 3c97-0e4d-7233 interface Ethernet0/13 vlan 7
  mac-address static 3c97-0e51-8af8 interface Ethernet0/14 vlan 7
+ mac-address static 3c97-0e4d-78f5 interface Ethernet0/15 vlan 7
  mac-address static 00e0-4c46-872b interface Ethernet0/19 vlan 7
  mac-address static 00e0-4c36-b7e4 interface Ethernet0/20 vlan 7
+ mac-address static 901b-0e34-7b4a interface Ethernet0/21 vlan 7
  mac-address static 30cd-a75f-1b4c interface Ethernet0/22 vlan 7
 #
  ip route-static 0.0.0.0 0.0.0.0 10.189.46.1 preference 100

@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>{% block title %}<!-- title -->{% endblock %}</title>
+        <link rel="stylesheet" href="/static/css/meidl.css">
         <link rel="stylesheet" href="/static/css/uikit.min.css">
         <link rel="stylesheet" href="/static/css/uikit.gradient.min.css">
         <script src="/static/js/uikit.min.js"></script>
@@ -9,7 +10,10 @@
     <body>
             <nav class="uk-navbar uk-navbar-attached uk-margin-bottom">
                 <div class="uk-container uk-container-center">
-                <a href="/" class="uk-navbar-brand">Awesome</a>
+                <a href="/" class="uk-navbar-brand"><i class="uk-icon-home"></i> Meidl's python website</a>
+                <a href="/" class="uk-navbar-brand"><i class="uk-icon-bar-chart"></i> 运行参数</a>
+                <a href="/" class="uk-navbar-brand"><i class="uk-icon-binoculars"></i> 配置核对</a>
+                <a href="/" class="uk-navbar-brand"><i class="uk-icon-cogs"></i> 设备管理</a>
                 </div>
             </nav>
         {% block content %}<!-- content -->{% endblock %}

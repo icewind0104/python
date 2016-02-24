@@ -184,6 +184,7 @@ interface NULL0
  mac-address static 00e0-4c27-3a29 interface Ethernet0/4 vlan 12
  mac-address static baae-c531-9be2 interface Ethernet0/5 vlan 12
  mac-address static 001b-2456-4a14 interface Ethernet0/5 vlan 12
+ mac-address static 54ee-757d-1a8d interface Ethernet0/6 vlan 12
  mac-address static 3c97-0e4d-6e99 interface Ethernet0/6 vlan 12
  mac-address static 00e0-4c27-40ea interface Ethernet0/6 vlan 12
  mac-address static 001b-2450-677f interface Ethernet0/6 vlan 12
@@ -201,6 +202,7 @@ interface NULL0
  mac-address static 00e0-4c27-4146 interface Ethernet0/9 vlan 12
  mac-address static 3c97-0e47-31f5 interface Ethernet0/9 vlan 12
  mac-address static 0016-d3c0-1fef interface Ethernet0/9 vlan 12
+ mac-address static 54ee-757d-1a75 interface Ethernet0/10 vlan 12
  mac-address static 00e0-4c98-43a3 interface Ethernet0/10 vlan 12
  mac-address static 0016-d3ba-f526 interface Ethernet0/10 vlan 12
  mac-address static 0016-d32a-f4dc interface Ethernet0/10 vlan 12

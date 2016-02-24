@@ -1,5 +1,0 @@
-#!/bin/bash
-
-echo "begin"
-pytbon3 /home/meidl/python/test.py
-echo "end"
